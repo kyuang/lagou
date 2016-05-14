@@ -388,7 +388,19 @@
 								<li>
 									<a href="<?php echo e(url('Admin/contet')); ?>">
 										<i class="icon-double-angle-right"></i>
-										公司描述
+										首页导航管理
+									</a>
+								</li>
+								<li>
+									<a href="<?php echo e(url('Admin/contet')); ?>">
+										<i class="icon-double-angle-right"></i>
+										首页广告管理
+									</a>
+								</li>
+								<li>
+									<a href="<?php echo e(url('Admin/contet')); ?>">
+										<i class="icon-double-angle-right"></i>
+										首页轮播图管理
 									</a>
 								</li>
 							</ul>
@@ -619,7 +631,7 @@
 								</li>
 
 								<li>
-									<a href="login.html">
+									<a href="<?php echo e(url('Index/login')); ?>">
 										<i class="icon-double-angle-right"></i>
 										登录 &amp; 注册
 									</a>

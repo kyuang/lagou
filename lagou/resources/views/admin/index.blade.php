@@ -388,7 +388,19 @@
 								<li>
 									<a href="{{url('Admin/contet')}}">
 										<i class="icon-double-angle-right"></i>
-										公司描述
+										首页导航管理
+									</a>
+								</li>
+								<li>
+									<a href="{{url('Admin/contet')}}">
+										<i class="icon-double-angle-right"></i>
+										首页广告管理
+									</a>
+								</li>
+								<li>
+									<a href="{{url('Admin/contet')}}">
+										<i class="icon-double-angle-right"></i>
+										首页轮播图管理
 									</a>
 								</li>
 							</ul>
