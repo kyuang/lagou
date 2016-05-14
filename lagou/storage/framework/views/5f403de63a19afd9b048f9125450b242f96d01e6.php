@@ -7,8 +7,8 @@
 		<meta name="description" content="站长素材提供Bootstrap模版,Bootstrap教程,Bootstrap中文翻译等相关Bootstrap插件下载" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- basic styles -->
-		<link href="{{URL::asset('/')}}/assets/css/bootstrap.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="{{URL::asset('/')}}/assets/css/font-awesome.min.css" />
+		<link href="<?php echo e(URL::asset('/')); ?>/assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="<?php echo e(URL::asset('/')); ?>/assets/css/font-awesome.min.css" />
 
 		<!--[if IE 7]>
 		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
@@ -22,9 +22,9 @@
 
 		<!-- ace styles -->
 
-		<link rel="stylesheet" href="{{URL::asset('/')}}/assets/css/ace.min.css" />
-		<link rel="stylesheet" href="{{URL::asset('/')}}/assets/css/ace-rtl.min.css" />
-		<link rel="stylesheet" href="{{URL::asset('/')}}/assets/css/ace-skins.min.css" />
+		<link rel="stylesheet" href="<?php echo e(URL::asset('/')); ?>/assets/css/ace.min.css" />
+		<link rel="stylesheet" href="<?php echo e(URL::asset('/')); ?>/assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="<?php echo e(URL::asset('/')); ?>/assets/css/ace-skins.min.css" />
 
 		<!--[if lte IE 8]>
 		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
@@ -34,7 +34,7 @@
 
 		<!-- ace settings handler -->
 
-		<script src="{{URL::asset('/')}}/assets/js/ace-extra.min.js"></script>
+		<script src="<?php echo e(URL::asset('/')); ?>/assets/js/ace-extra.min.js"></script>
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
@@ -213,7 +213,7 @@
 
 								<li>
 									<a href="#">
-										<img src="{{URL::asset('/')}}/assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+										<img src="<?php echo e(URL::asset('/')); ?>/assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
 										<span class="msg-body">
 											<span class="msg-title">
 												<span class="blue">Alex:</span>
@@ -230,7 +230,7 @@
 
 								<li>
 									<a href="#">
-										<img src="{{URL::asset('/')}}/assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+										<img src="<?php echo e(URL::asset('/')); ?>/assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
 										<span class="msg-body">
 											<span class="msg-title">
 												<span class="blue">Susan:</span>
@@ -247,7 +247,7 @@
 
 								<li>
 									<a href="#">
-										<img src="{{URL::asset('/')}}/assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+										<img src="<?php echo e(URL::asset('/')); ?>/assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
 										<span class="msg-body">
 											<span class="msg-title">
 												<span class="blue">Bob:</span>
@@ -372,21 +372,21 @@
 							</a>
 							<ul class="submenu">
 								<li>
-									<a href="{{url('Type/lists')}}">
+									<a href="<?php echo e(url('Type/lists')); ?>">
 										<i class="icon-double-angle-right"></i>
 										职位类型
 									</a>
 								</li>
 
 								<li>
-									<a href="{{url('Admin/zhi_juti')}}">
+									<a href="<?php echo e(url('Admin/zhi_juti')); ?>">
 										<i class="icon-double-angle-right"></i>
 										具体职位
 									</a>
 								</li>
 
 								<li>
-									<a href="{{url('Admin/contet')}}">
+									<a href="<?php echo e(url('Admin/contet')); ?>">
 										<i class="icon-double-angle-right"></i>
 										公司描述
 									</a>
@@ -619,7 +619,7 @@
 								</li>
 
 								<li>
-									<a href="{{url('Index/login')}}">
+									<a href="login.html">
 										<i class="icon-double-angle-right"></i>
 										登录 &amp; 注册
 									</a>
@@ -1292,7 +1292,7 @@
 
 																<div class="itemdiv memberdiv">
 																	<div class="user">
-																		<img alt="Joe Doe's avatar" src="{{URL::asset('/')}}/assets/avatars/avatar2.png" />
+																		<img alt="Joe Doe's avatar" src="<?php echo e(URL::asset('/')); ?>/assets/avatars/avatar2.png" />
 																	</div>
 
 																	<div class="body">
@@ -1345,7 +1345,7 @@
 
 																<div class="itemdiv memberdiv">
 																	<div class="user">
-																		<img alt="Jim Doe's avatar" src="{{URL::asset('/')}}/assets/avatars/avatar.png" />
+																		<img alt="Jim Doe's avatar" src="<?php echo e(URL::asset('/')); ?>/assets/avatars/avatar.png" />
 																	</div>
 
 																	<div class="body">
@@ -1440,7 +1440,7 @@
 
 																<div class="itemdiv memberdiv">
 																	<div class="user">
-																		<img alt="Susan's avatar" src="{{URL::asset('/')}}/assets/avatars/avatar3.png" />
+																		<img alt="Susan's avatar" src="<?php echo e(URL::asset('/')); ?>/assets/avatars/avatar3.png" />
 																	</div>
 
 																	<div class="body">
@@ -1461,7 +1461,7 @@
 
 																<div class="itemdiv memberdiv">
 																	<div class="user">
-																		<img alt="Phil Doe's avatar" src="{{URL::asset('/')}}/assets/avatars/avatar4.png" />
+																		<img alt="Phil Doe's avatar" src="<?php echo e(URL::asset('/')); ?>/assets/avatars/avatar4.png" />
 																	</div>
 
 																	<div class="body">
@@ -1482,7 +1482,7 @@
 
 																<div class="itemdiv memberdiv">
 																	<div class="user">
-																		<img alt="Alexa Doe's avatar" src="{{URL::asset('/')}}/assets/avatars/avatar1.png" />
+																		<img alt="Alexa Doe's avatar" src="<?php echo e(URL::asset('/')); ?>/assets/avatars/avatar1.png" />
 																	</div>
 
 																	<div class="body">
@@ -1519,7 +1519,7 @@
 															<div class="comments">
 																<div class="itemdiv commentdiv">
 																	<div class="user">
-																		<img alt="Bob Doe's Avatar" src="{{URL::asset('/')}}/assets/avatars/avatar.png" />
+																		<img alt="Bob Doe's Avatar" src="<?php echo e(URL::asset('/')); ?>/assets/avatars/avatar.png" />
 																	</div>
 
 																	<div class="body">
@@ -1734,7 +1734,7 @@
 
 														<div class="itemdiv dialogdiv">
 															<div class="user">
-																<img alt="John's Avatar" src="{{URL::asset('/')}}/assets/avatars/avatar.png" />
+																<img alt="John's Avatar" src="<?php echo e(URL::asset('/')); ?>/assets/avatars/avatar.png" />
 															</div>
 
 															<div class="body">
@@ -1758,7 +1758,7 @@
 
 														<div class="itemdiv dialogdiv">
 															<div class="user">
-																<img alt="Bob's Avatar" src="{{URL::asset('/')}}/assets/avatars/user.jpg" />
+																<img alt="Bob's Avatar" src="<?php echo e(URL::asset('/')); ?>/assets/avatars/user.jpg" />
 															</div>
 
 															<div class="body">
@@ -1924,7 +1924,7 @@
 		<!--[if !IE]> -->
 
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='{{URL::asset('/')}}/assets/js/jquery-2.0.3.min.js'>"+"<"+"script>");
+			window.jQuery || document.write("<script src='<?php echo e(URL::asset('/')); ?>/assets/js/jquery-2.0.3.min.js'>"+"<"+"script>");
 		</script>
 
 		<!-- <![endif]-->
@@ -1938,8 +1938,8 @@
 		<script type="text/javascript">
 			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"script>");
 		</script>
-		<script src="{{URL::asset('/')}}/assets/js/bootstrap.min.js"></script>
-		<script src="{{URL::asset('/')}}/assets/js/typeahead-bs2.min.js"></script>
+		<script src="<?php echo e(URL::asset('/')); ?>/assets/js/bootstrap.min.js"></script>
+		<script src="<?php echo e(URL::asset('/')); ?>/assets/js/typeahead-bs2.min.js"></script>
 
 		<!-- page specific plugin scripts -->
 
@@ -1947,19 +1947,19 @@
 		  <script src="assets/js/excanvas.min.js"></script>
 		<![endif]-->
 
-		<script src="{{URL::asset('/')}}/assets/js/jquery-ui-1.10.3.custom.min.js"></script>
-		<script src="{{URL::asset('/')}}/assets/js/jquery.ui.touch-punch.min.js"></script>
-		<script src="{{URL::asset('/')}}/assets/js/jquery.slimscroll.min.js"></script>
-		<script src="{{URL::asset('/')}}/assets/js/jquery.easy-pie-chart.min.js"></script>
-		<script src="{{URL::asset('/')}}/assets/js/jquery.sparkline.min.js"></script>
-		<script src="{{URL::asset('/')}}/assets/js/flot/jquery.flot.min.js"></script>
-		<script src="{{URL::asset('/')}}/assets/js/flot/jquery.flot.pie.min.js"></script>
-		<script src="{{URL::asset('/')}}/assets/js/flot/jquery.flot.resize.min.js"></script>
+		<script src="<?php echo e(URL::asset('/')); ?>/assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="<?php echo e(URL::asset('/')); ?>/assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="<?php echo e(URL::asset('/')); ?>/assets/js/jquery.slimscroll.min.js"></script>
+		<script src="<?php echo e(URL::asset('/')); ?>/assets/js/jquery.easy-pie-chart.min.js"></script>
+		<script src="<?php echo e(URL::asset('/')); ?>/assets/js/jquery.sparkline.min.js"></script>
+		<script src="<?php echo e(URL::asset('/')); ?>/assets/js/flot/jquery.flot.min.js"></script>
+		<script src="<?php echo e(URL::asset('/')); ?>/assets/js/flot/jquery.flot.pie.min.js"></script>
+		<script src="<?php echo e(URL::asset('/')); ?>/assets/js/flot/jquery.flot.resize.min.js"></script>
 
 		<!-- ace scripts -->
 
-		<script src="{{URL::asset('/')}}/assets/js/ace-elements.min.js"></script>
-		<script src="{{URL::asset('/')}}/assets/js/ace.min.js"></script>
+		<script src="<?php echo e(URL::asset('/')); ?>/assets/js/ace-elements.min.js"></script>
+		<script src="<?php echo e(URL::asset('/')); ?>/assets/js/ace.min.js"></script>
 
 		<!-- inline scripts related to this page -->
 

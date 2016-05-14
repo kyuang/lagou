@@ -30,6 +30,11 @@ Route::group(['middleware' => ['web']], function () {
     //
 });
 
+//前台首页
+Route::any('/Index/index',"IndexController@index");
+Route::any('/Index/login',"IndexController@login");
+Route::any('/Index/register',"IndexController@register");
+
 
 // --------------------------------------------------------------------
 //后台
@@ -40,3 +45,6 @@ Route::any('/Admin/zhi_fang',"Admin\AdminController@zhi_fang");
 Route::any('/Admin/zhi_juti',"Admin\AdminController@zhi_juti");
 Route::any('/Admin/add_adress',"Admin\AdminController@add_adress");
 Route::any('/Admin/content',"Admin\AdminController@content");
+
+Route::any('/Type/add',"Admin\TypeController@add");
+Route::any('/Type/lists',"Admin\TypeController@lists");

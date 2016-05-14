@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0021)http://www.lagou.com/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" charset="utf-8" async="" src="{{URL::asset('files')}}/contains.js"></script><script type="text/javascript" charset="utf-8" async="" src="{{URL::asset('files')}}/taskMgr.js"></script><script type="text/javascript" charset="utf-8" async="" src="{{URL::asset('files')}}/views.js"></script>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" charset="utf-8" async="" src="<?php echo e(URL::asset('files')); ?>/contains.js"></script><script type="text/javascript" charset="utf-8" async="" src="<?php echo e(URL::asset('files')); ?>/taskMgr.js"></script><script type="text/javascript" charset="utf-8" async="" src="<?php echo e(URL::asset('files')); ?>/views.js"></script>
 	<!-- meta -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="renderer" content="webkit">
@@ -20,7 +20,7 @@
 
 	<!-- global_domain FE_base... -->
 	
-<script charset="utf-8" src="{{URL::asset('files')}}/v.js"></script><script async="" src="{{URL::asset('files')}}/analytics.js"></script><script async="" src="{{URL::asset('files')}}/a.js"></script><script type="text/javascript">
+<script charset="utf-8" src="<?php echo e(URL::asset('files')); ?>/v.js"></script><script async="" src="<?php echo e(URL::asset('files')); ?>/analytics.js"></script><script async="" src="<?php echo e(URL::asset('files')); ?>/a.js"></script><script type="text/javascript">
 window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
     ctx : "http://www.lagou.com",
     rctx : "http://hr.lagou.com",
@@ -39,12 +39,12 @@ window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 	<!-- header样式 -->	<!-- footer样式 -->
 	<!-- 页面样式 -->
 
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('files')}}/mCustomScrollbar_ac2fb8b.css">
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('files')}}/layout_8da9288.css">
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('files')}}/main.html_aio_2ff5795.css">
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('files')}}/widgets_cd857e8.css">
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('files')}}/main.html_aio_2_bc9c0ac.css">
-<script src="{{URL::asset('files')}}/jquery.validate.min_f66db7c.js" class="lazyload" charset="utf-8"></script><link href="{{URL::asset('files')}}/loginpop_8eb0b34.css" rel="stylesheet" class="lazyload" charset="utf-8"><script src="{{URL::asset('files')}}/lagou_5427c0e.js" class="lazyload" charset="utf-8"></script><script charset="utf-8" async="" src="{{URL::asset('files')}}/i.js" id="_da"></script></head>
+    <link rel="stylesheet" type="text/css" href="<?php echo e(URL::asset('files')); ?>/mCustomScrollbar_ac2fb8b.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo e(URL::asset('files')); ?>/layout_8da9288.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo e(URL::asset('files')); ?>/main.html_aio_2ff5795.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo e(URL::asset('files')); ?>/widgets_cd857e8.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo e(URL::asset('files')); ?>/main.html_aio_2_bc9c0ac.css">
+<script src="<?php echo e(URL::asset('files')); ?>/jquery.validate.min_f66db7c.js" class="lazyload" charset="utf-8"></script><link href="<?php echo e(URL::asset('files')); ?>/loginpop_8eb0b34.css" rel="stylesheet" class="lazyload" charset="utf-8"><script src="<?php echo e(URL::asset('files')); ?>/lagou_5427c0e.js" class="lazyload" charset="utf-8"></script><script charset="utf-8" async="" src="<?php echo e(URL::asset('files')); ?>/i.js" id="_da"></script></head>
 <body><iframe style="display: none;"></iframe>
 	
 	<!-- 公共html -->
@@ -61,7 +61,7 @@ window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 
 	<!--验证注册邮箱-->
 	<!--
-    @require "common/widgets/header_c/modules/emailvalid/main.less"
+    @require  "common/widgets/header_c/modules/emailvalid/main.less"
 -->
 
 
@@ -80,10 +80,10 @@ window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 			
 			<ul class="lg_tbar_r">
 				<li>
-					<a href="{{url('Index/login')}}" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">登录</a>
+					<a href="<?php echo e(url('Index/login')); ?>" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">登录</a>
 				</li>
 				<li>
-					<a href="{{url('Index/register')}}" class="bl" data-lg-tj-id="5g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">注册</a>
+					<a href="<?php echo e(url('Index/register')); ?>" class="bl" data-lg-tj-id="5g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">注册</a>
 				</li>
 			</ul>
 
@@ -98,14 +98,14 @@ window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 
 		<div class="inner">
 			<div class="lg_tnav_l">
-				<a href="{{URL::asset('files')}}/拉勾网-最专业的互联网招聘平台.html" class="lg_logo" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
+				<a href="<?php echo e(URL::asset('files')); ?>/拉勾网-最专业的互联网招聘平台.html" class="lg_logo" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
 					<h1>拉勾网</h1>
 				</a>
 								<div class="suggestCity"><strong>北京站</strong><em id="changeCity_btn">[切换城市]</em></div>
 							</div>
 			<ul class="lg_tnav_wrap">
 				<li>
-					<a href="{{URL::asset('files')}}/拉勾网-最专业的互联网招聘平台.html" class="current" data-lg-tj-id="5i00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">首页</a>
+					<a href="<?php echo e(URL::asset('files')); ?>/拉勾网-最专业的互联网招聘平台.html" class="current" data-lg-tj-id="5i00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">首页</a>
 				</li>
 				<li>
 					<a href="http://www.lagou.com/gongsi/" data-lg-tj-id="5j00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">公司</a>
@@ -1815,19 +1815,19 @@ window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 
                         
                         
-            <a class="" href="http://www.lagou.com/gongsi/19365.html" target="_blank" data-lg-tj-id="es00" data-lg-tj-no="0001" data-lg-tj-cid="1982"><img src="{{URL::asset('files')}}/Cgp3O1csCW2AXOYXAAHE9GZUzok034.JPG" width="612" height="160" alt="货车帮"></a>
+            <a class="" href="http://www.lagou.com/gongsi/19365.html" target="_blank" data-lg-tj-id="es00" data-lg-tj-no="0001" data-lg-tj-cid="1982"><img src="<?php echo e(URL::asset('files')); ?>/Cgp3O1csCW2AXOYXAAHE9GZUzok034.JPG" width="612" height="160" alt="货车帮"></a>
         </li>
                 <li class="banner_bg_2">
 
                         
                         
-            <a class="" href="http://www.lagou.com/topic/renrenxingtwo.html" target="_blank" data-lg-tj-id="es00" data-lg-tj-no="0002" data-lg-tj-cid="1975"><img src="{{URL::asset('files')}}/CgqKkVcE0s-AKW7uAACEYADklOk091.JPG" width="612" height="160" alt="人人行(借贷宝)"></a>
+            <a class="" href="http://www.lagou.com/topic/renrenxingtwo.html" target="_blank" data-lg-tj-id="es00" data-lg-tj-no="0002" data-lg-tj-cid="1975"><img src="<?php echo e(URL::asset('files')); ?>/CgqKkVcE0s-AKW7uAACEYADklOk091.JPG" width="612" height="160" alt="人人行(借贷宝)"></a>
         </li>
                 <li class="banner_bg_3">
 
                         
                         
-            <a class="" href="http://www.lagou.com/activity/dist/imageCollection/pc/html/index.html?labelWords=hot" target="_blank" data-lg-tj-id="es00" data-lg-tj-no="0003" data-lg-tj-cid="2133"><img src="{{URL::asset('files')}}/Cgp3O1csR66AF4jIAACp5e8pwGU974.JPG" width="612" height="160" alt="设计专场"></a>
+            <a class="" href="http://www.lagou.com/activity/dist/imageCollection/pc/html/index.html?labelWords=hot" target="_blank" data-lg-tj-id="es00" data-lg-tj-no="0003" data-lg-tj-cid="2133"><img src="<?php echo e(URL::asset('files')); ?>/Cgp3O1csR66AF4jIAACp5e8pwGU974.JPG" width="612" height="160" alt="设计专场"></a>
         </li>
             </ul>
     <div class="banner_control">
@@ -1835,15 +1835,15 @@ window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
         <ul class="thumbs">
                         <li class="thumbs_1">
                 <i></i>
-                <img src="{{URL::asset('files')}}/Cgp3O1csCXCARQOAAAAZooX853U320.JPG" width="113" height="42">
+                <img src="<?php echo e(URL::asset('files')); ?>/Cgp3O1csCXCARQOAAAAZooX853U320.JPG" width="113" height="42">
             </li>
                         <li class="thumbs_2 current">
                 <i></i>
-                <img src="{{URL::asset('files')}}/CgqKkVcE0tSAdseNAAAokHl4hJg013.JPG" width="113" height="42">
+                <img src="<?php echo e(URL::asset('files')); ?>/CgqKkVcE0tSAdseNAAAokHl4hJg013.JPG" width="113" height="42">
             </li>
                         <li class="thumbs_3">
                 <i></i>
-                <img src="{{URL::asset('files')}}/CgqKkVcsR7iAGzTCAAAOwlwqivw702.JPG" width="113" height="42">
+                <img src="<?php echo e(URL::asset('files')); ?>/CgqKkVcsR7iAGzTCAAAOwlwqivw702.JPG" width="113" height="42">
             </li>
                     </ul>
     </div>
@@ -1855,7 +1855,7 @@ window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
                 
                 
         <a class="" href="http://www.lagou.com/gongsi/49187.html" target="_blank" data-lg-tj-id="ey00" data-lg-tj-no="0001" data-lg-tj-cid="5111">
-            <img src="{{URL::asset('files')}}/Cgp3O1aDe-qAVMgMAAAfkQtKw50248.png" width="113" height="113" alt="惠民网">
+            <img src="<?php echo e(URL::asset('files')); ?>/Cgp3O1aDe-qAVMgMAAAfkQtKw50248.png" width="113" height="113" alt="惠民网">
             <div class="hot_info">
                 <h2 title="惠民网">惠民网</h2>
                 <em></em>
@@ -1870,7 +1870,7 @@ window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
                 
                 
         <a class="" href="http://www.lagou.com/gongsi/766.html" target="_blank" data-lg-tj-id="ey00" data-lg-tj-no="0002" data-lg-tj-cid="4792">
-            <img src="{{URL::asset('files')}}/CgYXBlWLxvOAVgoRAAZGmVXIEvE578.png" width="113" height="113" alt="更美APP">
+            <img src="<?php echo e(URL::asset('files')); ?>/CgYXBlWLxvOAVgoRAAZGmVXIEvE578.png" width="113" height="113" alt="更美APP">
             <div class="hot_info">
                 <h2 title="更美APP">更美APP</h2>
                 <em></em>
@@ -1885,7 +1885,7 @@ window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
                 
                 
         <a class="" href="http://www.lagou.com/gongsi/50889.html" target="_blank" data-lg-tj-id="ey00" data-lg-tj-no="0003" data-lg-tj-cid="4778">
-            <img src="{{URL::asset('files')}}/Cgp3O1ax7JWAOSzUAABS3OF0A7w289.jpg" width="113" height="113" alt="和创科技（红圈营销）">
+            <img src="<?php echo e(URL::asset('files')); ?>/Cgp3O1ax7JWAOSzUAABS3OF0A7w289.jpg" width="113" height="113" alt="和创科技（红圈营销）">
             <div class="hot_info">
                 <h2 title="和创科技（红圈营销）">和创科技（红圈营销）</h2>
                 <em></em>
@@ -1900,7 +1900,7 @@ window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
                 
                 
         <a class="" href="http://www.lagou.com/gongsi/44091.html" target="_blank" data-lg-tj-id="ey00" data-lg-tj-no="0004" data-lg-tj-cid="4771">
-            <img src="{{URL::asset('files')}}/Cgo8PFT5fXCAWXgmAAB9s4MsAAU976.jpg" width="113" height="113" alt="自如网">
+            <img src="<?php echo e(URL::asset('files')); ?>/Cgo8PFT5fXCAWXgmAAB9s4MsAAU976.jpg" width="113" height="113" alt="自如网">
             <div class="hot_info">
                 <h2 title="自如网">自如网</h2>
                 <em></em>
@@ -1915,7 +1915,7 @@ window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
                 
                 
         <a class="" href="http://www.lagou.com/gongsi/51158.html" target="_blank" data-lg-tj-id="ey00" data-lg-tj-no="0005" data-lg-tj-cid="4705">
-            <img src="{{URL::asset('files')}}/CgqKkVZf9wSAdgoaAABrydFqegA445.png" width="113" height="113" alt="中金支付">
+            <img src="<?php echo e(URL::asset('files')); ?>/CgqKkVZf9wSAdgoaAABrydFqegA445.png" width="113" height="113" alt="中金支付">
             <div class="hot_info">
                 <h2 title="中金支付">中金支付</h2>
                 <em></em>
@@ -1930,7 +1930,7 @@ window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
                 
                 
         <a class="" href="http://www.lagou.com/gongsi/31317.html" target="_blank" data-lg-tj-id="ey00" data-lg-tj-no="0006" data-lg-tj-cid="4799">
-            <img src="{{URL::asset('files')}}/CgqKkVci-kaAb4wNAAAWUt8qJLY447.jpg" width="113" height="113" alt="中国金融认证中心">
+            <img src="<?php echo e(URL::asset('files')); ?>/CgqKkVci-kaAb4wNAAAWUt8qJLY447.jpg" width="113" height="113" alt="中国金融认证中心">
             <div class="hot_info">
                 <h2 title="中国金融认证中心">中国金融认证中心</h2>
                 <em></em>
@@ -3047,7 +3047,7 @@ window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 	<a id="backtop" title="回到顶部" rel="nofollow" style="bottom: 140px;"></a>
 <!-- feedback -->
 <!--
-    @require "common/widgets/footer_c/modules/feedback/feedback.less"
+    @require  "common/widgets/footer_c/modules/feedback/feedback.less"
 -->
 
 <!--我要反馈按钮-->
@@ -3081,9 +3081,9 @@ window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
     <div class="wrapper">
         <i class="footer_lagou_icon"></i>
         <div class="inner_wrapper">
-            <a class="footer_app" href="http://www.lagou.com/app/download.html" rel="nofollow">拉勾APP<span>new</span><img src="{{URL::asset('files')}}/CgqLKVaLdtWAKVC3AAEEpK9-Koc598.JPG" width="256" height="256"></a>
+            <a class="footer_app" href="http://www.lagou.com/app/download.html" rel="nofollow">拉勾APP<span>new</span><img src="<?php echo e(URL::asset('files')); ?>/CgqLKVaLdtWAKVC3AAEEpK9-Koc598.JPG" width="256" height="256"></a>
             <a href="http://e.weibo.com/lagou720" target="_blank" rel="nofollow">拉勾微博</a>
-            <a class="footer_qr" href="javascript:void(0)" rel="nofollow">拉勾微信<img src="{{URL::asset('files')}}/CgpzWlZNl0qAZitPAABXEpAOJx0071.JPG" width="242" height="242"></a>
+            <a class="footer_qr" href="javascript:void(0)" rel="nofollow">拉勾微信<img src="<?php echo e(URL::asset('files')); ?>/CgpzWlZNl0qAZitPAABXEpAOJx0071.JPG" width="242" height="242"></a>
             <a href="http://www.lagou.com/topic/whatisnew.html" target="_blank" rel="nofollow">版本更新</a>
             <a href="http://www.lagou.com/qa.html?t=1" target="_blank" rel="nofollow">帮助中心</a>
             <a href="http://www.lagou.com/about.html" target="_blank" rel="nofollow">联系我们</a>
@@ -3100,13 +3100,13 @@ window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 
 	<!-- 底部登陆条 -->
 	<!--
-    @require "common/widgets/login_toolbar/main.less"
+    @require  "common/widgets/login_toolbar/main.less"
 -->
 
 <div id="loginToolBar" class="loginToolBar" style="bottom: 0px;">
     <div>
         <em></em>
-        <img src="{{URL::asset('files')}}/footbar_logo_cccc78d.png" width="138" height="45">
+        <img src="<?php echo e(URL::asset('files')); ?>/footbar_logo_cccc78d.png" width="138" height="45">
         <span class="companycount"><i style="background-position-y: -30px;"></i><i style="background-position-y: -30px;"></i><i style="background-position-y: -270px;"></i><b></b><i style="background-position-y: -90px;"></i><i style="background-position-y: -240px;"></i><i style="background-position-y: -270px;"></i></span>
         <span class="positioncount"><i style="background-position-y: -30px;"></i><b></b><i style="background-position-y: -210px;"></i><i style="background-position-y: -150px;"></i><i style="background-position-y: -270px;"></i><b></b><i style="background-position-y: -120px;"></i><i style="background-position-y: -120px;"></i><i style="background-position-y: -270px;"></i></span>
         <a class="bar_login passport_login_pop" href="javascript:;"><i></i></a>
@@ -3124,17 +3124,17 @@ window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 	<noscript>&lt;img src="//stats.ipinyou.com/adv.gif?a=ga..n3f5DPSWZXFMcbQa2-GxjX&amp;e=" style="display:none;" /&gt;</noscript>
 
 
-<script type="text/javascript" src="{{URL::asset('files')}}/vendor_d53d12d.js"></script>
+<script type="text/javascript" src="<?php echo e(URL::asset('files')); ?>/vendor_d53d12d.js"></script>
 <script type="text/javascript">/*resourcemap*/
 require.config({paths:{
   "common/components/template-helper/main": "http://pstatic.lagou.com/www/static/common/components/template-helper/main_4b1b867",
   "common/widgets/common/msgPopup": "http://pstatic.lagou.com/www/static/common/widgets/common/msgPopup_ccfc337"
 }});</script>
-<script type="text/javascript" src="{{URL::asset('files')}}/main.html_aio_4787e07.js"></script>
-<script type="text/javascript" src="{{URL::asset('files')}}/widgets_4dd49c9.js"></script><script src="{{URL::asset('files')}}/h.js" type="text/javascript"></script>
-<script type="text/javascript" src="{{URL::asset('files')}}/userinfo_7f282e9.js"></script>
-<script type="text/javascript" src="{{URL::asset('files')}}/layout_a28dd79.js"></script>
-<script type="text/javascript" src="{{URL::asset('files')}}/main.html_aio_2_f93dde9.js"></script>
+<script type="text/javascript" src="<?php echo e(URL::asset('files')); ?>/main.html_aio_4787e07.js"></script>
+<script type="text/javascript" src="<?php echo e(URL::asset('files')); ?>/widgets_4dd49c9.js"></script><script src="<?php echo e(URL::asset('files')); ?>/h.js" type="text/javascript"></script>
+<script type="text/javascript" src="<?php echo e(URL::asset('files')); ?>/userinfo_7f282e9.js"></script>
+<script type="text/javascript" src="<?php echo e(URL::asset('files')); ?>/layout_a28dd79.js"></script>
+<script type="text/javascript" src="<?php echo e(URL::asset('files')); ?>/main.html_aio_2_f93dde9.js"></script>
 <script type="text/javascript">
     window.global = window.global || {};
     global.userCtx = '';
@@ -3204,7 +3204,7 @@ require.config({paths:{
 	    //业务主模块入口
 	    require(['index/page/index/main']);
 	</script><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none; left: 538.5px;"></ul><div id="cboxOverlay" style="opacity: 0; cursor: pointer; visibility: visible; display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none; visibility: visible; top: 78px; left: 411px; position: absolute; width: 528px; height: 510px; opacity: 0;"><div id="cboxWrapper" style="height: 510px; width: 528px;"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left; width: 502px;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left; height: 484px;"></div><div id="cboxContent" style="float: left; width: 502px; height: 484px;"><div id="cboxTitle" style="float: left; display: block;">切换城市</div><div id="cboxCurrent" style="float: left; display: none;"></div><button type="button" id="cboxPrevious" style="display: none;"></button><button type="button" id="cboxNext" style="display: none;"></button><button id="cboxSlideshow" style="display: none;"></button><div id="cboxLoadingOverlay" style="float: left; display: none;"></div><div id="cboxLoadingGraphic" style="float: left; display: none;"></div><button type="button" id="cboxClose">close</button></div><div id="cboxMiddleRight" style="float: left; height: 484px;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left; width: 502px;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; max-width: none; display: none;"></div></div>
-<script type="text/javascript" src="{{URL::asset('files')}}/ipinyou_2be9977.js"></script>
+<script type="text/javascript" src="<?php echo e(URL::asset('files')); ?>/ipinyou_2be9977.js"></script>
 
 
 </body></html>

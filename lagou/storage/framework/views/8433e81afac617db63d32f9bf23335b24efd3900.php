@@ -9,11 +9,11 @@
 
 		<!-- basic styles -->
 
-		<link href="{{URL::asset('/')}}/assets/css/bootstrap.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="{{URL::asset('/')}}/assets/css/font-awesome.min.css" />
+		<link href="<?php echo e(URL::asset('/')); ?>/assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="<?php echo e(URL::asset('/')); ?>/assets/css/font-awesome.min.css" />
 
 		<!--[if IE 7]>
-		  <link rel="stylesheet" href="{{URL::asset('/')}}/assets/css/font-awesome-ie7.min.css" />
+		  <link rel="stylesheet" href="<?php echo e(URL::asset('/')); ?>/assets/css/font-awesome-ie7.min.css" />
 		<![endif]-->
 
 		<!-- page specific plugin styles -->
@@ -24,25 +24,25 @@
 
 		<!-- ace styles -->
 
-		<link rel="stylesheet" href="{{URL::asset('/')}}/assets/css/ace.min.css" />
-		<link rel="stylesheet" href="{{URL::asset('/')}}/assets/css/ace-rtl.min.css" />
-		<link rel="stylesheet" href="{{URL::asset('/')}}/assets/css/ace-skins.min.css" />
+		<link rel="stylesheet" href="<?php echo e(URL::asset('/')); ?>/assets/css/ace.min.css" />
+		<link rel="stylesheet" href="<?php echo e(URL::asset('/')); ?>/assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="<?php echo e(URL::asset('/')); ?>/assets/css/ace-skins.min.css" />
 
 		<!--[if lte IE 8]>
-		  <link rel="stylesheet" href="{{URL::asset('/')}}/assets/css/ace-ie.min.css" />
+		  <link rel="stylesheet" href="<?php echo e(URL::asset('/')); ?>/assets/css/ace-ie.min.css" />
 		<![endif]-->
 
 		<!-- inline styles related to this page -->
 
 		<!-- ace settings handler -->
 
-		<script src="{{URL::asset('/')}}/assets/js/ace-extra.min.js"></script>
+		<script src="<?php echo e(URL::asset('/')); ?>/assets/js/ace-extra.min.js"></script>
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
 		<!--[if lt IE 9]>
-		<script src="{{URL::asset('/')}}/assets/js/html5shiv.js"></script>
-		<script src="{{URL::asset('/')}}/assets/js/respond.min.js"></script>
+		<script src="<?php echo e(URL::asset('/')); ?>/assets/js/html5shiv.js"></script>
+		<script src="<?php echo e(URL::asset('/')); ?>/assets/js/respond.min.js"></script>
 		<![endif]-->
 <style type="text/css">
 table.gridtable {
@@ -244,7 +244,7 @@ table.gridtable td {
 
 								<li>
 									<a href="#">
-										<img src="{{URL::asset('/')}}/assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+										<img src="<?php echo e(URL::asset('/')); ?>/assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
 										<span class="msg-body">
 											<span class="msg-title">
 												<span class="blue">Alex:</span>
@@ -261,7 +261,7 @@ table.gridtable td {
 
 								<li>
 									<a href="#">
-										<img src="{{URL::asset('/')}}/assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+										<img src="<?php echo e(URL::asset('/')); ?>/assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
 										<span class="msg-body">
 											<span class="msg-title">
 												<span class="blue">Susan:</span>
@@ -278,7 +278,7 @@ table.gridtable td {
 
 								<li>
 									<a href="#">
-										<img src="{{URL::asset('/')}}/assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+										<img src="<?php echo e(URL::asset('/')); ?>/assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
 										<span class="msg-body">
 											<span class="msg-title">
 												<span class="blue">Bob:</span>
@@ -304,7 +304,7 @@ table.gridtable td {
 
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="{{URL::asset('/')}}/assets/avatars/user.jpg" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="<?php echo e(URL::asset('/')); ?>/assets/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>Welcome,</small>
 									Jason
@@ -733,7 +733,7 @@ table.gridtable td {
 									Large &amp; Small
 								</small>
 							</h1>
-							<p style="float: right;line-height: 60px;margin-left: 20px;"><a href="{{url('Type/add')}}">添加分类</a></p>
+							<p style="float: right;line-height: 60px;margin-left: 20px;"><a href="<?php echo e(url('Type/add')); ?>">添加分类</a></p>
 						</div><!-- /.page-header -->
 
 						<div class="row">
@@ -759,15 +759,15 @@ table.gridtable td {
 				<th>是否显示</th>
 				<th>操作</th>
 			</tr>
-			@foreach($arr as $v)
+			<?php foreach($arr as $v): ?>
 			<tr>
-				<td>{{$v['r_id']}}</td>
-				<td>{{$v['role_name']}}</td>
-				<td>{{$v['p_id']}}</td>
-				<td>@if($v['is_show']==0)  不显示 @else  显示  @endif</td>
+				<td><?php echo e($v['r_id']); ?></td>
+				<td><?php echo e($v['role_name']); ?></td>
+				<td><?php echo e($v['p_id']); ?></td>
+				<td><?php if($v['is_show']==0): ?>  不显示 <?php else: ?>  显示  <?php endif; ?></td>
 				<td><a href="javascript:;;" onclick="javascript:return confirm('确定要删除?');" >删除</a> | <a href="">修改</a></td>
 			</tr>
-			@endforeach
+			<?php endforeach; ?>
 
 		</table>
 		<script type="text/javascript">
@@ -861,29 +861,29 @@ table.gridtable td {
 		<!--[if !IE]> -->
 
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='{{URL::asset('/')}}/assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='<?php echo e(URL::asset('/')); ?>/assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- <![endif]-->
 
 		<!--[if IE]>
 <script type="text/javascript">
- window.jQuery || document.write("<script src='{{URL::asset('/')}}/assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+ window.jQuery || document.write("<script src='<?php echo e(URL::asset('/')); ?>/assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
 </script>
 <![endif]-->
 
 		<script type="text/javascript">
-			if("ontouchend" in document) document.write("<script src='{{URL::asset('/')}}/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if("ontouchend" in document) document.write("<script src='<?php echo e(URL::asset('/')); ?>/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
-		<script src="{{URL::asset('/')}}/assets/js/bootstrap.min.js"></script>
-		<script src="{{URL::asset('/')}}/assets/js/typeahead-bs2.min.js"></script>
+		<script src="<?php echo e(URL::asset('/')); ?>/assets/js/bootstrap.min.js"></script>
+		<script src="<?php echo e(URL::asset('/')); ?>/assets/js/typeahead-bs2.min.js"></script>
 
 		<!-- page specific plugin scripts -->
 
 		<!-- ace scripts -->
 
-		<script src="{{URL::asset('/')}}/assets/js/ace-elements.min.js"></script>
-		<script src="{{URL::asset('/')}}/assets/js/ace.min.js"></script>
+		<script src="<?php echo e(URL::asset('/')); ?>/assets/js/ace-elements.min.js"></script>
+		<script src="<?php echo e(URL::asset('/')); ?>/assets/js/ace.min.js"></script>
 
 		<!-- inline scripts related to this page -->
 	<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>

@@ -44,35 +44,6 @@
 		<script src="{{URL::asset('/')}}/assets/js/html5shiv.js"></script>
 		<script src="{{URL::asset('/')}}/assets/js/respond.min.js"></script>
 		<![endif]-->
-<style type="text/css">
-table.gridtable {
-	font-family: verdana,arial,sans-serif;
-	font-size:11px;
-	color:#333333;
-	border-width: 1px;
-	width: 800px;
-	height: 400px;
-	text-align:center;
-	border-color: #666666;
-	border-collapse: collapse;
-}
-table.gridtable th {
-	text-align:center;
-	border-width: 1px;
-	/*padding: 8px;*/
-	border-style: solid;
-	border-color: #666666;
-	background-color: #dedede;
-}
-table.gridtable td {
-	border-width: 1px;
-	/*padding: 8px;*/
-	border-style: solid;
-	border-color: #666666;
-	background-color: #ffffff;
-}
-</style>
-
 	</head>
 
 	<body>
@@ -733,159 +704,47 @@ table.gridtable td {
 									Large &amp; Small
 								</small>
 							</h1>
-							<p style="float: right;line-height: 60px;margin-left: 20px;"><a href="{{url('Type/add')}}">添加分类</a></p>
+							<p style="float: right;line-height: 60px;margin-left: 20px;"><a href="{{url('Type/lists')}}">分类列表</a></p>
 						</div><!-- /.page-header -->
 
 						<div class="row">
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
 
-								<div class="row">
-									<div class="col-xs-6 col-sm-3 pricing-box">
-										<div class="widget-box" style="width: 800px;">
-											<div class="widget-header header-color-dark">
-												<h5 class="bigger lighter">Basic Package</h5>
-											</div>
+					<div class="row">
+						<div class="col-xs-6 col-sm-3 pricing-box">
+							<div class="widget-box">
+								<!-- 添加分类表单 -->
+								<div class="widget-header header-color-dark">
+									<form action="">
+										<table>
+											<tr>
+												<td>分类名称</td>
+												<td><input type="text" name="role_name" id=""></td>
+											</tr>
+											<tr>
+												<td>父级分类</td>
+												<td><select name="p_id" id="">
+													<option value="0">顶级分类</option>
+													<?php foreach($arr as $v) { ?>
+														<option value="<?php echo $v['r_id'] ?>"><?php echo $v['role_name'] ?></option>
+													<?php } ?>
 
-										</div>
+												</select></td>
+											</tr>
+											<tr>
+												<td>是否显示</td>
+												<td><input type="radio" name="is_show"  value="0" />不显示
+												<input type="radio" name="is_show" value="1" checked/>显示</td>
+											</tr>
+											<tr>
+												<td><input type="reset" value="重置" /></td>
+												<td><input type="submit" value="提交" /></td>
+											</tr>
+										</table>
+									</form>
+								</div>
 
-<!-- 分类列表 -->
-	<div style="width: 800px;">
-		<table border="1" class="gridtable">
-			<tr>
-				<th>id</th>
-				<th>分类名称</th>
-				<th>父级分类</th>
-				<th>是否显示</th>
-				<th>操作</th>
-			</tr>
-			@foreach($arr as $v)
-			<tr>
-				<td>{{$v['r_id']}}</td>
-				<td>{{$v['role_name']}}</td>
-				<td>{{$v['p_id']}}</td>
-				<td>@if($v['is_show']==0)  不显示 @else  显示  @endif</td>
-				<td><a href="javascript:;;" onclick="javascript:return confirm('确定要删除?');" >删除</a> | <a href="">修改</a></td>
-			</tr>
-			@endforeach
-
-		</table>
-		<script type="text/javascript">
-		function del(a)
-		{
-			alert(12);
-		}
-		</script>
-
-
-
-
-
-
-
-	</div>
-
-
-
-							</div><!-- /.col -->
-						</div><!-- /.row -->
-					</div><!-- /.page-content -->
-				</div><!-- /.main-content -->
-
-				<div class="ace-settings-container" id="ace-settings-container">
-					<div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
-						<i class="icon-cog bigger-150"></i>
-					</div>
-
-					<div class="ace-settings-box" id="ace-settings-box">
-						<div>
-							<div class="pull-left">
-								<select id="skin-colorpicker" class="hide">
-									<option data-skin="default" value="#438EB9">#438EB9</option>
-									<option data-skin="skin-1" value="#222A2D">#222A2D</option>
-									<option data-skin="skin-2" value="#C6487E">#C6487E</option>
-									<option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
-								</select>
 							</div>
-							<span>&nbsp; Choose Skin</span>
-						</div>
-
-						<div>
-							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-navbar" />
-							<label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
-						</div>
-
-						<div>
-							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-sidebar" />
-							<label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
-						</div>
-
-						<div>
-							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-breadcrumbs" />
-							<label class="lbl" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
-						</div>
-
-						<div>
-							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" />
-							<label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
-						</div>
-
-						<div>
-							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-add-container" />
-							<label class="lbl" for="ace-settings-add-container">
-								Inside
-								<b>.container</b>
-							</label>
 						</div>
 					</div>
-				</div><!-- /#ace-settings-container -->
-			</div><!-- /.main-container-inner -->
-
-			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
-				<i class="icon-double-angle-up icon-only bigger-110"></i>
-			</a>
-		</div><!-- /.main-container -->
-
-		<!-- basic scripts -->
-
-		<!--[if !IE]> -->
-
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-		<!-- <![endif]-->
-
-		<!--[if IE]>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<![endif]-->
-
-		<!--[if !IE]> -->
-
-		<script type="text/javascript">
-			window.jQuery || document.write("<script src='{{URL::asset('/')}}/assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
-		</script>
-
-		<!-- <![endif]-->
-
-		<!--[if IE]>
-<script type="text/javascript">
- window.jQuery || document.write("<script src='{{URL::asset('/')}}/assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
-</script>
-<![endif]-->
-
-		<script type="text/javascript">
-			if("ontouchend" in document) document.write("<script src='{{URL::asset('/')}}/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
-		</script>
-		<script src="{{URL::asset('/')}}/assets/js/bootstrap.min.js"></script>
-		<script src="{{URL::asset('/')}}/assets/js/typeahead-bs2.min.js"></script>
-
-		<!-- page specific plugin scripts -->
-
-		<!-- ace scripts -->
-
-		<script src="{{URL::asset('/')}}/assets/js/ace-elements.min.js"></script>
-		<script src="{{URL::asset('/')}}/assets/js/ace.min.js"></script>
-
-		<!-- inline scripts related to this page -->
-	<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
-</body>
-</html>
