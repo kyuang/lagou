@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Controllers\Admin;
 
-use Validator;
+use Validator,DB;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Models\Role_type;
@@ -12,16 +12,28 @@ class TypeController extends Controller
 {
 	public function lists()
 	{
-		$user = Role_type::get_type();
-		var_dump($user);die;
+		$user = Role_type::type_list();
+		// var_dump($user);die;
 		return view('admin.pricing',['arr'=>$user]);
 	}
 
 	public function add()
 	{
-		$user = Role_type::get_type();
+		if(!isset($_POST['role_name']))
+		{
+			$user = Role_type::get_type();
 		// var_dump($user);die;
 		return view('admin.add_type',['arr'=>$user]);
+		}
+		else
+		{
+			$data = $_POST;
+			$re = DB::table('role_type')->insert($data);
+			if($re)
+			{
+				echo "<a href='javascript:history.go(-1)'>返回继续添加</a><br><a href='lists'>去列表</a>";
+			}
+		}	
 	}
 
 

@@ -8,19 +8,20 @@ class Role_type extends Model
 	protected $table = "role_type";
 	protected function get_type()
 	{
-		$user = Role_type::all();
-		foreach ($user as $key => $v) 
+		$user = Role_type::where(['p_id'=>0])->get();
+		foreach($user as $key=>$v)
 		{
-			// $arr[] = $v->attributes;
-			// static $arr = array();
-			if($v->attributes['p_id']==0)
-			{
-				$arr[$v->attributes['r_id']] = $v->attributes;
-			}
+			$user[$key]['child'] = Role_type::where(['p_id'=>$v->attributes['r_id']])->get();
 		}
-		foreach($arr as $k=>$val)
-		{			
-				$arr[$k][] = '';			
+
+		return $user;
+	}
+
+	protected function type_list()
+	{
+		$user = Role_type::all();
+		foreach($user as $v){
+			$arr[] = $v->attributes;
 		} 
 		return $arr;
 	}

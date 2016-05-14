@@ -716,7 +716,7 @@
 							<div class="widget-box">
 								<!-- 添加分类表单 -->
 								<div class="widget-header header-color-dark">
-									<form action="">
+									<form action="{{url('Type/add')}}" method="post" >
 										<table>
 											<tr>
 												<td>分类名称</td>
@@ -728,6 +728,9 @@
 													<option value="0">顶级分类</option>
 													<?php foreach($arr as $v) { ?>
 														<option value="<?php echo $v['r_id'] ?>"><?php echo $v['role_name'] ?></option>
+														@foreach($v['child'] as $val)
+															<option value="{{$val->r_id}}"> &nbsp; &nbsp;|--{{$val->role_name}}</option>
+														@endforeach
 													<?php } ?>
 
 												</select></td>
