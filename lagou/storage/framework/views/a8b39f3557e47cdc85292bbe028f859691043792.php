@@ -137,64 +137,44 @@ window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
             <div class="menu_main job_hopping">
                 <h2>
                     技术
-                                                            <!-- 跳槽月 -->
-                                        <span></span>
+                    <!-- 跳槽月 -->
+                    <span></span>
                 </h2>
-
-                                                                                                                                                                                                            
                                                         
                 <a href="http://www.lagou.com/zhaopin/Java/" data-lg-tj-id="4A00" data-lg-tj-no="0001" data-lg-tj-cid="idnull">Java</a>
-                                                                                
-                                                        
+                                                                                                                                        
                 <a href="http://www.lagou.com/zhaopin/PHP/" data-lg-tj-id="4A00" data-lg-tj-no="0002" data-lg-tj-cid="idnull">PHP</a>
-                                                                                
                                                         
                 <a href="http://www.lagou.com/zhaopin/C/" data-lg-tj-id="4A00" data-lg-tj-no="0003" data-lg-tj-cid="idnull">C</a>
-                                                                                
                                                         
                 <a href="http://www.lagou.com/zhaopin/C++/" data-lg-tj-id="4A00" data-lg-tj-no="0004" data-lg-tj-cid="idnull">C++</a>
-                                                                                
                                                         
                 <a href="http://www.lagou.com/zhaopin/Android/" data-lg-tj-id="4A00" data-lg-tj-no="0005" data-lg-tj-cid="idnull">Android</a>
-                                                                                
                                                         
                 <a href="http://www.lagou.com/zhaopin/iOS/" data-lg-tj-id="4A00" data-lg-tj-no="0006" data-lg-tj-cid="idnull">iOS</a>
-                                                                                
                                                         
                 <a href="http://www.lagou.com/zhaopin/ceshi/" data-lg-tj-id="4A00" data-lg-tj-no="0007" data-lg-tj-cid="idnull">测试</a>
-                                                                                
                                                         
                 <a href="http://www.lagou.com/zhaopin/qianduankaifa/" data-lg-tj-id="4A00" data-lg-tj-no="0008" data-lg-tj-cid="idnull">前端开发</a>
-                                                                                
                                                         
                 <a href="http://www.lagou.com/zhaopin/jishujingli/" data-lg-tj-id="4A00" data-lg-tj-no="0009" data-lg-tj-cid="idnull">技术经理</a>
-                                                                                
                                                         
                 <a href="http://www.lagou.com/zhaopin/jishuzongjian/" data-lg-tj-id="4A00" data-lg-tj-no="0010" data-lg-tj-cid="idnull">技术总监</a>
-                                                                                
                                                         
                 <a href="http://www.lagou.com/zhaopin/jiagoushi/" data-lg-tj-id="4A00" data-lg-tj-no="0011" data-lg-tj-cid="idnull">架构师</a>
                                                                                 
                                                         
                 <a href="http://www.lagou.com/zhaopin/CTO/" data-lg-tj-id="4A00" data-lg-tj-no="0012" data-lg-tj-cid="idnull">CTO</a>
-                                                                                                                                                                                                                        </div>
+            </div>
             <div class="menu_sub dn" style="top: 0px;">
-                                <dl>
-                                        <dt>
-                                                
-                                                
-                                                                                                                                                                                                                                                                                                                                                                                                    
+                <dl>
+                    <dt>                                                                                                                                                                                                                                                                                                                                                                                               
                         <a href="http://www.lagou.com/zhaopin/houduankaifa/" data-lg-tj-id="4H00" data-lg-tj-no="0001" data-lg-tj-cid="idnull">后端开发</a>
                     </dt>
-                    <dd>
-                        
-                                                        
-                                                        
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <a href="http://www.lagou.com/zhaopin/Java/" data-lg-tj-id="4O00" data-lg-tj-no="0101" data-lg-tj-cid="idnull" class="curr">Java</a>
-                        
-                                                        
-                                                        
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <a href="http://www.lagou.com/zhaopin/Python/" data-lg-tj-id="4O00" data-lg-tj-no="0102" data-lg-tj-cid="idnull" class="">Python</a>
+                    <dd>    
+                    	<a href="http://www.lagou.com/zhaopin/Java/" data-lg-tj-id="4O00" data-lg-tj-no="0101" data-lg-tj-cid="idnull" class="curr">Java</a>
+                                                                                                                                      
+                        <a href="http://www.lagou.com/zhaopin/Python/" data-lg-tj-id="4O00" data-lg-tj-no="0102" data-lg-tj-cid="idnull" class="">Python</a>
                         
                                                         
                                                         
