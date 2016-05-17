@@ -19,7 +19,7 @@
 
 <!-- header/global_domain FE_base.. -->
 
-<script src="login/v.htm" charset="utf-8"></script><script src="{{URL::asset('/')}}login/analytics.js" async=""></script><script src="{{URL::asset('/')}}login/a.js" async=""></script><script type="text/javascript">
+<script src="login/v.htm" charset="utf-8"></script><script src="<?php echo e(URL::asset('/')); ?>login/analytics.js" async=""></script><script src="<?php echo e(URL::asset('/')); ?>login/a.js" async=""></script><script type="text/javascript">
 var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 	ctx : "http://www.lagou.com",
 	rctx : "http://hr.lagou.com",
@@ -37,7 +37,7 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
   	<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('/')}}login/main.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo e(URL::asset('/')); ?>login/main.css">
 </head>
 <body>
 
@@ -48,7 +48,7 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 </header>
 <section class="content_box cleafix">
 	<div class="left_area fl">
-		<form action="{{url('Index/login')}}" method="post">
+		<form action="<?php echo e(url('Index/login')); ?>" method="post">
 			<div class="form_body" data-view="loginView">
 				<div style="display: block;" class="input_item clearfix" data-propertyname="username" data-controltype="Phone">
 					<input class="input input_white" id="" name="email" placeholder="请输入已验证手机/邮箱" data-required="required" autocomplete="off" type="text">
@@ -57,7 +57,7 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 					<input class="input input_white" id="" name="password" placeholder="请输入密码" data-required="required" autocomplete="off" type="password">
 				</div>
 				<div class="input_item clearfix" data-propertyname="request_form_verifyCode" data-controltype="VerifyCode" style="display: block;">
-					<input class="input input_white fl" style="width:130px; display:block;" name="" placeholder="请证明你不是机器人" data-required="required" autocomplete="off" type="text"><img src="{{URL::asset('/')}}login/create.jpg" class="yzm">
+					<input class="input input_white fl" style="width:130px; display:block;" name="" placeholder="请证明你不是机器人" data-required="required" autocomplete="off" type="text"><img src="<?php echo e(URL::asset('/')); ?>login/create.jpg" class="yzm">
 					
 					<a href="javascript:;" class="reflash"></a>
 				</div>
@@ -68,7 +68,7 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 					<input class="btn btn_green btn_active btn_block btn_lg" value="登&nbsp;录" type="submit">
 				</div>
 				<div class="input_item clearfix">
-					<h5 class="reg_now">还没有拉勾帐号？<a href="{{URL::asset('Index/register')}}">立即注册</a></h5>
+					<h5 class="reg_now">还没有拉勾帐号？<a href="<?php echo e(URL::asset('Index/register')); ?>">立即注册</a></h5>
 				</div>
 				<input value="true" id="isVisiable_request_form_verifyCode" type="hidden">
 			</div>
@@ -76,7 +76,7 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 	</div>
 
 	<div class="divider fl">
-		<img src="{{URL::asset('/')}}login/divider-login_3362138.jpg" alt="分割线">
+		<img src="<?php echo e(URL::asset('/')); ?>login/divider-login_3362138.jpg" alt="分割线">
 	</div>
 	<div class="right_area fl">
 		<h5>使用以下帐号直接登录:</h5>
@@ -86,7 +86,7 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 			<li class="last_child"><a href="https://passport.lagou.com/oauth20/auth_weixinProvider.html" class="vender_icon icon_wechat" title="使用微信帐号登录" target="_blank"></a></li>
 		</ul>
 		<div class="qrcode">
-			<img src="{{URL::asset('/')}}login/qrcode_0ec6bff.jpg" alt="二维码">
+			<img src="<?php echo e(URL::asset('/')); ?>login/qrcode_0ec6bff.jpg" alt="二维码">
 			<p>[ 扫码下载拉勾APP ]</p>
 		</div>
 	</div>
@@ -98,9 +98,9 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 <!-- 页面主体END --><!-- jquery lib -->
 <!--拉勾UI框架 -->
 <!-- analytics js file --><!-- plat analytics js file -->
-<script type="text/javascript" src="{{URL::asset('/')}}login/vendor_b53750a.js"></script>
-<script type="text/javascript" src="{{URL::asset('/')}}login/main.js"></script>
-<script type="text/javascript" src="{{URL::asset('/')}}login/static_07dbb47.js"></script><script src="{{URL::asset('/')}}login/h.js" type="text/javascript"></script>
+<script type="text/javascript" src="<?php echo e(URL::asset('/')); ?>login/vendor_b53750a.js"></script>
+<script type="text/javascript" src="<?php echo e(URL::asset('/')); ?>login/main.js"></script>
+<script type="text/javascript" src="<?php echo e(URL::asset('/')); ?>login/static_07dbb47.js"></script><script src="<?php echo e(URL::asset('/')); ?>login/h.js" type="text/javascript"></script>
 <script type="text/javascript">
     //login page
     require(['pc/page/login/main']);
