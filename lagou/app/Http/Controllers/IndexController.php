@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Input;
 
+use App\Http\Models\Role_type;
+
 class IndexController extends Controller
 {
 	/**
@@ -14,7 +16,8 @@ class IndexController extends Controller
 	 */
 	public function index()
 	{
-		return view('index');
+		$list = Role_type::type_tree();
+		return view('index',['type'=>$list]);
 	}
 	/**
 	 * 登陆页面

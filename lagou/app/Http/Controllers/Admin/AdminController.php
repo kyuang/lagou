@@ -3,11 +3,14 @@ namespace App\Http\Controllers\Admin;
 
 use Validator;
 use Illuminate\Http\Request;
+
+
 use App\Http\Controllers\Controller;
 use Input;
-
+header("Content-type: text/html; charset=utf-8");
 class AdminController extends Controller
 {
+
 	//设置方法--登录
 	public function login()
 	{
@@ -16,6 +19,8 @@ class AdminController extends Controller
 	//执行登录--->跳转到后台首页
 	public function login_go()
 	{
+	
+		// var_dump($list);die;
 		return view('admin.index');
 	}
 	//数据添加---->添加职位的类型

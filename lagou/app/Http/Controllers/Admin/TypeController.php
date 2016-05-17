@@ -13,7 +13,7 @@ class TypeController extends Controller
 	public function lists()
 	{
 		$user = Role_type::type_list();
-		// var_dump($user);die;
+		
 		return view('admin.pricing',['arr'=>$user]);
 	}
 
@@ -34,6 +34,12 @@ class TypeController extends Controller
 				echo "<a href='javascript:history.go(-1)'>返回继续添加</a><br><a href='lists'>去列表</a>";
 			}
 		}	
+	}
+
+	public function show()
+	{
+		$list = Role_type::type_go();
+		var_dump($list);die;
 	}
 
 
