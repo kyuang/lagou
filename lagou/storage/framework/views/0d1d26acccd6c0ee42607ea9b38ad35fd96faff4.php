@@ -18,7 +18,7 @@
 
 
 <!-- header/global_domain FE_base.. -->
-
+<script src="<?php echo e(URL::asset('/')); ?>/assets/js/jquery-2.0.3.min.js"></script>
 <script src="<?php echo e(URL::asset('/')); ?>/register/v.htm" charset="utf-8"></script><script src="<?php echo e(URL::asset('/')); ?>/register/analytics.js" async=""></script><script src="<?php echo e(URL::asset('/')); ?>/register/a.js" async=""></script><script type="text/javascript">
 var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 	ctx : "http://www.lagou.com",
@@ -38,7 +38,6 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 <![endif]-->
 
 
-
     <link rel="stylesheet" type="text/css" href="<?php echo e(URL::asset('/')); ?>/register/main.css">
 </head>
 <body>
@@ -51,7 +50,7 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 <input value="true" id="is_must_show_verify_code" type="hidden">
 <section class="content_box cleafix">
 	<div class="left_area fl">
-		<form action="" method="">
+		<form action="<?php echo e(url('Zhuce/zhuce')); ?>" method="post">
 			<ul class="form_head clearfix">
 				<li class="active">
 					<i class="icon icon_phone"></i>
@@ -92,37 +91,91 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 			        </label>
 				</div>
 				<div style="display: block;" class="input_item clearfix" data-propertyname="submit" data-controltype="Botton">
-					<input class="btn btn_green btn_active btn_block btn_lg" value="注&nbsp;册" type="button">
+					<input class="btn btn_green btn_active btn_block btn_lg" value="注&nbsp;册" type="submit">
 				</div>
 			</div>
 			<div class="form_body" data-view="emailRegister" style="display:none;">
+			<div style="display: block;" class="input_item clearfix"  data-controltype="Email">
+					<input class="input input_white" name="username" placeholder="请输入您的昵称" data-required="required"  type="text">
+				</div>
 				<div style="display: block;" class="input_item clearfix" data-propertyname="email" data-controltype="Email">
-					<input class="input input_white" name="" placeholder="请输入常用邮箱地址" data-required="required" autocomplete="off" type="text">
+					<input class="input input_white" name="email" id="em" placeholder="请输入常用邮箱地址" data-required="required" autocomplete="off" type="text">
 				</div>
 				<div style="display: block;" class="input_item clearfix" data-propertyname="password" data-controltype="Password">
-					<input class="input input_white" name="" placeholder="请输入密码" data-required="required" autocomplete="off" type="password">
+					<input class="input input_white" name="pwd" placeholder="请输入密码" data-required="required" autocomplete="off" type="password">
 				</div>
 				<div style="display: block;" class="input_item clearfix" data-propertyname="request_form_verifyCode" data-controltype="VerifyCode">
-					<input class="input input_white fl" style="width:130px; display:block;" name="" placeholder="请证明你不是机器人" data-required="required" autocomplete="off" type="text"><img src="<?php echo e(URL::asset('/')); ?>/register/create.jpg" class="yzm">
+					<input class="input input_white fl" style="width:130px; display:block;" name="yan" placeholder="请证明你不是机器人" data-required="required" autocomplete="off" type="text"><img src="<?php echo e(URL::asset('/')); ?>/register/create.jpg" class="yzm">
 					
 					<a href="javascript:;" class="reflash"></a>
 				</div>
+				<div style="display: block;" class="input_item clearfix">
+					<input class="input input_white" name="numss" id="num" placeholder="请输入验证码" data-required="required" autocomplete="off">
+					<input type="hidden" id="nums" name="nuns" value="">
+					<input id="huo" type="button" value="获取验证码" onclick="yanzheng()">
+				</div>
+
 				<div style="display: block;" class="input_item clearfix" data-propertyname="type" data-controltype="Switch">
-					<input class="btn btn_outline btn_lg" value="找工作" data-myvalue="0" type="button">
-					<input class="btn btn_outline btn_lg last_child" value="招人" data-myvalue="1" type="button">
+					<input id="as" class="btn btn_outline btn_lg" value="找工作" data-myvalue="0" type="button" onclick="gongzuo()">
+					<input type="hidden" name="zhao" id="gong" value="">
+
+					<input id="ad" class="btn btn_outline btn_lg last_child" value="招人" data-myvalue="1" type="button" onclick="zhaoren()" >
+					<input type="hidden" name="zhaoren" value="" id="ren">
 				</div>
 				<div style="display: block;" class="input_item clearfix" data-propertyname="protocol" data-controltype="CheckBox">
 					<label class="box_checkbox" for="checkbox2">
-			            <span style="background-position: -13px 3px;" class="checkbox_icon"></span><input checked="checked" value="" id="checkbox2" class="checkbox" data-myvalue="agred" data-text="我已阅读并同意" type="checkbox">我已阅读并同意
+			            <span style="background-position: -13px 3px;" class="checkbox_icon"></span><input checked="checked" name="xieyi" value="1" id="checkbox2" class="checkbox" data-myvalue="agred" data-text="我已阅读并同意" type="checkbox">我已阅读并同意
 			            <a href="http://www.lagou.com/privacy.html" target="_blank" style="color:#00b38a">《拉勾用户协议》</a>
 			        </label>
 				</div>
 				<div style="display: block;" class="input_item clearfix" data-propertyname="submit" data-controltype="Botton">
-					<input class="btn btn_green btn_active btn_block btn_lg" value="注&nbsp;册" type="button">
+					<input class="btn btn_green btn_active btn_block btn_lg" value="注&nbsp;册" type="submit">
 				</div>
 			</div>
 		</form>
 	</div>
+	<script>
+		function gongzuo()
+		{
+			//获取值
+			var zhao = $("#as").attr("data-myvalue");
+			//将获取到的值付给找工作的隐藏域
+			$("#gong").val(zhao);
+		}
+		function zhaoren()
+		{
+			//获取招人的值
+			var zhaoren = $("#ad").attr("data-myvalue");
+			$("#ren").val(zhaoren);
+		}
+		//获取验证码
+		function yanzheng()
+		{
+			var time = 60;
+			$("#huo").attr('disabled','true');
+			$("#huo").val("重新发送("+time+")");
+			
+			var ttt = setInterval(function(){
+				time--;
+				// alert(time)
+				$("#huo").val("重新发送("+time+")");
+				if(time==0)
+				{
+					clearTimeout(ttt);
+					$("#huo").attr('disabled',false);
+				}
+			},1000);
+			// alert(1)
+			var id = $("#em").val();
+			var url = "<?php echo e(url('Zhuce/yanzheng')); ?>";
+			var data = {'zhi':id};
+			$.get(url,data,function(msg){
+
+			});
+
+		}
+	</script>
+
 	<div class="divider fl">
 		<img src="<?php echo e(URL::asset('/')); ?>/register/divider_a3c3658.jpg" alt="分割线">
 	</div>
@@ -148,7 +201,7 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 </footer><!-- jquery lib -->
 <!--拉勾UI框架 -->
 <!-- analytics js file --><!-- plat analytics js file -->
-<script type="text/javascript" src="<?php echo e(URL::asset('/')); ?>/register/vendor_b53750a.js"></script>
+<script type="text/javascript" src="<?php echo e(URL::asset('/')); ?>register/vendor_b53750a.js"></script>
 <script type="text/javascript" src="<?php echo e(URL::asset('/')); ?>/register/main.js"></script>
 <script type="text/javascript" src="<?php echo e(URL::asset('/')); ?>/register/static_07dbb47.js"></script><script src="<?php echo e(URL::asset('/')); ?>/register/h.js" type="text/javascript"></script>
 <script type="text/javascript">
