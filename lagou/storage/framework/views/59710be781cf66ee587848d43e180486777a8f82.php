@@ -18,8 +18,8 @@
 
 
 <!-- header/global_domain FE_base.. -->
-<script src="{{URL::asset('/')}}/assets/js/jquery-2.0.3.min.js"></script>
-<script src="{{URL::asset('/')}}/register/v.htm" charset="utf-8"></script><script src="{{URL::asset('/')}}/register/analytics.js" async=""></script><script src="{{URL::asset('/')}}/register/a.js" async=""></script><script type="text/javascript">
+<script src="<?php echo e(URL::asset('/')); ?>/assets/js/jquery-2.0.3.min.js"></script>
+<script src="<?php echo e(URL::asset('/')); ?>/register/v.htm" charset="utf-8"></script><script src="<?php echo e(URL::asset('/')); ?>/register/analytics.js" async=""></script><script src="<?php echo e(URL::asset('/')); ?>/register/a.js" async=""></script><script type="text/javascript">
 var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 	ctx : "http://www.lagou.com",
 	rctx : "http://hr.lagou.com",
@@ -38,7 +38,7 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 <![endif]-->
 
 
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('/')}}/register/main.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo e(URL::asset('/')); ?>/register/main.css">
 </head>
 <body>
 
@@ -50,7 +50,7 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 <input value="true" id="is_must_show_verify_code" type="hidden">
 <section class="content_box cleafix">
 	<div class="left_area fl">
-		<form action="{{url('Zhuce/zhuce')}}" method="post">
+		<form action="<?php echo e(url('Zhuce/zhuce')); ?>" method="post">
 			<ul class="form_head clearfix">
 				<li class="active">
 					<i class="icon icon_phone"></i>
@@ -66,7 +66,7 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 					<input class="input input_white" id="" name="" placeholder="请输入常用手机号码" data-required="required" autocomplete="off" type="text">
 				</div>
 				<div class="input_item clearfix" data-propertyname="request_form_verifyCode" data-controltype="VerifyCode" style="display: block;">
-					<input class="input input_white fl" style="width:130px; display:block;" name="" placeholder="请证明你不是机器人" data-required="required" autocomplete="off" type="text"><img src="{{URL::asset('/')}}/register/create.jpg" class="yzm">
+					<input class="input input_white fl" style="width:130px; display:block;" name="" placeholder="请证明你不是机器人" data-required="required" autocomplete="off" type="text"><img src="<?php echo e(URL::asset('/')); ?>/register/create.jpg" class="yzm">
 					
 					<a href="javascript:;" class="reflash"></a>
 				</div>
@@ -105,7 +105,7 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 					<input class="input input_white" name="pwd" placeholder="请输入密码" data-required="required" autocomplete="off" type="password">
 				</div>
 				<div style="display: block;" class="input_item clearfix" data-propertyname="request_form_verifyCode" data-controltype="VerifyCode">
-					<input class="input input_white fl" style="width:130px; display:block;" name="yan" placeholder="请证明你不是机器人" data-required="required" autocomplete="off" type="text"><img src="{{URL::asset('/')}}/register/create.jpg" class="yzm">
+					<input class="input input_white fl" style="width:130px; display:block;" name="yan" placeholder="请证明你不是机器人" data-required="required" autocomplete="off" type="text"><img src="<?php echo e(URL::asset('/')); ?>/register/create.jpg" class="yzm">
 					
 					<a href="javascript:;" class="reflash"></a>
 				</div>
@@ -167,7 +167,7 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 			},1000);
 			// alert(1)
 			var id = $("#em").val();
-			var url = "{{url('Zhuce/yanzheng')}}";
+			var url = "<?php echo e(url('Zhuce/yanzheng')); ?>";
 			var data = {'zhi':id};
 			$.get(url,data,function(msg){
 
@@ -177,7 +177,7 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 	</script>
 
 	<div class="divider fl">
-		<img src="{{URL::asset('/')}}/register/divider_a3c3658.jpg" alt="分割线">
+		<img src="<?php echo e(URL::asset('/')); ?>/register/divider_a3c3658.jpg" alt="分割线">
 	</div>
 	
 	<div class="right_area fl">
@@ -190,7 +190,7 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 			<li class="last_child"><a href="https://passport.lagou.com/oauth20/auth_weixinProvider.html" class="vender_icon icon_wechat" title="使用微信帐号登录" target="_blank"></a></li>
 		</ul>
 		<div class="qrcode">
-			<img src="{{URL::asset('/')}}/register/qrcode_0ec6bff.jpg" alt="二维码">
+			<img src="<?php echo e(URL::asset('/')); ?>/register/qrcode_0ec6bff.jpg" alt="二维码">
 			<p>[ 扫码下载拉勾APP ]</p>
 		</div>
 	</div>
@@ -201,9 +201,9 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 </footer><!-- jquery lib -->
 <!--拉勾UI框架 -->
 <!-- analytics js file --><!-- plat analytics js file -->
-<script type="text/javascript" src="{{URL::asset('/')}}register/vendor_b53750a.js"></script>
-<script type="text/javascript" src="{{URL::asset('/')}}/register/main.js"></script>
-<script type="text/javascript" src="{{URL::asset('/')}}/register/static_07dbb47.js"></script><script src="{{URL::asset('/')}}/register/h.js" type="text/javascript"></script>
+<script type="text/javascript" src="<?php echo e(URL::asset('/')); ?>register/vendor_b53750a.js"></script>
+<script type="text/javascript" src="<?php echo e(URL::asset('/')); ?>/register/main.js"></script>
+<script type="text/javascript" src="<?php echo e(URL::asset('/')); ?>/register/static_07dbb47.js"></script><script src="<?php echo e(URL::asset('/')); ?>/register/h.js" type="text/javascript"></script>
 <script type="text/javascript">
     //login page
     require(['pc/page/register/main']);

@@ -48,3 +48,8 @@ Route::any('/Admin/content',"Admin\AdminController@content");
 
 Route::any('/Type/add',"Admin\TypeController@add");
 Route::any('/Type/lists',"Admin\TypeController@lists");
+
+// ------------------------------------------------------------------------
+//注册
+Route::any('/Zhuce/zhuce',"ZhuceController@zhuce");
+Route::any('/Zhuce/yanzheng',"ZhuceController@yanzheng");
