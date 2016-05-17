@@ -48,8 +48,22 @@ Route::any('/Admin/content',"Admin\AdminController@content");
 
 Route::any('/Type/add',"Admin\TypeController@add");
 Route::any('/Type/lists',"Admin\TypeController@lists");
+<<<<<<< HEAD
 
 // ------------------------------------------------------------------------
 //注册
 Route::any('/Zhuce/zhuce',"ZhuceController@zhuce");
 Route::any('/Zhuce/yanzheng',"ZhuceController@yanzheng");
+=======
+Route::any('/Type/show',"Admin\TypeController@show");
+
+//公司发布职位
+Route::any('/Admin/Company_position',"Admin\CompanyController@Company_position");
+//添加入库
+Route::any('/Admin/Add_position',"Admin\CompanyController@Add_position");
+//职位列表
+Route::any('/Admin/Job_lists',"Admin\CompanyController@Job_lists");
+
+
+
+>>>>>>> 6ce4716e8bdf97c081f2c63f18938ca836b615e3

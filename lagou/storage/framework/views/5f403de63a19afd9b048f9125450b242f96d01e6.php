@@ -388,12 +388,43 @@
 								<li>
 									<a href="<?php echo e(url('Admin/contet')); ?>">
 										<i class="icon-double-angle-right"></i>
-										公司描述
+										首页导航管理
+									</a>
+								</li>
+								<li>
+									<a href="<?php echo e(url('Admin/contet')); ?>">
+										<i class="icon-double-angle-right"></i>
+										首页广告管理
+									</a>
+								</li>
+								<li>
+									<a href="<?php echo e(url('Admin/contet')); ?>">
+										<i class="icon-double-angle-right"></i>
+										首页轮播图管理
 									</a>
 								</li>
 							</ul>
 						</li>
-
+						<li>
+							<a href="" class="dropdown-toggle">
+								<i class="icon-text-width"></i>
+								<span class="menu-text"> 公司职位发布 </span>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="<?php echo e(url('Admin/Company_position')); ?>">
+										<i class="icon-double-angle-right"></i>
+										  添加招聘信息
+									</a>
+								</li>
+								<li>
+									<a href="<?php echo e(url('/Admin/Job_lists')); ?>">
+										<i class="icon-double-angle-right"></i>
+										  招聘信息管理
+									</a>
+								</li>
+							</ul>
+						</li>	
 						<li>
 							<a href="#" class="dropdown-toggle">
 								<i class="icon-desktop"></i>
@@ -619,7 +650,7 @@
 								</li>
 
 								<li>
-									<a href="login.html">
+									<a href="<?php echo e(url('Index/login')); ?>">
 										<i class="icon-double-angle-right"></i>
 										登录 &amp; 注册
 									</a>
