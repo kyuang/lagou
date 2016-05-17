@@ -48,13 +48,13 @@ Route::any('/Admin/content',"Admin\AdminController@content");
 
 Route::any('/Type/add',"Admin\TypeController@add");
 Route::any('/Type/lists',"Admin\TypeController@lists");
-<<<<<<< HEAD
+
 
 // ------------------------------------------------------------------------
 //注册
 Route::any('/Zhuce/zhuce',"ZhuceController@zhuce");
 Route::any('/Zhuce/yanzheng',"ZhuceController@yanzheng");
-=======
+
 Route::any('/Type/show',"Admin\TypeController@show");
 
 //公司发布职位
@@ -66,4 +66,4 @@ Route::any('/Admin/Job_lists',"Admin\CompanyController@Job_lists");
 
 
 
->>>>>>> 6ce4716e8bdf97c081f2c63f18938ca836b615e3
+

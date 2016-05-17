@@ -4826,3 +4826,6 @@ Stack trace:
 #36 D:\study\learngit\lagou\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #37 {main}  
 >>>>>>> 6ce4716e8bdf97c081f2c63f18938ca836b615e3
+[2016-05-17 11:13:44] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in D:\study\learngit\lagou\app\Http\routes.php:51
+Stack trace:
+#0 {main}  
