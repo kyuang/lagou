@@ -33,6 +33,7 @@ Route::group(['middleware' => ['web']], function () {
 //前台首页
 Route::any('/Index/index',"IndexController@index");
 Route::any('/Index/login',"IndexController@login");
+Route::any('/login/login.json',"IndexController@login.json");
 Route::any('/Index/register',"IndexController@register");
 
 
@@ -48,13 +49,19 @@ Route::any('/Admin/content',"Admin\AdminController@content");
 
 Route::any('/Type/add',"Admin\TypeController@add");
 Route::any('/Type/lists',"Admin\TypeController@lists");
+<<<<<<< HEAD
+=======
 
+>>>>>>> 3bd74cc3a0fffcb09d3f3f58f33e135dfb81e0f7
 
 // ------------------------------------------------------------------------
 //注册
 Route::any('/Zhuce/zhuce',"ZhuceController@zhuce");
 Route::any('/Zhuce/yanzheng',"ZhuceController@yanzheng");
+<<<<<<< HEAD
+=======
 
+>>>>>>> 3bd74cc3a0fffcb09d3f3f58f33e135dfb81e0f7
 Route::any('/Type/show',"Admin\TypeController@show");
 
 //公司发布职位
@@ -63,6 +70,8 @@ Route::any('/Admin/Company_position',"Admin\CompanyController@Company_position")
 Route::any('/Admin/Add_position',"Admin\CompanyController@Add_position");
 //职位列表
 Route::any('/Admin/Job_lists',"Admin\CompanyController@Job_lists");
+<<<<<<< HEAD
+=======
 
 //用户列表
 Route::any('/User/user_list',"UserController@user_list");
@@ -71,3 +80,4 @@ Route::any('/User/user_list',"UserController@user_list");
 Route::any('/Admin/elements',"Admin\AdminController@elements");
 
 
+>>>>>>> 3bd74cc3a0fffcb09d3f3f58f33e135dfb81e0f7
