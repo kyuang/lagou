@@ -10,6 +10,8 @@ use Input;
 
 use App\Http\Models\Role_type;
 
+header("content-type:text/html;charset=utf-8");
+
 class IndexController extends Controller
 {
 	/**
@@ -19,7 +21,15 @@ class IndexController extends Controller
 	public function index()
 	{
 		$list = Role_type::type_tree();
-		return view('index',['type'=>$list]);
+		//首页职位招聘热门职位
+		$job=DB::table("job")->get();
+		//print_r($job);die;
+		foreach ($job as $k => $v) {
+			$job[$k]->company_type=unserialize($v->company_type);
+			$job[$k]->material_benefits=unserialize($v->material_benefits);
+		}
+		//print_r($job);die;
+		return view('index',['type'=>$list,"job"=>$job]);
 	}
 	/**
 	 * 登陆页面
