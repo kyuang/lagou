@@ -89,8 +89,8 @@
 
 				<div class="clearfix">
 					<label class="inline">
-						<input type="checkbox" class="ace" />
-						<span class="lbl"> Remember Me</span>
+						<input type="checkbox" Rememberclass="ace" />
+						<span class="lbl">  Me</span>
 					</label>
 
 					<button id="tijiao" type="button" class="width-35 pull-right btn btn-sm btn-primary">

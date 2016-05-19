@@ -33,6 +33,7 @@ Route::group(['middleware' => ['web']], function () {
 //前台首页
 Route::any('/Index/index',"IndexController@index");
 Route::any('/Index/login',"IndexController@login");
+Route::any('/login/login.json',"IndexController@login.json");
 Route::any('/Index/register',"IndexController@register");
 
 
