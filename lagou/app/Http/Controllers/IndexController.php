@@ -1,10 +1,11 @@
 <?php
 namespace App\Http\Controllers;
 
-use Validator,DB;
+use Validator,DB,Redirect;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Cookie;
 use Input;
 
 use App\Http\Models\Role_type;
@@ -36,8 +37,11 @@ class IndexController extends Controller
 			$email=$_POST['email'];
 			$password=$_POST['password'];
 			$re = DB::table('users')->where(['email'=>$email,'password'=>$password])->first();
-			$username = DB::table('users')->lists('username');
+			// var_dump($re);die;
+			$username = DB::table('users')->where(['email'=>$email,'password'=>$password])->pluck('username');
 			// var_dump($username);die;
+			$a=$username[0];
+			// var_dump($a);die;
 			if($re)
 			{
 				  //登陆失败 记录登陆失败的次数
@@ -53,11 +57,13 @@ class IndexController extends Controller
 				{
 					
 					//登录成功
-					Session::put('username',$username);
+					setcookie('username',$a);
+					
+					// Session::put('username',$username);
 					// $a = Session::get('username');
 					// var_dump($a);die;
 					echo "<script>alert('登陆成功');location.href='index';</script>";
-						die;
+						
 				}
 				  
 			}
@@ -72,6 +78,15 @@ class IndexController extends Controller
 			}
 		}
 		
+	}
+
+	/**
+	 * 退出页面
+	 */
+	public function loginout()
+	{
+		setcookie('username','',time()-1);
+		return Redirect::to('Index/index');
 	}
 
 	/**
