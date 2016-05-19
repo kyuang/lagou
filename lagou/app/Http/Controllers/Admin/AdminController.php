@@ -48,4 +48,10 @@ class AdminController extends Controller
 	{
 		return view('admin.pricing');
 	}
+
+	public function elements()
+	{
+		return view('admin.elements');
+		
+	}
 }
