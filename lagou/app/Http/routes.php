@@ -72,7 +72,8 @@ Route::any('/Admin/Job_lists',"Admin\CompanyController@Job_lists");
 Route::any('/User/user_list',"UserController@user_list");
 
 //城市站管理
-Route::any('/Admin/elements',"Admin\AdminController@elements");
+Route::any('/City/elements',"Admin\CityController@elements");
+Route::any('/City/add_city',"Admin\CityController@add_city");
 
 
 
