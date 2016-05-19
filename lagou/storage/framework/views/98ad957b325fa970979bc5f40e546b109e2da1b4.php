@@ -48,7 +48,7 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 </header>
 <section class="content_box cleafix">
 	<div class="left_area fl">
-		<form action="<?php echo e(url('Index/login')); ?>" method="post">
+		<form action="<?php echo e(url('Index/login')); ?>" method="post" id="from">
 			<div class="form_body" data-view="loginView">
 				<div style="display: block;" class="input_item clearfix" data-propertyname="username" data-controltype="Phone">
 					<input class="input input_white" id="" name="email" placeholder="请输入已验证手机/邮箱" data-required="required" autocomplete="off" type="text">
@@ -99,11 +99,16 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 <!--拉勾UI框架 -->
 <!-- analytics js file --><!-- plat analytics js file -->
 <script type="text/javascript" src="<?php echo e(URL::asset('/')); ?>login/vendor_b53750a.js"></script>
-<script type="text/javascript" src="<?php echo e(URL::asset('/')); ?>login/main.js"></script>
+<script type="text/javascript" src="<?php echo e(URL::asset('/')); ?>login/jquery.js"></script>
 <script type="text/javascript" src="<?php echo e(URL::asset('/')); ?>login/static_07dbb47.js"></script><script src="<?php echo e(URL::asset('/')); ?>login/h.js" type="text/javascript"></script>
 <script type="text/javascript">
     //login page
     require(['pc/page/login/main']);
+</script>
+<script>
+$("#from").submit(function(){
+	var url="<?php echo e(url('Index/login')); ?>";
+});
 </script>
 
 
