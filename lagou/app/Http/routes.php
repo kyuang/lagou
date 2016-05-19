@@ -64,6 +64,10 @@ Route::any('/Admin/Add_position',"Admin\CompanyController@Add_position");
 //职位列表
 Route::any('/Admin/Job_lists',"Admin\CompanyController@Job_lists");
 
+//用户列表
+Route::any('/User/user_list',"UserController@user_list");
 
+//城市站管理
+Route::any('/Admin/elements',"Admin\AdminController@elements");
 
 
