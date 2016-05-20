@@ -1,13 +1,16 @@
 <?php
 namespace App\Http\Controllers;
 
-use Validator,DB;
+use Validator,DB,Redirect;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Cookie;
 use Input;
 
 use App\Http\Models\Role_type;
+
+header("content-type:text/html;charset=utf-8");
 
 class IndexController extends Controller
 {
@@ -17,6 +20,7 @@ class IndexController extends Controller
 	 */
 	public function index()
 	{
+<<<<<<< HEAD
 		$id=$_GET['id'];
 		if($id!=1)
 		{	
@@ -27,6 +31,18 @@ class IndexController extends Controller
 			$list = Role_type::type_tree();
 			return view('dengindex',['type'=>$list]);
 		}
+=======
+		$list = Role_type::type_tree();
+		//首页职位招聘热门职位
+		$job=DB::table("job")->get();
+		//print_r($job);die;
+		foreach ($job as $k => $v) {
+			$job[$k]->company_type=unserialize($v->company_type);
+			$job[$k]->material_benefits=unserialize($v->material_benefits);
+		}
+		//print_r($job);die;
+		return view('index',['type'=>$list,"job"=>$job]);
+>>>>>>> e4ebd113b83244aa2233ceb054ffcac274547cae
 	}
 	/**
 	 * 登陆页面
@@ -44,8 +60,11 @@ class IndexController extends Controller
 			$email=$_POST['email'];
 			$password=$_POST['password'];
 			$re = DB::table('users')->where(['email'=>$email,'password'=>$password])->first();
-			$username = DB::table('users')->lists('username');
+			// var_dump($re);die;
+			$username = DB::table('users')->where(['email'=>$email,'password'=>$password])->pluck('username');
 			// var_dump($username);die;
+			$a=$username[0];
+			// var_dump($a);die;
 			if($re)
 			{
 				  //登陆失败 记录登陆失败的次数
@@ -61,11 +80,18 @@ class IndexController extends Controller
 				{
 					
 					//登录成功
-					Session::put('username',$username);
+					setcookie('username',$a);
+					
+					// Session::put('username',$username);
 					// $a = Session::get('username');
 					// var_dump($a);die;
+<<<<<<< HEAD
 					echo "<script>alert('登陆成功');location.href='index?id=1';</script>";
 						die;
+=======
+					echo "<script>alert('登陆成功');location.href='index';</script>";
+						
+>>>>>>> e4ebd113b83244aa2233ceb054ffcac274547cae
 				}
 				  
 			}
@@ -80,6 +106,15 @@ class IndexController extends Controller
 			}
 		}
 		
+	}
+
+	/**
+	 * 退出页面
+	 */
+	public function loginout()
+	{
+		setcookie('username','',time()-1);
+		return Redirect::to('Index/index');
 	}
 
 	/**

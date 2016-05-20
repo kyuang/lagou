@@ -77,24 +77,15 @@ sctx : "http://suggest.lagou.com"
 <a href="http://hr.lagou.com/dashboard/" class="lg_os" data-lg-tj-id="5600" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">进入企业版</a>
 </div>
 
+
 <ul class="lg_tbar_r">
-<?php if(empty($_COOKIE['username'])){?>
 <li>
 <a href="<?php echo e(url('Index/login')); ?>" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">登录</a>
 </li>
 <li>
 <a href="<?php echo e(url('Index/register')); ?>" class="bl" data-lg-tj-id="5g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">注册</a>
 </li>
-<?php }else{?>
-<li>
-<a href="" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">欢迎<?php echo $_COOKIE['username'];?>登录</a>
-</li>
-<li>
-<a href="<?php echo e(url('Index/loginout')); ?>" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a>
-</li>
-<?php }?>
 </ul>
-	
 
 
 </div>
@@ -235,6 +226,7 @@ sctx : "http://suggest.lagou.com"
 <dd>
 
 <a href="http://www.lagou.com/zhaopin/HTML5/" data-lg-tj-id="4O00" data-lg-tj-no="0201" data-lg-tj-cid="idnull" class="">HTML5</a>
+
 
 <a href="http://www.lagou.com/zhaopin/Android/" data-lg-tj-id="4O00" data-lg-tj-no="0202" data-lg-tj-cid="idnull" class="curr">Android</a>
 
@@ -1871,559 +1863,57 @@ sctx : "http://suggest.lagou.com"
 <div id="hotList" class="clearfix">
 
 <div class="hot_posHotPosition position_list init_joblist">
+<?php foreach($job as $v): ?>
+	<?php if($v->is_hot==1): ?>
 <ul class="clearfix">
 <li class="position_list_item" data-jobid="1639461" data-positionid="1639461" data-salary="15k-25k" data-company="121体育" data-positionname="HTML5" data-companyid="82528">
+<!-- 开始 -->
 <div class="pli_top">
 <div class="fl pli_top_l">
 <div class="position_name">
-<!--  -->
 
-
-<h2 class="fl"><a href="http://www.lagou.com/jobs/1639461.html" target="_blank" class="position_link fl wordCut" data-index="0" data-lg-tj-id="4m00" data-lg-tj-no="0001" data-lg-tj-cid="1639461">HTML5<span>[北京]</span></a></h2>
+<h2 class="fl"><a href="http://www.lagou.com/jobs/1639461.html" target="_blank" class="position_link fl wordCut" data-index="0" data-lg-tj-id="4m00" data-lg-tj-no="0001" data-lg-tj-cid="1639461"><?php echo e($v->job_name); ?><span><?php echo e($v->region_name); ?></span></a></h2>
 <!-- 此处需要和后台确认 -->
-<span class="fl">1天前发布</span>
+
+<span class="fl"><?php echo e($v->kai_time); ?></span>
 </div>
 <div>
-<span class="salary fl">15k-25k</span>
-<span><!-- <i class="experience"></i>&nbsp;  -->经验3-5年</span> / <span>学历不限</span>
+<span class="salary fl"><?php echo e($v->salary); ?></span>
+<span><!-- <i class="experience"></i>&nbsp;  --><?php echo e($v->work_jingyan); ?></span> / <span><?php echo e($v->xueli); ?></span>
 </div>
 </div>
 <div class="fr pli_top_r">
 <div class="company_name wordCut">
-<a href="http://www.lagou.com/gongsi/82528.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0001" data-lg-tj-cid="82528">121体育</a>
+<a href="http://www.lagou.com/gongsi/82528.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0001" data-lg-tj-cid="82528">公司名称</a>
 </div>
 <div class="industry wordCut">
-<span> 移动互联网 · O2O</span> / <span>初创型(不需要融资)</span>
+<?php foreach($v->company_type as $t): ?>
+	<span><?php echo e($t); ?></span><?php endforeach; ?>/<span><?php echo e($v->financing_name); ?></span>
 </div>
 </div>
 </div>
 <div class="pli_btm">
 <div class="pli_btm_l fl wordCut">
-“地铁直达 建设骨干”
+<?php echo e($v->entice); ?>
+
 </div>
 <div class="pli_btm_r fl">
-<span>节日礼物</span>
-<span>带薪年假</span>
-<span>绩效奖金</span>
+<?php foreach($v->material_benefits as $m): ?>
+<span><?php echo e($m); ?></span>
+<?php endforeach; ?>
 </div>
 </div>
 </li>
 <li class="position_list_item" data-jobid="1572650" data-positionid="1572650" data-salary="20k-35k" data-company="好好住" data-positionname="Android" data-companyid="84329">
-<div class="pli_top">
-<div class="fl pli_top_l">
-<div class="position_name">
-<!--  -->
-
-
-<h2 class="fl"><a href="http://www.lagou.com/jobs/1572650.html" target="_blank" class="position_link fl wordCut" data-index="1" data-lg-tj-id="4m00" data-lg-tj-no="0002" data-lg-tj-cid="1572650">Android<span>[北京]</span></a></h2>
-<!-- 此处需要和后台确认 -->
-<span class="fl">2016-05-05</span>
-</div>
-<div>
-<span class="salary fl">20k-35k</span>
-<span><!-- <i class="experience"></i>&nbsp;  -->经验3-5年</span> / <span>本科</span>
-</div>
-</div>
-<div class="fr pli_top_r">
-<div class="company_name wordCut">
-<a href="http://www.lagou.com/gongsi/84329.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0002" data-lg-tj-cid="84329">好好住</a>
-</div>
-<div class="industry wordCut">
-<span> 移动互联网 · 电子商务</span> / <span>成长型(A轮)</span>
-</div>
-</div>
-</div>
-<div class="pli_btm">
-<div class="pli_btm_l fl wordCut">
-“创造中国最有趣创新受欢迎的家居APP”
-</div>
-<div class="pli_btm_r fl">
-<span>技能培训</span>
-<span>股票期权</span>
-<span>带薪年假</span>
-</div>
-</div>
+	<?php endif; ?>
+<?php endforeach; ?>
+<!-- 结束 -->
 </li>
-<li class="position_list_item" data-jobid="627426" data-positionid="627426" data-salary="18k-25k" data-company="拉勾网" data-positionname="数据产品经理" data-companyid="147">
-<div class="pli_top">
-<div class="fl pli_top_l">
-<div class="position_name">
-<!--  -->
 
-
-<h2 class="fl"><a href="http://www.lagou.com/jobs/627426.html" target="_blank" class="position_link fl wordCut" data-index="2" data-lg-tj-id="4m00" data-lg-tj-no="0003" data-lg-tj-cid="627426">数据产品经理<span>[北京]</span></a></h2>
-<!-- 此处需要和后台确认 -->
-<span class="fl">2016-05-04</span>
-</div>
-<div>
-<span class="salary fl">18k-25k</span>
-<span><!-- <i class="experience"></i>&nbsp;  -->经验3-5年</span> / <span>本科</span>
-</div>
-</div>
-<div class="fr pli_top_r">
-<div class="company_name wordCut">
-<a href="http://www.lagou.com/gongsi/147.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0003" data-lg-tj-cid="147">拉勾网</a>
-</div>
-<div class="industry wordCut">
-<span> 企业服务 · 招聘</span> / <span>成熟型(C轮)</span>
-</div>
-</div>
-</div>
-<div class="pli_btm">
-<div class="pli_btm_l fl wordCut">
-“推动数据系统化，结束被临时需求拖死的时代”
-</div>
-<div class="pli_btm_r fl">
-<span>节日礼物</span>
-<span>年底双薪</span>
-<span>绩效奖金</span>
-</div>
-</div>
-</li>
-<li class="position_list_item" data-jobid="1694539" data-positionid="1694539" data-salary="10k-15k" data-company="北大软件" data-positionname=".NET开发" data-companyid="80815">
-<div class="pli_top">
-<div class="fl pli_top_l">
-<div class="position_name">
-<!--  -->
-
-
-<h2 class="fl"><a href="http://www.lagou.com/jobs/1694539.html" target="_blank" class="position_link fl wordCut" data-index="3" data-lg-tj-id="4m00" data-lg-tj-no="0004" data-lg-tj-cid="1694539">.NET开发<span>[北京]</span></a></h2>
-<!-- 此处需要和后台确认 -->
-<span class="fl">2016-05-04</span>
-</div>
-<div>
-<span class="salary fl">10k-15k</span>
-<span><!-- <i class="experience"></i>&nbsp;  -->经验1-3年</span> / <span>本科</span>
-</div>
-</div>
-<div class="fr pli_top_r">
-<div class="company_name wordCut">
-<a href="http://www.lagou.com/gongsi/80815.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0004" data-lg-tj-cid="80815">北大软件</a>
-</div>
-<div class="industry wordCut">
-<span> 移动互联网 · 电子商务</span> / <span>初创型(未融资)</span>
-</div>
-</div>
-</div>
-<div class="pli_btm">
-<div class="pli_btm_l fl wordCut">
-“五险一金、国企、发展平台大、稳定”
-</div>
-<div class="pli_btm_r fl">
-<span>节日礼物</span>
-<span>带薪年假</span>
-<span>绩效奖金</span>
-</div>
-</div>
-</li>
-<li class="position_list_item" data-jobid="616216" data-positionid="616216" data-salary="15k-30k" data-company="人人行(借贷宝)" data-positionname="PHP" data-companyid="61921">
-<div class="pli_top">
-<div class="fl pli_top_l">
-<div class="position_name">
-<!--  -->
-
-
-<h2 class="fl"><a href="http://www.lagou.com/jobs/616216.html" target="_blank" class="position_link fl wordCut" data-index="4" data-lg-tj-id="4m00" data-lg-tj-no="0005" data-lg-tj-cid="616216">PHP<span>[北京]</span></a></h2>
-<!-- 此处需要和后台确认 -->
-<span class="fl">2016-05-06</span>
-</div>
-<div>
-<span class="salary fl">15k-30k</span>
-<span><!-- <i class="experience"></i>&nbsp;  -->经验1-3年</span> / <span>本科</span>
-</div>
-</div>
-<div class="fr pli_top_r">
-<div class="company_name wordCut">
-<a href="http://www.lagou.com/gongsi/61921.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0005" data-lg-tj-cid="61921">人人行(借贷宝)</a>
-</div>
-<div class="industry wordCut">
-<span> 移动互联网 · 金融</span> / <span>成熟型(不需要融资)</span>
-</div>
-</div>
-</div>
-<div class="pli_btm">
-<div class="pli_btm_l fl wordCut">
-“九鼎出品；六险一金；帅哥美女多；”
-</div>
-<div class="pli_btm_r fl">
-<span>年底双薪</span>
-<span>节日礼物</span>
-<span>绩效奖金</span>
-</div>
-</div>
-</li>
-<li class="position_list_item" data-jobid="583893" data-positionid="583893" data-salary="6k-12k" data-company="趣乐科技（百万琴友家园）" data-positionname="产品运营" data-companyid="21027">
-<div class="pli_top">
-<div class="fl pli_top_l">
-<div class="position_name">
-<!--  -->
-
-
-<h2 class="fl"><a href="http://www.lagou.com/jobs/583893.html" target="_blank" class="position_link fl wordCut" data-index="5" data-lg-tj-id="4m00" data-lg-tj-no="0006" data-lg-tj-cid="583893">产品运营<span>[北京]</span></a></h2>
-<!-- 此处需要和后台确认 -->
-<span class="fl">1天前发布</span>
-</div>
-<div>
-<span class="salary fl">6k-12k</span>
-<span><!-- <i class="experience"></i>&nbsp;  -->经验1-3年</span> / <span>本科</span>
-</div>
-</div>
-<div class="fr pli_top_r">
-<div class="company_name wordCut">
-<a href="http://www.lagou.com/gongsi/21027.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0006" data-lg-tj-cid="21027">趣乐科技（百万琴友家园）</a>
-</div>
-<div class="industry wordCut">
-<span> 移动互联网 · 硬件</span> / <span>成长型(A轮)</span>
-</div>
-</div>
-</div>
-<div class="pli_btm">
-<div class="pli_btm_l fl wordCut">
-“五险一金、颜值高、教你弹钢琴、玩吉他~”
-</div>
-<div class="pli_btm_r fl">
-<span>行业前景好</span>
-<span>股票期权</span>
-<span>扁平管理</span>
-</div>
-</div>
-</li>
-<li class="position_list_item" data-jobid="212805" data-positionid="212805" data-salary="15k-30k" data-company="货车帮" data-positionname="高级Java" data-companyid="19365">
-<div class="pli_top">
-<div class="fl pli_top_l">
-<div class="position_name">
-<!--  -->
-
-
-<h2 class="fl"><a href="http://www.lagou.com/jobs/212805.html" target="_blank" class="position_link fl wordCut" data-index="6" data-lg-tj-id="4m00" data-lg-tj-no="0007" data-lg-tj-cid="212805">高级Java<span>[成都]</span></a></h2>
-<!-- 此处需要和后台确认 -->
-<span class="fl">2016-05-06</span>
-</div>
-<div>
-<span class="salary fl">15k-30k</span>
-<span><!-- <i class="experience"></i>&nbsp;  -->经验3-5年</span> / <span>本科</span>
-</div>
-</div>
-<div class="fr pli_top_r">
-<div class="company_name wordCut">
-<a href="http://www.lagou.com/gongsi/19365.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0007" data-lg-tj-cid="19365">货车帮</a>
-</div>
-<div class="industry wordCut">
-<span> 移动互联网 · 电子商务</span> / <span>成长型(A轮)</span>
-</div>
-</div>
-</div>
-<div class="pli_btm">
-<div class="pli_btm_l fl wordCut">
-“优厚薪酬 期权计划 下午茶晚餐 滴滴打车”
-</div>
-<div class="pli_btm_r fl">
-<span>快速成长型</span>
-<span>薪酬优厚</span>
-<span>股票期权</span>
-</div>
-</div>
-</li>
-<li class="position_list_item" data-jobid="1546095" data-positionid="1546095" data-salary="5k-8k" data-company="虫洞翻翻" data-positionname="网站运营" data-companyid="115170">
-<div class="pli_top">
-<div class="fl pli_top_l">
-<div class="position_name">
-<!--  -->
-
-
-<h2 class="fl"><a href="http://www.lagou.com/jobs/1546095.html" target="_blank" class="position_link fl wordCut" data-index="7" data-lg-tj-id="4m00" data-lg-tj-no="0008" data-lg-tj-cid="1546095">网站运营<span>[北京]</span></a></h2>
-<!-- 此处需要和后台确认 -->
-<span class="fl">2016-05-07</span>
-</div>
-<div>
-<span class="salary fl">5k-8k</span>
-<span><!-- <i class="experience"></i>&nbsp;  -->经验1-3年</span> / <span>学历不限</span>
-</div>
-</div>
-<div class="fr pli_top_r">
-<div class="company_name wordCut">
-<a href="http://www.lagou.com/gongsi/115170.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0008" data-lg-tj-cid="115170">虫洞翻翻</a>
-</div>
-<div class="industry wordCut">
-<span> 电子商务 · 文化娱乐</span> / <span>初创型(天使轮)</span>
-</div>
-</div>
-</div>
-<div class="pli_btm">
-<div class="pli_btm_l fl wordCut">
-“创业大街，期权，核心员工分得代持股份”
-</div>
-<div class="pli_btm_r fl">
-<span>股票期权</span>
-<span>扁平管理</span>
-<span>帅哥多</span>
-</div>
-</div>
-</li>
-<li class="position_list_item" data-jobid="1164929" data-positionid="1164929" data-salary="20k-35k" data-company="和创科技（红圈营销）" data-positionname="iOS" data-companyid="50889">
-<div class="pli_top">
-<div class="fl pli_top_l">
-<div class="position_name">
-<!--  -->
-
-
-<h2 class="fl"><a href="http://www.lagou.com/jobs/1164929.html" target="_blank" class="position_link fl wordCut" data-index="8" data-lg-tj-id="4m00" data-lg-tj-no="0009" data-lg-tj-cid="1164929">iOS<span>[北京]</span></a></h2>
-<!-- 此处需要和后台确认 -->
-<span class="fl">2016-05-03</span>
-</div>
-<div>
-<span class="salary fl">20k-35k</span>
-<span><!-- <i class="experience"></i>&nbsp;  -->经验3-5年</span> / <span>本科</span>
-</div>
-</div>
-<div class="fr pli_top_r">
-<div class="company_name wordCut">
-<a href="http://www.lagou.com/gongsi/50889.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0009" data-lg-tj-cid="50889">和创科技（红圈营销）</a>
-</div>
-<div class="industry wordCut">
-<span> 移动互联网 · 企业服务</span> / <span>上市公司</span>
-</div>
-</div>
-</div>
-<div class="pli_btm">
-<div class="pli_btm_l fl wordCut">
-“上市公司，持续股权激励，技术极客云集！”
-</div>
-<div class="pli_btm_r fl">
-<span>弹性工作</span>
-<span>敏捷研发</span>
-<span>股票期权</span>
-</div>
-</div>
-</li>
-<li class="position_list_item" data-jobid="1608540" data-positionid="1608540" data-salary="15k-30k" data-company="汽车之家" data-positionname="品牌经理" data-companyid="8103">
-<div class="pli_top">
-<div class="fl pli_top_l">
-<div class="position_name">
-<!--  -->
-
-
-<h2 class="fl"><a href="http://www.lagou.com/jobs/1608540.html" target="_blank" class="position_link fl wordCut" data-index="9" data-lg-tj-id="4m00" data-lg-tj-no="0010" data-lg-tj-cid="1608540">品牌经理<span>[北京]</span></a></h2>
-<!-- 此处需要和后台确认 -->
-<span class="fl">10:05发布</span>
-</div>
-<div>
-<span class="salary fl">15k-30k</span>
-<span><!-- <i class="experience"></i>&nbsp;  -->经验5-10年</span> / <span>大专</span>
-</div>
-</div>
-<div class="fr pli_top_r">
-<div class="company_name wordCut">
-<a href="http://www.lagou.com/gongsi/8103.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0010" data-lg-tj-cid="8103">汽车之家</a>
-</div>
-<div class="industry wordCut">
-<span> 移动互联网 · 文化娱乐</span> / <span>上市公司</span>
-</div>
-</div>
-</div>
-<div class="pli_btm">
-<div class="pli_btm_l fl wordCut">
-“美股上市公司，核心业务板块，空间大”
-</div>
-<div class="pli_btm_r fl">
-<span>技能培训</span>
-<span>节日礼物</span>
-<span>带薪年假</span>
-</div>
-</div>
-</li>
-<li class="position_list_item" data-jobid="1352956" data-positionid="1352956" data-salary="15k-30k" data-company="闪银奇异" data-positionname="Java高级" data-companyid="29496">
-<div class="pli_top">
-<div class="fl pli_top_l">
-<div class="position_name">
-<!--  -->
-
-
-<h2 class="fl"><a href="http://www.lagou.com/jobs/1352956.html" target="_blank" class="position_link fl wordCut" data-index="10" data-lg-tj-id="4m00" data-lg-tj-no="0011" data-lg-tj-cid="1352956">Java高级<span>[北京]</span></a></h2>
-<!-- 此处需要和后台确认 -->
-<span class="fl">10:05发布</span>
-</div>
-<div>
-<span class="salary fl">15k-30k</span>
-<span><!-- <i class="experience"></i>&nbsp;  -->经验3-5年</span> / <span>本科</span>
-</div>
-</div>
-<div class="fr pli_top_r">
-<div class="company_name wordCut">
-<a href="http://www.lagou.com/gongsi/29496.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0011" data-lg-tj-cid="29496">闪银奇异</a>
-</div>
-<div class="industry wordCut">
-<span> 移动互联网 · 金融</span> / <span>成长型(B轮)</span>
-</div>
-</div>
-</div>
-<div class="pli_btm">
-<div class="pli_btm_l fl wordCut">
-“高素质团队 扁平管理 氛围轻松 福利好”
-</div>
-<div class="pli_btm_r fl">
-<span>13~15薪</span>
-<span>晋升空间大</span>
-<span>定期体检</span>
-</div>
-</div>
-</li>
-<li class="position_list_item" data-jobid="605012" data-positionid="605012" data-salary="15k-30k" data-company="之间网（远景投资集团旗下）" data-positionname="高级UI设计师" data-companyid="64050">
-<div class="pli_top">
-<div class="fl pli_top_l">
-<div class="position_name">
-<!--  -->
-
-
-<h2 class="fl"><a href="http://www.lagou.com/jobs/605012.html" target="_blank" class="position_link fl wordCut" data-index="11" data-lg-tj-id="4m00" data-lg-tj-no="0012" data-lg-tj-cid="605012">高级UI设计师<span>[北京]</span></a></h2>
-<!-- 此处需要和后台确认 -->
-<span class="fl">10:04发布</span>
-</div>
-<div>
-<span class="salary fl">15k-30k</span>
-<span><!-- <i class="experience"></i>&nbsp;  -->经验5-10年</span> / <span>本科</span>
-</div>
-</div>
-<div class="fr pli_top_r">
-<div class="company_name wordCut">
-<a href="http://www.lagou.com/gongsi/64050.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0012" data-lg-tj-cid="64050">之间网（远景投资集团旗下）</a>
-</div>
-<div class="industry wordCut">
-<span> 移动互联网 · 数据服务</span> / <span>成长型(不需要融资)</span>
-</div>
-</div>
-</div>
-<div class="pli_btm">
-<div class="pli_btm_l fl wordCut">
-“六险一金 带薪年假 节日福利 各种津贴”
-</div>
-<div class="pli_btm_r fl">
-<span>五险一金</span>
-<span>带薪年假</span>
-<span>节日礼物</span>
-</div>
-</div>
-</li>
-<li class="position_list_item" data-jobid="1681656" data-positionid="1681656" data-salary="20k-40k" data-company="浩东律所" data-positionname="服务型智能机器人算法工程师" data-companyid="67214">
-<div class="pli_top">
-<div class="fl pli_top_l">
-<div class="position_name">
-<!--  -->
-
-
-<h2 class="fl"><a href="http://www.lagou.com/jobs/1681656.html" target="_blank" class="position_link fl wordCut" data-index="12" data-lg-tj-id="4m00" data-lg-tj-no="0013" data-lg-tj-cid="1681656">服务型智能机器人算法工程师<span>[北京]</span></a></h2>
-<!-- 此处需要和后台确认 -->
-<span class="fl">10:04发布</span>
-</div>
-<div>
-<span class="salary fl">20k-40k</span>
-<span><!-- <i class="experience"></i>&nbsp;  -->经验1-3年</span> / <span>硕士</span>
-</div>
-</div>
-<div class="fr pli_top_r">
-<div class="company_name wordCut">
-<a href="http://www.lagou.com/gongsi/67214.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0013" data-lg-tj-cid="67214">浩东律所</a>
-</div>
-<div class="industry wordCut">
-<span> 其他</span> / <span>上市公司</span>
-</div>
-</div>
-</div>
-<div class="pli_btm">
-<div class="pli_btm_l fl wordCut">
-“福利待遇优厚 工作地点深圳包住宿”
-</div>
-<div class="pli_btm_r fl">
-<span>绩效奖金</span>
-<span>百人双证律所</span>
-<span>岗位晋升</span>
-</div>
-</div>
-</li>
-<li class="position_list_item" data-jobid="1487957" data-positionid="1487957" data-salary="15k-20k" data-company="蚁匠家修" data-positionname="iOS" data-companyid="26180">
-<div class="pli_top">
-<div class="fl pli_top_l">
-<div class="position_name">
-<!--  -->
-
-
-<h2 class="fl"><a href="http://www.lagou.com/jobs/1487957.html" target="_blank" class="position_link fl wordCut" data-index="13" data-lg-tj-id="4m00" data-lg-tj-no="0014" data-lg-tj-cid="1487957">iOS<span>[北京]</span></a></h2>
-<!-- 此处需要和后台确认 -->
-<span class="fl">10:04发布</span>
-</div>
-<div>
-<span class="salary fl">15k-20k</span>
-<span><!-- <i class="experience"></i>&nbsp;  -->经验3-5年</span> / <span>学历不限</span>
-</div>
-</div>
-<div class="fr pli_top_r">
-<div class="company_name wordCut">
-<a href="http://www.lagou.com/gongsi/26180.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0014" data-lg-tj-cid="26180">蚁匠家修</a>
-</div>
-<div class="industry wordCut">
-<span> 电子商务 · O2O</span> / <span>成长型(A轮)</span>
-</div>
-</div>
-</div>
-<div class="pli_btm">
-<div class="pli_btm_l fl wordCut">
-“13薪 年度涨薪 技术大牛带队”
-</div>
-<div class="pli_btm_r fl">
-<span>岗位晋升</span>
-<span>扁平管理</span>
-<span>绩效奖金</span>
-</div>
-</div>
-</li>
-<li class="position_list_item" data-jobid="1812492" data-positionid="1812492" data-salary="10k-16k" data-company="小马科技" data-positionname="功能测试" data-companyid="44598">
-<div class="pli_top">
-<div class="fl pli_top_l">
-<div class="position_name">
-<!--  -->
-
-
-<h2 class="fl"><a href="http://www.lagou.com/jobs/1812492.html" target="_blank" class="position_link fl wordCut" data-index="14" data-lg-tj-id="4m00" data-lg-tj-no="0015" data-lg-tj-cid="1812492">功能测试<span>[北京]</span></a></h2>
-<!-- 此处需要和后台确认 -->
-<span class="fl">10:04发布</span>
-</div>
-<div>
-<span class="salary fl">10k-16k</span>
-<span><!-- <i class="experience"></i>&nbsp;  -->经验不限</span> / <span>学历不限</span>
-</div>
-</div>
-<div class="fr pli_top_r">
-<div class="company_name wordCut">
-<a href="http://www.lagou.com/gongsi/44598.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0015" data-lg-tj-cid="44598">小马科技</a>
-</div>
-<div class="industry wordCut">
-<span> 移动互联网 · 教育</span> / <span>成长型(B轮)</span>
-</div>
-</div>
-</div>
-<div class="pli_btm">
-<div class="pli_btm_l fl wordCut">
-“带薪年假等”
-</div>
-<div class="pli_btm_r fl">
-<span>带薪年假</span>
-<span>管理规范</span>
-<span>岗位晋升</span>
-</div>
-</div>
-</li>
 </ul>
-<a href="http://www.lagou.com/zhaopin/" class="list_more fr" target="_blank" data-lg-tj-id="4p00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">查看更多</a>
+<a href="http://www.lagou.com/zhaopin/" class="list_more fr" target="_blank" data-lg-tj-id="4s00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">查看更多</a>
 </div>
-
-
-
-
-
-
-
-
-
+<!-- 最新职位开始 -->
 <div class="new_posHotPosition position_list" style="display:none;">
 <ul class="clearfix">
 <li class="position_list_item" data-jobid="1194641" data-positionid="1194641" data-salary="15k-20k" data-company="久通网" data-positionname="数据分析师" data-companyid="21570">
@@ -2465,12 +1955,10 @@ sctx : "http://suggest.lagou.com"
 </div>
 </li>
 
-
-
-
 </ul>
 <a href="http://www.lagou.com/zhaopin/" class="list_more fr" target="_blank" data-lg-tj-id="4s00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">查看更多</a>
 </div>
+<!-- 最新职位结束 -->
 </div>
 
 

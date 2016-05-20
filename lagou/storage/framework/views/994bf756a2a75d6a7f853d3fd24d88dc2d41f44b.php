@@ -77,15 +77,24 @@ sctx : "http://suggest.lagou.com"
 <a href="http://hr.lagou.com/dashboard/" class="lg_os" data-lg-tj-id="5600" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">进入企业版</a>
 </div>
 
-
 <ul class="lg_tbar_r">
+<?php if(empty($_COOKIE['username'])){?>
 <li>
 <a href="<?php echo e(url('Index/login')); ?>" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">登录</a>
 </li>
 <li>
 <a href="<?php echo e(url('Index/register')); ?>" class="bl" data-lg-tj-id="5g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">注册</a>
 </li>
+<?php }else{?>
+<li>
+<a href="" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">欢迎<?php echo $_COOKIE['username'];?>登录</a>
+</li>
+<li>
+<a href="<?php echo e(url('Index/loginout')); ?>" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a>
+</li>
+<?php }?>
 </ul>
+	
 
 
 </div>
