@@ -17,8 +17,16 @@ class IndexController extends Controller
 	 */
 	public function index()
 	{
-		$list = Role_type::type_tree();
-		return view('index',['type'=>$list]);
+		$id=$_GET['id'];
+		if($id!=1)
+		{	
+			$list = Role_type::type_tree();
+			return view('index',['type'=>$list]);
+		}else
+		{
+			$list = Role_type::type_tree();
+			return view('dengindex',['type'=>$list]);
+		}
 	}
 	/**
 	 * 登陆页面
@@ -56,7 +64,7 @@ class IndexController extends Controller
 					Session::put('username',$username);
 					// $a = Session::get('username');
 					// var_dump($a);die;
-					echo "<script>alert('登陆成功');location.href='index';</script>";
+					echo "<script>alert('登陆成功');location.href='index?id=1';</script>";
 						die;
 				}
 				  
