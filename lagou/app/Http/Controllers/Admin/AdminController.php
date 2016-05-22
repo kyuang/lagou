@@ -20,6 +20,7 @@ class AdminController extends Controller
 	public function login_go()
 	{
 	
+		// echo count('abc');die;
 		// var_dump($list);die;
 		return view('admin.index');
 	}
