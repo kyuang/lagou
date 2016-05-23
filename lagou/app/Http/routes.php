@@ -50,21 +50,12 @@ Route::any('/Admin/content',"Admin\AdminController@content");
 
 Route::any('/Type/add',"Admin\TypeController@add");
 Route::any('/Type/lists',"Admin\TypeController@lists");
-<<<<<<< HEAD
-=======
-
->>>>>>> e4ebd113b83244aa2233ceb054ffcac274547cae
 
 // ------------------------------------------------------------------------
 //注册
 Route::any('/Zhuce/zhuce',"ZhuceController@zhuce");
 Route::any('/Zhuce/yanzheng',"ZhuceController@yanzheng");
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> e4ebd113b83244aa2233ceb054ffcac274547cae
 Route::any('/Type/show',"Admin\TypeController@show");
 
 //公司发布职位
@@ -73,7 +64,6 @@ Route::any('/Admin/Company_position',"Admin\CompanyController@Company_position")
 Route::any('/Admin/Add_position',"Admin\CompanyController@Add_position");
 //职位列表
 Route::any('/Admin/Job_lists',"Admin\CompanyController@Job_lists");
-<<<<<<< HEAD
 
 //------------------------------------------------------------------------
 //用户中心-------个人资料
@@ -83,7 +73,6 @@ Route::any('Yonghu/geren_add',"YonghuController@geren_add");
 //简历模块----模块首页展示
 Route::any('Yonghu/jianli',"YonghuController@jianli");
 Route::any('Yonghu/wanshan',"YonghuController@wanshan");
-=======
 
 
 //用户列表
@@ -95,4 +84,4 @@ Route::any('/City/add_city',"Admin\CityController@add_city");
 
 
 
->>>>>>> e4ebd113b83244aa2233ceb054ffcac274547cae
+

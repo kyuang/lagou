@@ -20,18 +20,18 @@ class IndexController extends Controller
 	 */
 	public function index()
 	{
-<<<<<<< HEAD
-		$id=$_GET['id'];
-		if($id!=1)
+		if(!empty($_GET['id']) && $_GET['id']!=1)
 		{	
+		// echo "sdfasdfgasd";die;
 			$list = Role_type::type_tree();
-			return view('index',['type'=>$list]);
+			return view('dengindex',['type'=>$list]);
 		}else
 		{
 			$list = Role_type::type_tree();
-			return view('dengindex',['type'=>$list]);
+			return view('index',['type'=>$list]);
+			
 		}
-=======
+
 		$list = Role_type::type_tree();
 		//首页职位招聘热门职位
 		$job=DB::table("job")->get();
@@ -42,7 +42,7 @@ class IndexController extends Controller
 		}
 		//print_r($job);die;
 		return view('index',['type'=>$list,"job"=>$job]);
->>>>>>> e4ebd113b83244aa2233ceb054ffcac274547cae
+
 	}
 	/**
 	 * 登陆页面
@@ -85,13 +85,12 @@ class IndexController extends Controller
 					// Session::put('username',$username);
 					// $a = Session::get('username');
 					// var_dump($a);die;
-<<<<<<< HEAD
+
 					echo "<script>alert('登陆成功');location.href='index?id=1';</script>";
 						die;
-=======
-					echo "<script>alert('登陆成功');location.href='index';</script>";
-						
->>>>>>> e4ebd113b83244aa2233ceb054ffcac274547cae
+
+					echo "<script>alert('登陆成功');location.href='index';</script>";				
+
 				}
 				  
 			}
