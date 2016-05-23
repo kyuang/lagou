@@ -21,6 +21,7 @@ class IndexController extends Controller
 	public function index()
 	{
 		$list = Role_type::type_tree();
+		// var_dump($list);die;
 		//首页职位招聘热门职位
 		$job=DB::table("job")->get();
 		//print_r($job);die;
@@ -41,13 +42,9 @@ class IndexController extends Controller
 		}
 
 	
-		//print_r($job);die;
-<<<<<<< HEAD
-		return view('index',['type'=>$list,"job"=>$job,"jobn"=>$job]);
-=======
-		// return view('index',['type'=>$list,"job"=>$job]);
 
->>>>>>> 952236c56eb4cb894dcae3f5b3e5799ab7b68d6f
+		// return view('index',['type'=>$list,"job"=>$job,"jobn"=>$job]);
+
 	}
 	/**
 	 * 登陆页面

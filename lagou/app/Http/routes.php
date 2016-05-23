@@ -11,11 +11,9 @@
 |
 */
 
-<<<<<<< HEAD
+
 Route::get('/',"IndexController@index");
-=======
-Route::get('/', "IndexController@index");
->>>>>>> 952236c56eb4cb894dcae3f5b3e5799ab7b68d6f
+
 
 /*
 |--------------------------------------------------------------------------

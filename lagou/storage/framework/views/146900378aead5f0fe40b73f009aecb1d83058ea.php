@@ -345,7 +345,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="<?php echo e(url('Admin/contet')); ?>">
+									<a href="<?php echo e(url('Admin/content')); ?>">
 										<i class="icon-double-angle-right"></i>
 										首页广告管理
 									</a>
