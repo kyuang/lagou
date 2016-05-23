@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', "IndexController@index");
 
 /*
 |--------------------------------------------------------------------------
@@ -51,13 +49,10 @@ Route::any('/Admin/content',"Admin\AdminController@content");
 Route::any('/Type/add',"Admin\TypeController@add");
 Route::any('/Type/lists',"Admin\TypeController@lists");
 
-
 // ------------------------------------------------------------------------
 //注册
 Route::any('/Zhuce/zhuce',"ZhuceController@zhuce");
 Route::any('/Zhuce/yanzheng',"ZhuceController@yanzheng");
-
-
 
 Route::any('/Type/show',"Admin\TypeController@show");
 
@@ -68,12 +63,23 @@ Route::any('/Admin/Add_position',"Admin\CompanyController@Add_position");
 //职位列表
 Route::any('/Admin/Job_lists',"Admin\CompanyController@Job_lists");
 
+//------------------------------------------------------------------------
+//用户中心-------个人资料
+Route::any('Yonghu/shou',"YonghuController@shou");
+//接收完善的资料并进行入库
+Route::any('Yonghu/geren_add',"YonghuController@geren_add");
+//简历模块----模块首页展示
+Route::any('Yonghu/jianli',"YonghuController@jianli");
+Route::any('Yonghu/wanshan',"YonghuController@wanshan");
+
 
 //用户列表
 Route::any('/User/user_list',"UserController@user_list");
 
 //城市站管理
-Route::any('/Admin/elements',"Admin\AdminController@elements");
+Route::any('/City/elements',"Admin\CityController@elements");
+Route::any('/City/add_city',"Admin\CityController@add_city");
+
 
 
 

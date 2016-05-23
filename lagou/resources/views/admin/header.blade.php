@@ -408,7 +408,7 @@
 
 							<ul class="submenu">
 								<li>
-									<a href="{{url('Admin/elements')}}">
+									<a href="{{url('City/elements')}}">
 										<i class="icon-double-angle-right"></i>
 										城市站管理
 									</a>

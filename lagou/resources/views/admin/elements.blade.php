@@ -109,6 +109,53 @@
 								</small>
 							</h1>
 						</div><!-- /.page-header -->
+						<div>
+							<h2>已开通城市站</h2>
+							<table>
+								<tr>
+									<th>ID</th>
+									<th>城市名称</th>
+									<th>排序</th>
+									<th>操作</th>
+								</tr>
+								@foreach($city as $v)
+								<tr>
+									<td>{{$v->lgid}}</td>
+									<td>{{$v->zhan}}</td>
+									<td>{{$v->region_name}}</td>
+									<td><a href="">删除</a></td>
+								</tr>
+								@endforeach
+							</table>
+
+						</div>
+
+
+						<div id="add_city" style="">
+							<h2>添加开通城市</h2>
+							<form action="{{url('City/add_city')}}" method="post">
+								<table>
+									<tr>
+										<td>城市</td>
+										<td><select name="zhan" id="">
+											<option value="">请选择...</option>
+											@foreach($region as $v)
+											<option value="{{$v->region_id}}">{{$v->region_name}}</option>
+											@endforeach
+										</select></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td><input type="submit" value="添加"></td>
+									</tr>
+								</table>
+							</form>
+		
+						</div>
+
+
+
+					</div>
 
 		@include('admin.footer')				
 </body>
