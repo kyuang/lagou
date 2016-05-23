@@ -41,7 +41,9 @@ class IndexController extends Controller
 			$username = DB::table('users')->where(['email'=>$email,'password'=>$password])->pluck('username');
 			// var_dump($username);die;
 			$a=$username[0];
-			// var_dump($a);die;
+			$u_id = DB::table('users')->where(['email'=>$email,'password'=>$password])->pluck('u_id');
+			$id=$u_id[0];
+			// var_dump($id);die;
 			if($re)
 			{
 				  //登陆失败 记录登陆失败的次数
@@ -58,10 +60,11 @@ class IndexController extends Controller
 					
 					//登录成功
 					setcookie('username',$a);
-					
+					setcookie('id',$id);
+					// $as=$_COOKIE['id'];
 					// Session::put('username',$username);
 					// $a = Session::get('username');
-					// var_dump($a);die;
+					// var_dump($as);die;
 					echo "<script>alert('登陆成功');location.href='index';</script>";
 						
 				}

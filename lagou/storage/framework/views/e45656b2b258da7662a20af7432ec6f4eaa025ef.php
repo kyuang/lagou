@@ -166,7 +166,7 @@
 
 								<li>
 									<a href="#">
-										<img src="{{URL::asset('/')}}/assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+										<img src="<?php echo e(URL::asset('/')); ?>/assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
 										<span class="msg-body">
 											<span class="msg-title">
 												<span class="blue">Alex:</span>
@@ -183,7 +183,7 @@
 
 								<li>
 									<a href="#">
-										<img src="{{URL::asset('/')}}/assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+										<img src="<?php echo e(URL::asset('/')); ?>/assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
 										<span class="msg-body">
 											<span class="msg-title">
 												<span class="blue">Susan:</span>
@@ -200,7 +200,7 @@
 
 								<li>
 									<a href="#">
-										<img src="{{URL::asset('/')}}/assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+										<img src="<?php echo e(URL::asset('/')); ?>/assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
 										<span class="msg-body">
 											<span class="msg-title">
 												<span class="blue">Bob:</span>
@@ -226,7 +226,7 @@
 
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="{{URL::asset('/')}}/assets/avatars/user.jpg" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="<?php echo e(URL::asset('/')); ?>/assets/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>欢迎光临,</small>
 									Jason
@@ -325,33 +325,33 @@
 							</a>
 							<ul class="submenu">
 								<li>
-									<a href="{{url('Type/lists')}}">
+									<a href="<?php echo e(url('Type/lists')); ?>">
 										<i class="icon-double-angle-right"></i>
 										职位类型
 									</a>
 								</li>
 
 								<li>
-									<a href="{{url('Admin/zhi_juti')}}">
+									<a href="<?php echo e(url('Admin/zhi_juti')); ?>">
 										<i class="icon-double-angle-right"></i>
 										具体职位
 									</a>
 								</li>
 
 								<li>
-									<a href="{{url('Admin/contet')}}">
+									<a href="<?php echo e(url('Admin/contet')); ?>">
 										<i class="icon-double-angle-right"></i>
 										首页导航管理
 									</a>
 								</li>
 								<li>
-									<a href="{{url('Admin/content')}}">
+									<a href="<?php echo e(url('Admin/content')); ?>">
 										<i class="icon-double-angle-right"></i>
 										首页广告管理
 									</a>
 								</li>
 								<li>
-									<a href="{{url('Admin/contet')}}">
+									<a href="<?php echo e(url('Admin/contet')); ?>">
 										<i class="icon-double-angle-right"></i>
 										首页轮播图管理
 									</a>
@@ -365,13 +365,13 @@
 							</a>
 							<ul class="submenu">
 								<li>
-									<a href="{{url('Admin/Company_position')}}">
+									<a href="<?php echo e(url('Admin/Company_position')); ?>">
 										<i class="icon-double-angle-right"></i>
 										  添加招聘信息
 									</a>
 								</li>
 								<li>
-									<a href="{{url('/Admin/Job_lists')}}">
+									<a href="<?php echo e(url('/Admin/Job_lists')); ?>">
 										<i class="icon-double-angle-right"></i>
 										  招聘信息管理
 									</a>
@@ -385,13 +385,13 @@
 							</a>
 							<ul class="submenu">
 								<li>
-									<a href="{{url('User/user_list')}}">
+									<a href="<?php echo e(url('User/user_list')); ?>">
 										<i class="icon-double-angle-right"></i>
 										  用户列表
 									</a>
 								</li>
 								<li>
-									<a href="{{url('/Admin/Job_lists')}}">
+									<a href="<?php echo e(url('/Admin/Job_lists')); ?>">
 										<i class="icon-double-angle-right"></i>
 										  招聘信息管理
 									</a>
@@ -408,7 +408,7 @@
 
 							<ul class="submenu">
 								<li>
-									<a href="{{url('Admin/elements')}}">
+									<a href="<?php echo e(url('Admin/elements')); ?>">
 										<i class="icon-double-angle-right"></i>
 										城市站管理
 									</a>
@@ -623,7 +623,7 @@
 								</li>
 
 								<li>
-									<a href="{{url('Index/login')}}">
+									<a href="<?php echo e(url('Index/login')); ?>">
 										<i class="icon-double-angle-right"></i>
 										登录 &amp; 注册
 									</a>
