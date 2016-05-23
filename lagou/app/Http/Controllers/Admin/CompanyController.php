@@ -86,16 +86,18 @@ class CompanyController extends Controller
 		public function Job_lists(){
 			$data=DB::table("job")->select()->get();
 			//print_r($data);die;
+
 			foreach ($data as $k => $v) {
 				$data[$k]->company_type=unserialize($v->company_type);
 				$data[$k]->material_benefits=unserialize($v->material_benefits);
 				$data[$k]->duty=unserialize($v->duty);
-				//print_r($v->duty);die;
+
 				$data[$k]->ask=unserialize($v->ask);
 				
+
 				$data[$k]->gain=unserialize($v->gain);
 			}
-
+			print_r($data);die;
 		return view("Company.company_lists",["data"=>$data]);
 
 		}

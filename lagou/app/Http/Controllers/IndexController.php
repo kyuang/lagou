@@ -29,7 +29,7 @@ class IndexController extends Controller
 			$job[$k]->material_benefits=unserialize($v->material_benefits);
 		}
 		//print_r($job);die;
-		return view('index',['type'=>$list,"job"=>$job]);
+		return view('index',['type'=>$list,"job"=>$job,"jobn"=>$job]);
 	}
 	/**
 	 * 登陆页面
