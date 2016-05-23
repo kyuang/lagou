@@ -20,18 +20,6 @@ class IndexController extends Controller
 	 */
 	public function index()
 	{
-		if(!empty($_GET['id']) && $_GET['id']!=1)
-		{	
-		// echo "sdfasdfgasd";die;
-			$list = Role_type::type_tree();
-			return view('dengindex',['type'=>$list]);
-		}else
-		{
-			$list = Role_type::type_tree();
-			return view('index',['type'=>$list]);
-			
-		}
-
 		$list = Role_type::type_tree();
 		//首页职位招聘热门职位
 		$job=DB::table("job")->get();
@@ -40,8 +28,21 @@ class IndexController extends Controller
 			$job[$k]->company_type=unserialize($v->company_type);
 			$job[$k]->material_benefits=unserialize($v->material_benefits);
 		}
+		if(!empty($_GET['id']) && $_GET['id']!=1)
+		{	
+		// echo "sdfasdfgasd";die;
+			$list = Role_type::type_tree();
+			return view('dengindex',['type'=>$list,"job"=>$job]);
+		}else
+		{
+			$list = Role_type::type_tree();
+			return view('index',['type'=>$list,"job"=>$job]);
+			
+		}
+
+	
 		//print_r($job);die;
-		return view('index',['type'=>$list,"job"=>$job]);
+		// return view('index',['type'=>$list,"job"=>$job]);
 
 	}
 	/**
