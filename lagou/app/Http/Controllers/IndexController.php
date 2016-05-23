@@ -42,8 +42,12 @@ class IndexController extends Controller
 
 	
 		//print_r($job);die;
+<<<<<<< HEAD
+		return view('index',['type'=>$list,"job"=>$job,"jobn"=>$job]);
+=======
 		// return view('index',['type'=>$list,"job"=>$job]);
 
+>>>>>>> 952236c56eb4cb894dcae3f5b3e5799ab7b68d6f
 	}
 	/**
 	 * 登陆页面

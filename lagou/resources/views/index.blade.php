@@ -937,7 +937,7 @@ sctx : "http://suggest.lagou.com"
 </div>
 <div class="fr pli_top_r">
 <div class="company_name wordCut">
-<a href="http://www.lagou.com/gongsi/82528.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0001" data-lg-tj-cid="82528">公司名称</a>
+<a href="http://www.lagou.com/gongsi/82528.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0001" data-lg-tj-cid="82528">{{$v->company_name}}</a>
 </div>
 <div class="industry wordCut">
 @foreach($v->company_type as $t)
@@ -967,6 +967,8 @@ sctx : "http://suggest.lagou.com"
 </div>
 <!-- 最新职位开始 -->
 <div class="new_posHotPosition position_list" style="display:none;">
+	@foreach($jobn as $v)
+		@if($v->is_new==1)
 <ul class="clearfix">
 <li class="position_list_item" data-jobid="1194641" data-positionid="1194641" data-salary="15k-20k" data-company="久通网" data-positionname="数据分析师" data-companyid="21570">
 
@@ -977,37 +979,39 @@ sctx : "http://suggest.lagou.com"
 <div class="position_name">
 <h2 class="fl">
 
-<a href="http://www.lagou.com/jobs/1194641.html" target="_blank" class="position_link fl wordCut" data-index="0" data-lg-tj-id="4q00" data-lg-tj-no="0001" data-lg-tj-cid="1194641">数据分析师<span>[北京]</span></a></h2>
+<a href="http://www.lagou.com/jobs/1194641.html" target="_blank" class="position_link fl wordCut" data-index="0" data-lg-tj-id="4q00" data-lg-tj-no="0001" data-lg-tj-cid="1194641">{{$v->job_name}}<span>{{$v->region_name}}</span></a></h2>
 <!-- 此处需要和后台确认 -->
-<span class="fl">11:05发布</span>
+<span class="fl">{{$v->kai_time}}</span>
 </div>
 <div>
-<span class="salary fl">15k-20k</span>
-<span><!-- <i class="experience"></i>&nbsp;  -->经验1-3年</span> / <span>本科</span>
+<span class="salary fl">{{$v->salary}}</span>
+<span><!-- <i class="experience"></i>&nbsp;  -->{{$v->work_jingyan}}</span> / <span>{{$v->xueli}}</span>
 </div>
 </div>
 <div class="fr pli_top_r">
 <div class="company_name wordCut">
-<a href="http://www.lagou.com/gongsi/21570.html" target="_blank" data-lg-tj-id="4r00" data-lg-tj-no="0001" data-lg-tj-cid="21570">久通网</a>
+<a href="http://www.lagou.com/gongsi/21570.html" target="_blank" data-lg-tj-id="4r00" data-lg-tj-no="0001" data-lg-tj-cid="21570">{{$v->company_name}}</a>
 </div>
 <div class="industry wordCut">
-<span> 移动互联网</span> / <span>成熟型(D轮及以上)</span>
+@foreach($v->company_type as $t)
+	<span>{{$t}}</span>@endforeach/ <span>{{$v->financing_name}}</span>
 </div>
 </div>
 </div>
 <div class="pli_btm">
 <div class="pli_btm_l fl wordCut">
-“春假15天 五险一金全额 补充医疗保险 餐补”
+{{$v->entice}}
 </div>
 <div class="pli_btm_r fl">
-<span>年底双薪</span>
-<span>高温福利补贴</span>
-<span>节日礼金</span>
+@foreach($v->material_benefits as $m)
+<span>{{$m}}</span>
+@endforeach
 </div>
 </div>
 </li>
-
 </ul>
+		@endif
+	@endforeach
 <a href="http://www.lagou.com/zhaopin/" class="list_more fr" target="_blank" data-lg-tj-id="4s00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">查看更多</a>
 </div>
 <!-- 最新职位结束 -->
