@@ -87,11 +87,10 @@ class IndexController extends Controller
 					// $as=$_COOKIE['id'];
 					// Session::put('username',$username);
 					// $a = Session::get('username');
-<<<<<<< HEAD
+
 					// var_dump($as);die;
 					echo "<script>alert('登陆成功');location.href='index';</script>";
 						
-=======
 					// var_dump($a);die;
 
 					echo "<script>alert('登陆成功');location.href='index?id=1';</script>";
@@ -99,7 +98,6 @@ class IndexController extends Controller
 
 					echo "<script>alert('登陆成功');location.href='index';</script>";				
 
->>>>>>> 6659878e89222afdde6768f102921e5eee048a35
 				}
 				  
 			}
