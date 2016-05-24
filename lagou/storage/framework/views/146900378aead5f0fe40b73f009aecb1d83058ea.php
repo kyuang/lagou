@@ -345,7 +345,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="<?php echo e(url('Admin/contet')); ?>">
+									<a href="<?php echo e(url('Admin/content')); ?>">
 										<i class="icon-double-angle-right"></i>
 										首页广告管理
 									</a>
@@ -354,6 +354,12 @@
 									<a href="<?php echo e(url('Admin/contet')); ?>">
 										<i class="icon-double-angle-right"></i>
 										首页轮播图管理
+									</a>
+								</li>
+								<li>
+									<a href="<?php echo e(url('Admin/youqing')); ?>">
+										<i class="icon-double-angle-right"></i>
+										友情链接管理
 									</a>
 								</li>
 							</ul>

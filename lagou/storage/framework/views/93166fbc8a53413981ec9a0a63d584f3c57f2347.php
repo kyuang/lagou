@@ -77,15 +77,24 @@ sctx : "http://suggest.lagou.com"
 <a href="http://hr.lagou.com/dashboard/" class="lg_os" data-lg-tj-id="5600" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">进入企业版</a>
 </div>
 
-
 <ul class="lg_tbar_r">
+<?php if(empty($_COOKIE['username'])){?>
 <li>
 <a href="<?php echo e(url('Index/login')); ?>" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">登录</a>
 </li>
 <li>
 <a href="<?php echo e(url('Index/register')); ?>" class="bl" data-lg-tj-id="5g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">注册</a>
 </li>
+<?php }else{?>
+<li>
+<a href="" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">欢迎<?php echo $_COOKIE['username'];?>登录</a>
+</li>
+<li>
+<a href="<?php echo e(url('Index/loginout')); ?>" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a>
+</li>
+<?php }?>
 </ul>
+	
 
 
 </div>
@@ -1884,7 +1893,7 @@ sctx : "http://suggest.lagou.com"
 </div>
 <div class="fr pli_top_r">
 <div class="company_name wordCut">
-<a href="http://www.lagou.com/gongsi/82528.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0001" data-lg-tj-cid="82528">公司名称</a>
+<a href="http://www.lagou.com/gongsi/82528.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0001" data-lg-tj-cid="82528"><?php echo e($v->company_name); ?></a>
 </div>
 <div class="industry wordCut">
 <?php foreach($v->company_type as $t): ?>
@@ -1915,6 +1924,8 @@ sctx : "http://suggest.lagou.com"
 </div>
 <!-- 最新职位开始 -->
 <div class="new_posHotPosition position_list" style="display:none;">
+	<?php foreach($jobn as $v): ?>
+		<?php if($v->is_new==1): ?>
 <ul class="clearfix">
 <li class="position_list_item" data-jobid="1194641" data-positionid="1194641" data-salary="15k-20k" data-company="久通网" data-positionname="数据分析师" data-companyid="21570">
 
@@ -1925,37 +1936,40 @@ sctx : "http://suggest.lagou.com"
 <div class="position_name">
 <h2 class="fl">
 
-<a href="http://www.lagou.com/jobs/1194641.html" target="_blank" class="position_link fl wordCut" data-index="0" data-lg-tj-id="4q00" data-lg-tj-no="0001" data-lg-tj-cid="1194641">数据分析师<span>[北京]</span></a></h2>
+<a href="http://www.lagou.com/jobs/1194641.html" target="_blank" class="position_link fl wordCut" data-index="0" data-lg-tj-id="4q00" data-lg-tj-no="0001" data-lg-tj-cid="1194641"><?php echo e($v->job_name); ?><span><?php echo e($v->region_name); ?></span></a></h2>
 <!-- 此处需要和后台确认 -->
-<span class="fl">11:05发布</span>
+<span class="fl"><?php echo e($v->kai_time); ?></span>
 </div>
 <div>
-<span class="salary fl">15k-20k</span>
-<span><!-- <i class="experience"></i>&nbsp;  -->经验1-3年</span> / <span>本科</span>
+<span class="salary fl"><?php echo e($v->salary); ?></span>
+<span><!-- <i class="experience"></i>&nbsp;  --><?php echo e($v->work_jingyan); ?></span> / <span><?php echo e($v->xueli); ?></span>
 </div>
 </div>
 <div class="fr pli_top_r">
 <div class="company_name wordCut">
-<a href="http://www.lagou.com/gongsi/21570.html" target="_blank" data-lg-tj-id="4r00" data-lg-tj-no="0001" data-lg-tj-cid="21570">久通网</a>
+<a href="http://www.lagou.com/gongsi/21570.html" target="_blank" data-lg-tj-id="4r00" data-lg-tj-no="0001" data-lg-tj-cid="21570"><?php echo e($v->company_name); ?></a>
 </div>
 <div class="industry wordCut">
-<span> 移动互联网</span> / <span>成熟型(D轮及以上)</span>
+<?php foreach($v->company_type as $t): ?>
+	<span><?php echo e($t); ?></span><?php endforeach; ?>/ <span><?php echo e($v->financing_name); ?></span>
 </div>
 </div>
 </div>
 <div class="pli_btm">
 <div class="pli_btm_l fl wordCut">
-“春假15天 五险一金全额 补充医疗保险 餐补”
+<?php echo e($v->entice); ?>
+
 </div>
 <div class="pli_btm_r fl">
-<span>年底双薪</span>
-<span>高温福利补贴</span>
-<span>节日礼金</span>
+<?php foreach($v->material_benefits as $m): ?>
+<span><?php echo e($m); ?></span>
+<?php endforeach; ?>
 </div>
 </div>
 </li>
-
 </ul>
+		<?php endif; ?>
+	<?php endforeach; ?>
 <a href="http://www.lagou.com/zhaopin/" class="list_more fr" target="_blank" data-lg-tj-id="4s00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">查看更多</a>
 </div>
 <!-- 最新职位结束 -->

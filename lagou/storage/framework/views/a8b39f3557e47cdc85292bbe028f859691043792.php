@@ -143,602 +143,41 @@ sctx : "http://suggest.lagou.com"
 
 
 <!-- 单项分类开始 -->
-
-
+<?php foreach($type as $k=>$val): ?>
 <div class="menu_box">
-<div class="menu_main job_hopping">
-<h2>
-技术
-<!-- 跳槽月 -->
-<span></span>
-</h2>
+		<div class="menu_main job_hopping">
+		<h2>
+		<?php echo e($val['role_name']); ?>
 
-<a href="http://www.lagou.com/zhaopin/Java/" data-lg-tj-id="4A00" data-lg-tj-no="0001" data-lg-tj-cid="idnull">Java</a>
+		<!-- 跳槽月 -->
+		<span></span>
+		</h2>
+			<?php foreach($val['child'] as $aa): ?>
+				<?php foreach($aa['child'] as $bb): ?>
+				<a href="http://www.lagou.com/zhaopin/Java/" data-lg-tj-id="4A00" data-lg-tj-no="0001" data-lg-tj-cid="idnull"><?php echo e($bb['role_name']); ?></a>
+				<?php endforeach; ?>
+			<?php endforeach; ?>
+		</div>
 
-<a href="http://www.lagou.com/zhaopin/PHP/" data-lg-tj-id="4A00" data-lg-tj-no="0002" data-lg-tj-cid="idnull">PHP</a>
-
-<a href="http://www.lagou.com/zhaopin/C/" data-lg-tj-id="4A00" data-lg-tj-no="0003" data-lg-tj-cid="idnull">C</a>
-
-<a href="http://www.lagou.com/zhaopin/C++/" data-lg-tj-id="4A00" data-lg-tj-no="0004" data-lg-tj-cid="idnull">C++</a>
-
-<a href="http://www.lagou.com/zhaopin/Android/" data-lg-tj-id="4A00" data-lg-tj-no="0005" data-lg-tj-cid="idnull">Android</a>
-
-<a href="http://www.lagou.com/zhaopin/iOS/" data-lg-tj-id="4A00" data-lg-tj-no="0006" data-lg-tj-cid="idnull">iOS</a>
-
-<a href="http://www.lagou.com/zhaopin/ceshi/" data-lg-tj-id="4A00" data-lg-tj-no="0007" data-lg-tj-cid="idnull">测试</a>
-
-<a href="http://www.lagou.com/zhaopin/qianduankaifa/" data-lg-tj-id="4A00" data-lg-tj-no="0008" data-lg-tj-cid="idnull">前端开发</a>
-
-<a href="http://www.lagou.com/zhaopin/jishujingli/" data-lg-tj-id="4A00" data-lg-tj-no="0009" data-lg-tj-cid="idnull">技术经理</a>
-
-<a href="http://www.lagou.com/zhaopin/jishuzongjian/" data-lg-tj-id="4A00" data-lg-tj-no="0010" data-lg-tj-cid="idnull">技术总监</a>
-
-<a href="http://www.lagou.com/zhaopin/jiagoushi/" data-lg-tj-id="4A00" data-lg-tj-no="0011" data-lg-tj-cid="idnull">架构师</a>
-
-
-<a href="http://www.lagou.com/zhaopin/CTO/" data-lg-tj-id="4A00" data-lg-tj-no="0012" data-lg-tj-cid="idnull">CTO</a>
-</div>
 <div class="menu_sub dn" style="top: 0px;">
-<dl>
-<dt>                                                                                                                                                                                                                                                                                                                                                                                               
-<a href="http://www.lagou.com/zhaopin/houduankaifa/" data-lg-tj-id="4H00" data-lg-tj-no="0001" data-lg-tj-cid="idnull">后端开发</a>
-</dt>
-<dd>    
-<a href="http://www.lagou.com/zhaopin/Java/" data-lg-tj-id="4O00" data-lg-tj-no="0101" data-lg-tj-cid="idnull" class="curr">Java</a>
-
-<a href="http://www.lagou.com/zhaopin/Python/" data-lg-tj-id="4O00" data-lg-tj-no="0102" data-lg-tj-cid="idnull" class="">Python</a>                                                      
-
-<a href="http://www.lagou.com/zhaopin/PHP/" data-lg-tj-id="4O00" data-lg-tj-no="0103" data-lg-tj-cid="idnull" class="curr">PHP</a>
-
-<a href="http://www.lagou.com/zhaopin/.NET/" data-lg-tj-id="4O00" data-lg-tj-no="0104" data-lg-tj-cid="idnull" class="">.NET</a>
-
-<a href="http://www.lagou.com/zhaopin/C%23/" data-lg-tj-id="4O00" data-lg-tj-no="0105" data-lg-tj-cid="idnull" class="">C#</a>
-
-<a href="http://www.lagou.com/zhaopin/C%2B%2B/" data-lg-tj-id="4O00" data-lg-tj-no="0106" data-lg-tj-cid="idnull" class="curr">C++</a>
-
-<a href="http://www.lagou.com/zhaopin/C/" data-lg-tj-id="4O00" data-lg-tj-no="0107" data-lg-tj-cid="idnull" class="curr">C</a>
-
-<a href="http://www.lagou.com/zhaopin/VB/" data-lg-tj-id="4O00" data-lg-tj-no="0108" data-lg-tj-cid="idnull" class="">VB</a>
-
-<a href="http://www.lagou.com/zhaopin/Delphi/" data-lg-tj-id="4O00" data-lg-tj-no="0109" data-lg-tj-cid="idnull" class="">Delphi</a>
-
-<a href="http://www.lagou.com/zhaopin/Perl/" data-lg-tj-id="4O00" data-lg-tj-no="0110" data-lg-tj-cid="idnull" class="">Perl</a>
-
-<a href="http://www.lagou.com/zhaopin/Ruby/" data-lg-tj-id="4O00" data-lg-tj-no="0111" data-lg-tj-cid="idnull" class="">Ruby</a>
-
-<a href="http://www.lagou.com/zhaopin/Hadoop/" data-lg-tj-id="4O00" data-lg-tj-no="0112" data-lg-tj-cid="idnull" class="">Hadoop</a>
-
-<a href="http://www.lagou.com/zhaopin/Node.js/" data-lg-tj-id="4O00" data-lg-tj-no="0113" data-lg-tj-cid="idnull" class="">Node.js</a>
-
-<a href="http://www.lagou.com/zhaopin/shujuwajue/" data-lg-tj-id="4O00" data-lg-tj-no="0114" data-lg-tj-cid="idnull" class="">数据挖掘</a>
-
-<a href="http://www.lagou.com/zhaopin/ziranyuyanchuli/" data-lg-tj-id="4O00" data-lg-tj-no="0115" data-lg-tj-cid="idnull" class="">自然语言处理</a>
-
-<a href="http://www.lagou.com/zhaopin/sousuosuanfa/" data-lg-tj-id="4O00" data-lg-tj-no="0116" data-lg-tj-cid="idnull" class="">搜索算法</a>
-
-<a href="http://www.lagou.com/zhaopin/jingzhuntuijian/" data-lg-tj-id="4O00" data-lg-tj-no="0117" data-lg-tj-cid="idnull" class="">精准推荐</a>
-
-<a href="http://www.lagou.com/zhaopin/quanzhangongchengshi/" data-lg-tj-id="4O00" data-lg-tj-no="0118" data-lg-tj-cid="idnull" class="">全栈工程师</a>
-
-<a href="http://www.lagou.com/zhaopin/go/" data-lg-tj-id="4O00" data-lg-tj-no="0119" data-lg-tj-cid="idnull" class="">Go</a>
-
-<a href="http://www.lagou.com/zhaopin/asp/" data-lg-tj-id="4O00" data-lg-tj-no="0120" data-lg-tj-cid="idnull" class="">ASP</a>
-
-<a href="http://www.lagou.com/zhaopin/shell/" data-lg-tj-id="4O00" data-lg-tj-no="0121" data-lg-tj-cid="idnull" class="">Shell</a>
-
-
-</dd>
-</dl>
-<dl>
-<dt>
-
-<a href="http://www.lagou.com/zhaopin/yidongkaifa/" data-lg-tj-id="4H00" data-lg-tj-no="0002" data-lg-tj-cid="idnull">移动开发</a>
-
-</dt>
-<dd>
-
-<a href="http://www.lagou.com/zhaopin/HTML5/" data-lg-tj-id="4O00" data-lg-tj-no="0201" data-lg-tj-cid="idnull" class="">HTML5</a>
-
-
-<a href="http://www.lagou.com/zhaopin/Android/" data-lg-tj-id="4O00" data-lg-tj-no="0202" data-lg-tj-cid="idnull" class="curr">Android</a>
-
-<a href="http://www.lagou.com/zhaopin/iOS/" data-lg-tj-id="4O00" data-lg-tj-no="0203" data-lg-tj-cid="idnull" class="curr">iOS</a>
-
-<a href="http://www.lagou.com/zhaopin/WP/" data-lg-tj-id="4O00" data-lg-tj-no="0204" data-lg-tj-cid="idnull" class="">WP</a>
-
-<a href="http://www.lagou.com/zhaopin/yidongkaifaqita/" data-lg-tj-id="4O00" data-lg-tj-no="0205" data-lg-tj-cid="idnull" class="">移动开发其它</a>
-</dd>
-</dl>
-<dl>
-<dt>
-
-<a href="http://www.lagou.com/zhaopin/qianduankaifa/" data-lg-tj-id="4H00" data-lg-tj-no="0003" data-lg-tj-cid="idnull">前端开发</a>
-
-</dt>
-<dd>
-
-<a href="http://www.lagou.com/zhaopin/webqianduan/" data-lg-tj-id="4O00" data-lg-tj-no="0301" data-lg-tj-cid="idnull" class="">web前端</a>
-
-<a href="http://www.lagou.com/zhaopin/Flash/" data-lg-tj-id="4O00" data-lg-tj-no="0302" data-lg-tj-cid="idnull" class="">Flash</a>
-
-<a href="http://www.lagou.com/zhaopin/html51/" data-lg-tj-id="4O00" data-lg-tj-no="0303" data-lg-tj-cid="idnull" class="">html5</a>
-
-<a href="http://www.lagou.com/zhaopin/JavaScript/" data-lg-tj-id="4O00" data-lg-tj-no="0304" data-lg-tj-cid="idnull" class="">JavaScript</a>
-
-<a href="http://www.lagou.com/zhaopin/U3D/" data-lg-tj-id="4O00" data-lg-tj-no="0305" data-lg-tj-cid="idnull" class="">U3D</a>
-
-<a href="http://www.lagou.com/zhaopin/COCOS2D-X/" data-lg-tj-id="4O00" data-lg-tj-no="0306" data-lg-tj-cid="idnull" class="">COCOS2D-X</a>
-
-<a href="http://www.lagou.com/zhaopin/qianduankaifaqita/" data-lg-tj-id="4O00" data-lg-tj-no="0307" data-lg-tj-cid="idnull" class="">前端开发其它</a>
-</dd>
-</dl>
-<dl>
-<dt>
-
-<a href="http://www.lagou.com/zhaopin/ceshi/" data-lg-tj-id="4H00" data-lg-tj-no="0004" data-lg-tj-cid="idnull">测试</a>
-</dt>
-<dd>
-
-
-<a href="http://www.lagou.com/zhaopin/ceshigongchengshi/" data-lg-tj-id="4O00" data-lg-tj-no="0401" data-lg-tj-cid="idnull" class="">测试工程师</a>
-
-
-
-
-<a href="http://www.lagou.com/zhaopin/zidonghuaceshi/" data-lg-tj-id="4O00" data-lg-tj-no="0402" data-lg-tj-cid="idnull" class="">自动化测试</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/gongnengceshi/" data-lg-tj-id="4O00" data-lg-tj-no="0403" data-lg-tj-cid="idnull" class="">功能测试</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/xingnengceshi/" data-lg-tj-id="4O00" data-lg-tj-no="0404" data-lg-tj-cid="idnull" class="">性能测试</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/ceshikaifa/" data-lg-tj-id="4O00" data-lg-tj-no="0405" data-lg-tj-cid="idnull" class="">测试开发</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/youxiceshi/" data-lg-tj-id="4O00" data-lg-tj-no="0406" data-lg-tj-cid="idnull" class="">游戏测试</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/baiheceshi/" data-lg-tj-id="4O00" data-lg-tj-no="0407" data-lg-tj-cid="idnull" class="">白盒测试</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/huiheceshi/" data-lg-tj-id="4O00" data-lg-tj-no="0408" data-lg-tj-cid="idnull" class="">灰盒测试</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/heiheceshi/" data-lg-tj-id="4O00" data-lg-tj-no="0409" data-lg-tj-cid="idnull" class="">黑盒测试</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/shoujiceshi/" data-lg-tj-id="4O00" data-lg-tj-no="0410" data-lg-tj-cid="idnull" class="">手机测试</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/yingjianceshi/" data-lg-tj-id="4O00" data-lg-tj-no="0411" data-lg-tj-cid="idnull" class="">硬件测试</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/ceshijingli2/" data-lg-tj-id="4O00" data-lg-tj-no="0412" data-lg-tj-cid="idnull" class="">测试经理</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/ceshiqita/" data-lg-tj-id="4O00" data-lg-tj-no="0413" data-lg-tj-cid="idnull" class="">测试其它</a>
-</dd>
-</dl>
-<dl>
-<dt>
-
-
-
-<a href="http://www.lagou.com/zhaopin/yunwei/" data-lg-tj-id="4H00" data-lg-tj-no="0005" data-lg-tj-cid="idnull">运维</a>
-</dt>
-<dd>
-
-
-
-<a href="http://www.lagou.com/zhaopin/yunweigongchengshi/" data-lg-tj-id="4O00" data-lg-tj-no="0501" data-lg-tj-cid="idnull" class="">运维工程师</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/yunweikaifagongchengshi/" data-lg-tj-id="4O00" data-lg-tj-no="0502" data-lg-tj-cid="idnull" class="">运维开发工程师</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/wangluogongchengshi/" data-lg-tj-id="4O00" data-lg-tj-no="0503" data-lg-tj-cid="idnull" class="">网络工程师</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/xitonggongchengshi/" data-lg-tj-id="4O00" data-lg-tj-no="0504" data-lg-tj-cid="idnull" class="">系统工程师</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/ITzhichi/" data-lg-tj-id="4O00" data-lg-tj-no="0505" data-lg-tj-cid="idnull" class="">IT支持</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/idc/" data-lg-tj-id="4O00" data-lg-tj-no="0506" data-lg-tj-cid="idnull" class="">IDC</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/cdn/" data-lg-tj-id="4O00" data-lg-tj-no="0507" data-lg-tj-cid="idnull" class="">CDN</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/f5/" data-lg-tj-id="4O00" data-lg-tj-no="0508" data-lg-tj-cid="idnull" class="">F5</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/xitongguanliyuan/" data-lg-tj-id="4O00" data-lg-tj-no="0509" data-lg-tj-cid="idnull" class="">系统管理员</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/bingdufenxi/" data-lg-tj-id="4O00" data-lg-tj-no="0510" data-lg-tj-cid="idnull" class="">病毒分析</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/webanquan/" data-lg-tj-id="4O00" data-lg-tj-no="0511" data-lg-tj-cid="idnull" class="">WEB安全</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/wangluoanquan/" data-lg-tj-id="4O00" data-lg-tj-no="0512" data-lg-tj-cid="idnull" class="">网络安全</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/xitonganquan/" data-lg-tj-id="4O00" data-lg-tj-no="0513" data-lg-tj-cid="idnull" class="">系统安全</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/yunweijingli/" data-lg-tj-id="4O00" data-lg-tj-no="0514" data-lg-tj-cid="idnull" class="">运维经理</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/yunweiqita/" data-lg-tj-id="4O00" data-lg-tj-no="0515" data-lg-tj-cid="idnull" class="">运维其它</a>
-</dd>
-</dl>
-<dl>
-<dt>
-
-
-
-<a href="http://www.lagou.com/zhaopin/DBA/" data-lg-tj-id="4H00" data-lg-tj-no="0006" data-lg-tj-cid="idnull">DBA</a>
-</dt>
-<dd>
-
-
-
-<a href="http://www.lagou.com/zhaopin/MySQL/" data-lg-tj-id="4O00" data-lg-tj-no="0601" data-lg-tj-cid="idnull" class="">MySQL</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/SQLServer/" data-lg-tj-id="4O00" data-lg-tj-no="0602" data-lg-tj-cid="idnull" class="">SQLServer</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/Oracle/" data-lg-tj-id="4O00" data-lg-tj-no="0603" data-lg-tj-cid="idnull" class="">Oracle</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/DB2/" data-lg-tj-id="4O00" data-lg-tj-no="0604" data-lg-tj-cid="idnull" class="">DB2</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/MongoDB/" data-lg-tj-id="4O00" data-lg-tj-no="0605" data-lg-tj-cid="idnull" class="">MongoDB</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/etl/" data-lg-tj-id="4O00" data-lg-tj-no="0606" data-lg-tj-cid="idnull" class="">ETL</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/hive/" data-lg-tj-id="4O00" data-lg-tj-no="0607" data-lg-tj-cid="idnull" class="">Hive</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/shujucangku/" data-lg-tj-id="4O00" data-lg-tj-no="0608" data-lg-tj-cid="idnull" class="">数据仓库</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/dbaqita/" data-lg-tj-id="4O00" data-lg-tj-no="0609" data-lg-tj-cid="idnull" class="">DBA其它</a>
-</dd>
-</dl>
-<dl>
-<dt>
-
-
-
-<a href="http://www.lagou.com/zhaopin/gaoduanjishuzhiwei/" data-lg-tj-id="4H00" data-lg-tj-no="0007" data-lg-tj-cid="idnull">高端职位</a>
-</dt>
-<dd>
-
-
-
-<a href="http://www.lagou.com/zhaopin/jishujingli/" data-lg-tj-id="4O00" data-lg-tj-no="0701" data-lg-tj-cid="idnull" class="curr">技术经理</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/jishuzongjian/" data-lg-tj-id="4O00" data-lg-tj-no="0702" data-lg-tj-cid="idnull" class="curr">技术总监</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/jiagoushi/" data-lg-tj-id="4O00" data-lg-tj-no="0703" data-lg-tj-cid="idnull" class="curr">架构师</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/CTO/" data-lg-tj-id="4O00" data-lg-tj-no="0704" data-lg-tj-cid="idnull" class="curr">CTO</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/yunweizongjian/" data-lg-tj-id="4O00" data-lg-tj-no="0705" data-lg-tj-cid="idnull" class="">运维总监</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/jishuhehuoren/" data-lg-tj-id="4O00" data-lg-tj-no="0706" data-lg-tj-cid="idnull" class="">技术合伙人</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/xiangmuzongjian/" data-lg-tj-id="4O00" data-lg-tj-no="0707" data-lg-tj-cid="idnull" class="">项目总监</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/ceshizongjian/" data-lg-tj-id="4O00" data-lg-tj-no="0708" data-lg-tj-cid="idnull" class="">测试总监</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/anquanzhuanjia/" data-lg-tj-id="4O00" data-lg-tj-no="0709" data-lg-tj-cid="idnull" class="">安全专家</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/gaoduanjishuzhiweiqita/" data-lg-tj-id="4O00" data-lg-tj-no="0710" data-lg-tj-cid="idnull" class="">高端技术职位其它</a>
-</dd>
-</dl>
-<dl>
-<dt>
-
-
-
-<a href="http://www.lagou.com/zhaopin/xiangmuguanli/" data-lg-tj-id="4H00" data-lg-tj-no="0008" data-lg-tj-cid="idnull">项目管理</a>
-</dt>
-<dd>
-
-
-
-<a href="http://www.lagou.com/zhaopin/xiangmujingli/" data-lg-tj-id="4O00" data-lg-tj-no="0801" data-lg-tj-cid="idnull" class="">项目经理</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/xiangmuzhuli/" data-lg-tj-id="4O00" data-lg-tj-no="0802" data-lg-tj-cid="idnull" class="">项目助理</a>
-</dd>
-</dl>
-<dl>
-<dt>
-
-
-
-<a href="http://www.lagou.com/zhaopin/yingjiankaifa2/" data-lg-tj-id="4H00" data-lg-tj-no="0009" data-lg-tj-cid="idnull">硬件开发</a>
-</dt>
-<dd>
-
-
-
-<a href="http://www.lagou.com/zhaopin/yingjian/" data-lg-tj-id="4O00" data-lg-tj-no="0901" data-lg-tj-cid="idnull" class="">硬件</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/qianrushi/" data-lg-tj-id="4O00" data-lg-tj-no="0902" data-lg-tj-cid="idnull" class="">嵌入式</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/zidonghua/" data-lg-tj-id="4O00" data-lg-tj-no="0903" data-lg-tj-cid="idnull" class="">自动化</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/danpianji/" data-lg-tj-id="4O00" data-lg-tj-no="0904" data-lg-tj-cid="idnull" class="">单片机</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/dianlusheji/" data-lg-tj-id="4O00" data-lg-tj-no="0905" data-lg-tj-cid="idnull" class="">电路设计</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/qudongkaifa/" data-lg-tj-id="4O00" data-lg-tj-no="0906" data-lg-tj-cid="idnull" class="">驱动开发</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/xitongjicheng/" data-lg-tj-id="4O00" data-lg-tj-no="0907" data-lg-tj-cid="idnull" class="">系统集成</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/fpgakaifa/" data-lg-tj-id="4O00" data-lg-tj-no="0908" data-lg-tj-cid="idnull" class="">FPGA开发</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/dspkaifa/" data-lg-tj-id="4O00" data-lg-tj-no="0909" data-lg-tj-cid="idnull" class="">DSP开发</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/armkaifa/" data-lg-tj-id="4O00" data-lg-tj-no="0910" data-lg-tj-cid="idnull" class="">ARM开发</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/pcbgongyi/" data-lg-tj-id="4O00" data-lg-tj-no="0911" data-lg-tj-cid="idnull" class="">PCB工艺</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/mujusheji/" data-lg-tj-id="4O00" data-lg-tj-no="0912" data-lg-tj-cid="idnull" class="">模具设计</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/rechuandao/" data-lg-tj-id="4O00" data-lg-tj-no="0913" data-lg-tj-cid="idnull" class="">热传导</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/cailiaogongchengshi/" data-lg-tj-id="4O00" data-lg-tj-no="0914" data-lg-tj-cid="idnull" class="">材料工程师</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/jingyigongchengshi/" data-lg-tj-id="4O00" data-lg-tj-no="0915" data-lg-tj-cid="idnull" class="">精益工程师</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/shepingongchengshi/" data-lg-tj-id="4O00" data-lg-tj-no="0916" data-lg-tj-cid="idnull" class="">射频工程师</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/yingjiankaifaqita/" data-lg-tj-id="4O00" data-lg-tj-no="0917" data-lg-tj-cid="idnull" class="">硬件开发其它</a>
-</dd>
-</dl>
-<dl>
-<dt>
-
-
-
-<a href="http://www.lagou.com/zhaopin/qiyeruanjian/" data-lg-tj-id="4H00" data-lg-tj-no="0010" data-lg-tj-cid="idnull">企业软件</a>
-</dt>
-<dd>
-
-
-
-<a href="http://www.lagou.com/zhaopin/shishigongchengshi/" data-lg-tj-id="4O00" data-lg-tj-no="1001" data-lg-tj-cid="idnull" class="">实施工程师</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/shouqiangongchengshi/" data-lg-tj-id="4O00" data-lg-tj-no="1002" data-lg-tj-cid="idnull" class="">售前工程师</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/shouhougongchengshi/" data-lg-tj-id="4O00" data-lg-tj-no="1003" data-lg-tj-cid="idnull" class="">售后工程师</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/bigongchengshi/" data-lg-tj-id="4O00" data-lg-tj-no="1004" data-lg-tj-cid="idnull" class="">BI工程师</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/qiyeruanjianqita/" data-lg-tj-id="4O00" data-lg-tj-no="1005" data-lg-tj-cid="idnull" class="">企业软件其它</a>
-</dd>
-</dl>
+	<?php foreach($val['child'] as $va): ?>
+	<dl>
+		<dt>
+
+			<a href="http://www.lagou.com/zhaopin/houduankaifa/" data-lg-tj-id="4H00" data-lg-tj-no="0001" data-lg-tj-cid="idnull"><?php echo e($va['role_name']); ?></a>
+		</dt>
+		<dd> 
+			<?php foreach($va['child'] as $v): ?>   
+			<a href="http://www.lagou.com/zhaopin/Java/" data-lg-tj-id="4O00" data-lg-tj-no="0101" data-lg-tj-cid="idnull" class="curr"><?php echo e($v['role_name']); ?></a>
+			<?php endforeach; ?>
+		</dd>	
+	</dl>
+	<?php endforeach; ?>
+	
 </div>
 </div>
-
+<?php endforeach; ?>
 <!-- 单项分类循环结束 -->
-
-<div class="menu_box">
-<div class="menu_main job_hopping">
-<h2>
-产品
-<!-- 跳槽月 -->
-<span></span>
-</h2>
-
-
-
-<a href="http://www.lagou.com/zhaopin/chanpinzongjian/" data-lg-tj-id="4B00" data-lg-tj-no="0001" data-lg-tj-cid="idnull">产品总监</a>
-
-
-<a href="http://www.lagou.com/zhaopin/chanpinjingli1/" data-lg-tj-id="4B00" data-lg-tj-no="0002" data-lg-tj-cid="idnull">产品经理</a>
-
-
-<a href="http://www.lagou.com/zhaopin/yidongchanpinjingli/" data-lg-tj-id="4B00" data-lg-tj-no="0003" data-lg-tj-cid="idnull">移动产品经理</a>
-
-
-<a href="http://www.lagou.com/zhaopin/youxicehua/" data-lg-tj-id="4B00" data-lg-tj-no="0004" data-lg-tj-cid="idnull">游戏策划</a>
-</div>
-<div class="menu_sub dn">
-<dl>
-<dt>
-
-
-
-<a href="http://www.lagou.com/zhaopin/chanpinjingli/" data-lg-tj-id="4I00" data-lg-tj-no="0001" data-lg-tj-cid="idnull">产品经理</a>
-</dt>
-<dd>
-
-
-
-<a href="http://www.lagou.com/zhaopin/chanpinjingli1/" data-lg-tj-id="4P00" data-lg-tj-no="0101" data-lg-tj-cid="idnull" class="curr">产品经理</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/wangyechanpinjingli/" data-lg-tj-id="4P00" data-lg-tj-no="0102" data-lg-tj-cid="idnull" class="">网页产品经理</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/yidongchanpinjingli/" data-lg-tj-id="4P00" data-lg-tj-no="0103" data-lg-tj-cid="idnull" class="curr">移动产品经理</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/chanpinzhuli/" data-lg-tj-id="4P00" data-lg-tj-no="0104" data-lg-tj-cid="idnull" class="">产品助理</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/shujuchanpinjingli/" data-lg-tj-id="4P00" data-lg-tj-no="0105" data-lg-tj-cid="idnull" class="">数据产品经理</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/dianshangchanpinjingli/" data-lg-tj-id="4P00" data-lg-tj-no="0106" data-lg-tj-cid="idnull" class="">电商产品经理</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/youxicehua/" data-lg-tj-id="4P00" data-lg-tj-no="0107" data-lg-tj-cid="idnull" class="curr">游戏策划</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/chanpinshixisheng/" data-lg-tj-id="4P00" data-lg-tj-no="0108" data-lg-tj-cid="idnull" class="">产品实习生</a>
-</dd>
-</dl>
-<dl>
-<dt>
-
-
-
-<a href="http://www.lagou.com/zhaopin/chanpinshejishi/" data-lg-tj-id="4I00" data-lg-tj-no="0002" data-lg-tj-cid="idnull">产品设计师</a>
-</dt>
-<dd>
-
-
-
-<a href="http://www.lagou.com/zhaopin/wangyechanpinshejishi/" data-lg-tj-id="4P00" data-lg-tj-no="0201" data-lg-tj-cid="idnull" class="">网页产品设计师</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/wuxianchanpinshejishi/" data-lg-tj-id="4P00" data-lg-tj-no="0202" data-lg-tj-cid="idnull" class="">无线产品设计师</a>
-</dd>
-</dl>
-<dl>
-<dt>
-
-
-
-<a href="http://www.lagou.com/zhaopin/gaoduanchanpinzhiwei/" data-lg-tj-id="4I00" data-lg-tj-no="0003" data-lg-tj-cid="idnull">高端职位</a>
-</dt>
-<dd>
-
-
-
-<a href="http://www.lagou.com/zhaopin/chanpinbujingli/" data-lg-tj-id="4P00" data-lg-tj-no="0301" data-lg-tj-cid="idnull" class="">产品部经理</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/chanpinzongjian/" data-lg-tj-id="4P00" data-lg-tj-no="0302" data-lg-tj-cid="idnull" class="curr">产品总监</a>
-
-
-
-<a href="http://www.lagou.com/zhaopin/youxizhizuoren/" data-lg-tj-id="4P00" data-lg-tj-no="0303" data-lg-tj-cid="idnull" class="">游戏制作人</a>
-</dd>
-</dl>
-</div>
-</div>
-
-
-
-
 
 
 <!-- <a class="subscribe" href="http://www.lagou.com/s/subscribe.html" target="_blank">订阅职位</a> -->
@@ -937,7 +376,7 @@ sctx : "http://suggest.lagou.com"
 </div>
 <div class="fr pli_top_r">
 <div class="company_name wordCut">
-<a href="http://www.lagou.com/gongsi/82528.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0001" data-lg-tj-cid="82528">公司名称</a>
+<a href="http://www.lagou.com/gongsi/82528.html" target="_blank" data-lg-tj-id="4n00" data-lg-tj-no="0001" data-lg-tj-cid="82528"><?php echo e($v->company_name); ?></a>
 </div>
 <div class="industry wordCut">
 <?php foreach($v->company_type as $t): ?>
@@ -968,6 +407,8 @@ sctx : "http://suggest.lagou.com"
 </div>
 <!-- 最新职位开始 -->
 <div class="new_posHotPosition position_list" style="display:none;">
+	<?php foreach($job as $v): ?>
+		<?php if($v->is_new==1): ?>
 <ul class="clearfix">
 <li class="position_list_item" data-jobid="1194641" data-positionid="1194641" data-salary="15k-20k" data-company="久通网" data-positionname="数据分析师" data-companyid="21570">
 
@@ -978,37 +419,40 @@ sctx : "http://suggest.lagou.com"
 <div class="position_name">
 <h2 class="fl">
 
-<a href="http://www.lagou.com/jobs/1194641.html" target="_blank" class="position_link fl wordCut" data-index="0" data-lg-tj-id="4q00" data-lg-tj-no="0001" data-lg-tj-cid="1194641">数据分析师<span>[北京]</span></a></h2>
+<a href="http://www.lagou.com/jobs/1194641.html" target="_blank" class="position_link fl wordCut" data-index="0" data-lg-tj-id="4q00" data-lg-tj-no="0001" data-lg-tj-cid="1194641"><?php echo e($v->job_name); ?><span><?php echo e($v->region_name); ?></span></a></h2>
 <!-- 此处需要和后台确认 -->
-<span class="fl">11:05发布</span>
+<span class="fl"><?php echo e($v->kai_time); ?></span>
 </div>
 <div>
-<span class="salary fl">15k-20k</span>
-<span><!-- <i class="experience"></i>&nbsp;  -->经验1-3年</span> / <span>本科</span>
+<span class="salary fl"><?php echo e($v->salary); ?></span>
+<span><!-- <i class="experience"></i>&nbsp;  --><?php echo e($v->work_jingyan); ?></span> / <span><?php echo e($v->xueli); ?></span>
 </div>
 </div>
 <div class="fr pli_top_r">
 <div class="company_name wordCut">
-<a href="http://www.lagou.com/gongsi/21570.html" target="_blank" data-lg-tj-id="4r00" data-lg-tj-no="0001" data-lg-tj-cid="21570">久通网</a>
+<a href="http://www.lagou.com/gongsi/21570.html" target="_blank" data-lg-tj-id="4r00" data-lg-tj-no="0001" data-lg-tj-cid="21570"><?php echo e($v->company_name); ?></a>
 </div>
 <div class="industry wordCut">
-<span> 移动互联网</span> / <span>成熟型(D轮及以上)</span>
+<?php foreach($v->company_type as $t): ?>
+	<span><?php echo e($t); ?></span><?php endforeach; ?>/ <span><?php echo e($v->financing_name); ?></span>
 </div>
 </div>
 </div>
 <div class="pli_btm">
 <div class="pli_btm_l fl wordCut">
-“春假15天 五险一金全额 补充医疗保险 餐补”
+<?php echo e($v->entice); ?>
+
 </div>
 <div class="pli_btm_r fl">
-<span>年底双薪</span>
-<span>高温福利补贴</span>
-<span>节日礼金</span>
+<?php foreach($v->material_benefits as $m): ?>
+<span><?php echo e($m); ?></span>
+<?php endforeach; ?>
 </div>
 </div>
 </li>
-
 </ul>
+		<?php endif; ?>
+	<?php endforeach; ?>
 <a href="http://www.lagou.com/zhaopin/" class="list_more fr" target="_blank" data-lg-tj-id="4s00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">查看更多</a>
 </div>
 <!-- 最新职位结束 -->
@@ -1019,7 +463,15 @@ sctx : "http://suggest.lagou.com"
 <dl>
 <dt>友情链接</dt>
 <dd>
-<a href="http://www.liqucn.com/" target="_blank">手机软件</a> <span>|</span>                                <a href="http://www.wangxiao.cn/" target="_blank">中大网校</a> <span>|</span>                                <a href="http://www.woshipm.com/" target="_blank">人人都是产品经理</a> <span>|</span>                                <a href="http://www.job910.com/" target="_blank">教师招聘</a> <span>|</span>                                <a href="http://www.chinairn.com/" target="_blank">研究报告</a> <span>|</span>                                <a href="http://tuanche.com/" target="_blank">汽车团购</a> <span>|</span>                                <a href="http://www.vc.cn/" target="_blank">创投圈</a>                                                             <a href="http://www.ctoutiao.com/" target="_blank">创头条</a> <span>|</span>                                <a href="http://www.eoeandroid.com/" target="_blank">安卓开发论坛</a> <span>|</span>                                <a href="http://www.xjhr.com/" target="_blank">新疆人才网</a> <span>|</span>                                <a href="http://www.yixieshi.com/" target="_blank">互联网的一些事</a>                                                             <a href="http://www.24en.com/" target="_blank">爱思英语网</a> <span>|</span>                                <a href="http://www.xuzhoujob.com/" target="_blank">徐州英才网</a> <span>|</span>                                <a href="http://www.thinkphp.cn/" target="_blank">thinkphp</a> <span>|</span>                                <a href="http://www.kuakao.com/" target="_blank">考研网</a> <span>|</span>                                <a href="http://www.0755rc.com/" target="_blank">深圳人才网</a> <span>|</span>                                <a href="http://www.yinhangzhaopin.com/" target="_blank">银行招聘网</a>                                                             <a href="http://www.64365.com/" target="_blank">法律咨询网</a> <span>|</span>                                <a href="http://www.jianzhi8.com/" target="_blank">兼职吧</a>                                                             <a href="http://www.cfw.cn/" target="_blank">服装人才网</a> <span>|</span>                                <a href="http://www.eoemarket.com/" target="_blank">安卓软件</a> <span>|</span>                                <a href="http://www.yinhu.com/" target="_blank">银湖网</a>                                                             <a href="http://www.zbj.com/" target="_blank">创意服务外包</a> <span>|</span>                                <a href="http://www.xilu.com/" target="_blank">西陆军事</a> <span>|</span>                                <a href="http://www.eoffcn.com/" target="_blank">中公公务员网校</a> <span>|</span>                                <a href="http://www.laoren.com/" target="_blank">老人网</a> <span>|</span>                                <a href="http://www.cjol.com/" target="_blank">找工作</a> <span>|</span>                                <a href="http://www.job5156.com/" target="_blank">招聘网</a> <span>|</span>                                <a href="http://www.qianzhan.com/" target="_blank">前瞻网</a> <span>|</span>                                <a href="http://www.wezgc.com/" target="_blank">中关村创新创业服务平台</a>                                                             <a href="http://www.goodjobs.cn/" target="_blank">安徽招聘网</a> <span>|</span>                                <a href="http://www.tzrl.com/" target="_blank">台州人才网</a> <span>|</span>                                <a href="http://www.job256.com/" target="_blank">苏州人才网&nbsp;</a> <span>|</span>                                <a href="http://www.zgjsks.com/" target="_blank">教师网</a> <span>|</span>                                <a href="http://www.huibo.com/" target="_blank">汇博人才网</a> <span>|</span>                                <a href="http://www.canet.com.cn/" target="_blank">中国会计网</a> <span>|</span>                                <a href="http://www.epwk.com/" target="_blank">一品威客</a> <span>|</span>                                <a href="http://www.tmtpost.com/" target="_blank">钛媒体网</a> <span>|</span>                                <a href="http://www.qlrc.com/" target="_blank">齐鲁人才网</a> <span>|</span>                                <a href="http://www.youbian.com/" target="_blank">邮编生活网</a> <span>|</span>                                <a href="http://www.wlmqrc.cn/" target="_blank">乌鲁木齐人才网</a> <span>|</span>                                <a href="http://www.91job.com/" target="_blank">义乌人才网</a> <span>|</span>                                <a href="http://www.php100.com/" target="_blank">PHP100中文网</a>                                                             <a href="http://www.pxto.com.cn/" target="_blank">培训网</a>                                             <a href="http://www.lagou.com/af/flink.html" target="_blank" class="more" rel="nofollow">更多</a>
+<?php foreach($link as $v): ?>
+<a href="<?php echo e($v->link_href); ?>" target="_blank"><?php echo e($v->link_name); ?></a> <span>|</span>
+<?php endforeach; ?>
+<a href="http://www.liqucn.com/" target="_blank">手机软件</a> <span>|</span>
+<a href="http://www.wangxiao.cn/" target="_blank">中大网校</a> <span>|</span> 
+<a href="http://www.woshipm.com/" target="_blank">人人都是产品经理</a> <span>|</span>
+<a href="http://www.job910.com/" target="_blank">教师招聘</a> <span>|</span>
+<a href="http://www.chinairn.com/" target="_blank">研究报告</a> <span>|</span>
+<a href="http://www.lagou.com/af/flink.html" target="_blank" class="more" rel="nofollow">更多</a>
 </dd>
 </dl>
 </div>
@@ -1131,7 +583,7 @@ window.global = window.global || {};
 global.isLogin = false;
 global.isFirst = true;
 global.subSite = '北京';
-global.subSites = '全国,上海,杭州,广州,深圳,成都'.split(',');
+global.subSites = '<?php echo e($city); ?>'.split(',');
 
 
 require(['common/widgets/header_c/modules/emailvalid/main']);
@@ -1190,7 +642,8 @@ require(['common/widgets/login_toolbar/main'])
 
 //业务主模块入口
 require(['index/page/index/main']);
-</script><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none; left: 538.5px;"></ul><div id="cboxOverlay" style="opacity: 0; cursor: pointer; visibility: visible; display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none; visibility: visible; top: 78px; left: 411px; position: absolute; width: 528px; height: 510px; opacity: 0;"><div id="cboxWrapper" style="height: 510px; width: 528px;"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left; width: 502px;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left; height: 484px;"></div><div id="cboxContent" style="float: left; width: 502px; height: 484px;"><div id="cboxTitle" style="float: left; display: block;">切换城市</div><div id="cboxCurrent" style="float: left; display: none;"></div><button type="button" id="cboxPrevious" style="display: none;"></button><button type="button" id="cboxNext" style="display: none;"></button><button id="cboxSlideshow" style="display: none;"></button><div id="cboxLoadingOverlay" style="float: left; display: none;"></div><div id="cboxLoadingGraphic" style="float: left; display: none;"></div><button type="button" id="cboxClose">close</button></div><div id="cboxMiddleRight" style="float: left; height: 484px;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left; width: 502px;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; max-width: none; display: none;"></div></div>
+</script>
+<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none; left: 538.5px;"></ul><div id="cboxOverlay" style="opacity: 0; cursor: pointer; visibility: visible; display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none; visibility: visible; top: 78px; left: 411px; position: absolute; width: 528px; height: 510px; opacity: 0;"><div id="cboxWrapper" style="height: 510px; width: 528px;"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left; width: 502px;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left; height: 484px;"></div><div id="cboxContent" style="float: left; width: 502px; height: 484px;"><div id="cboxTitle" style="float: left; display: block;">切换城市</div><div id="cboxCurrent" style="float: left; display: none;"></div><button type="button" id="cboxPrevious" style="display: none;"></button><button type="button" id="cboxNext" style="display: none;"></button><button id="cboxSlideshow" style="display: none;"></button><div id="cboxLoadingOverlay" style="float: left; display: none;"></div><div id="cboxLoadingGraphic" style="float: left; display: none;"></div><button type="button" id="cboxClose">close</button></div><div id="cboxMiddleRight" style="float: left; height: 484px;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left; width: 502px;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; max-width: none; display: none;"></div></div>
 <script type="text/javascript" src="<?php echo e(URL::asset('files')); ?>/ipinyou_2be9977.js"></script>
 
 

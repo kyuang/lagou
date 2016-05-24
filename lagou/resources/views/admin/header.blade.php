@@ -356,6 +356,12 @@
 										首页轮播图管理
 									</a>
 								</li>
+								<li>
+									<a href="{{url('Admin/youqing')}}">
+										<i class="icon-double-angle-right"></i>
+										友情链接管理
+									</a>
+								</li>
 							</ul>
 						</li>
 						<li>
