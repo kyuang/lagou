@@ -18575,3 +18575,18 @@ Stack trace:
 >>>>>>> 6659878e89222afdde6768f102921e5eee048a35
 >>>>>>> 72803481ba9b97a57cc929f118b48ce81ba73959
 >>>>>>> 952236c56eb4cb894dcae3f5b3e5799ab7b68d6f
+[2016-05-23 07:33:38] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in D:\phpStudy\WWW\lagou\lagou\app\Http\routes.php:14
+Stack trace:
+#0 {main}  
+[2016-05-23 07:33:44] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in D:\phpStudy\WWW\lagou\lagou\app\Http\routes.php:14
+Stack trace:
+#0 {main}  
+[2016-05-23 07:34:13] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in D:\phpStudy\WWW\lagou\lagou\app\Http\routes.php:14
+Stack trace:
+#0 {main}  
+[2016-05-23 07:34:17] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in D:\phpStudy\WWW\lagou\lagou\app\Http\routes.php:14
+Stack trace:
+#0 {main}  
+[2016-05-23 07:34:35] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in D:\phpStudy\WWW\lagou\lagou\app\Http\Controllers\IndexController.php:91
+Stack trace:
+#0 {main}  

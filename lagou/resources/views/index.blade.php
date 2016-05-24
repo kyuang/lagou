@@ -967,7 +967,7 @@ sctx : "http://suggest.lagou.com"
 </div>
 <!-- 最新职位开始 -->
 <div class="new_posHotPosition position_list" style="display:none;">
-	@foreach($jobn as $v)
+	@foreach($job as $v)
 		@if($v->is_new==1)
 <ul class="clearfix">
 <li class="position_list_item" data-jobid="1194641" data-positionid="1194641" data-salary="15k-20k" data-company="久通网" data-positionname="数据分析师" data-companyid="21570">

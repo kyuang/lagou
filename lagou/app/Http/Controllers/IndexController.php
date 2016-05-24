@@ -41,13 +41,9 @@ class IndexController extends Controller
 		}
 
 	
-		//print_r($job);die;
-<<<<<<< HEAD
-		return view('index',['type'=>$list,"job"=>$job,"jobn"=>$job]);
-=======
-		// return view('index',['type'=>$list,"job"=>$job]);
 
->>>>>>> 952236c56eb4cb894dcae3f5b3e5799ab7b68d6f
+		return view('index',['type'=>$list,"job"=>$job]);
+
 	}
 	/**
 	 * 登陆页面
@@ -92,11 +88,7 @@ class IndexController extends Controller
 					// $as=$_COOKIE['id'];
 					// Session::put('username',$username);
 					// $a = Session::get('username');
-<<<<<<< HEAD
-					// var_dump($as);die;
-					echo "<script>alert('登陆成功');location.href='index';</script>";
-						
-=======
+
 					// var_dump($a);die;
 
 					echo "<script>alert('登陆成功');location.href='index?id=1';</script>";
@@ -104,7 +96,6 @@ class IndexController extends Controller
 
 					echo "<script>alert('登陆成功');location.href='index';</script>";				
 
->>>>>>> 6659878e89222afdde6768f102921e5eee048a35
 				}
 				  
 			}
