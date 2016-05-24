@@ -22,7 +22,13 @@ class IndexController extends Controller
 	{
 		$list = Role_type::type_tree();
 		$link = DB::table('links')->orderBy('sort', 'desc')->get();
-		// var_dump($list);die;
+		$city = DB::table('lagou_region')->join('region','lagou_region.zhan','=','region.region_id')->get();
+		foreach ($city as $key => $val) 
+		{
+			$a[] = $val->region_name;
+		}
+		$city = implode(',', $a);
+
 		//首页职位招聘热门职位
 		$job=DB::table("job")->get();
 		//print_r($job);die;
@@ -38,7 +44,7 @@ class IndexController extends Controller
 		}else
 		{
 			$list = Role_type::type_tree();
-			return view('index',['type'=>$list,"job"=>$job,'link'=>$link]);
+			return view('index',['type'=>$list,"job"=>$job,'link'=>$link,'city'=>$city]);
 			
 		}
 
