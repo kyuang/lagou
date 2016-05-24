@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Controllers\Admin;
 
-use Validator,DB,redirect;
+use Validator,DB,Redirect;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Input;
@@ -53,14 +53,16 @@ class AdminController extends Controller
 		}
 		else
 		{
-			$gname=$_POST['gname'];
+			$title=$_POST['title'];
 			$gimg="images/".$_FILES['gimg']['name'];
 			$area=$_POST['area'];
     		// var_dump($_FILES);die;
 			if(move_uploaded_file($_FILES['gimg']['tmp_name'],$gimg))
 			{
-				$sql="insert into guanggao (gname,gimg,area) values ('$gname','$gimg','$area')";
+				$sql="insert into guanggao (title,gimg,area) values ('$title','$gimg','$area')";
 				$asd=DB::insert($sql);
+
+				return Redirect::to('Admin/content');
 			}
 		}
 	}
