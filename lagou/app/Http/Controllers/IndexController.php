@@ -21,6 +21,14 @@ class IndexController extends Controller
 	public function index()
 	{
 		$list = Role_type::type_tree();
+		$link = DB::table('links')->orderBy('sort', 'desc')->get();
+		$city = DB::table('lagou_region')->join('region','lagou_region.zhan','=','region.region_id')->get();
+		foreach ($city as $key => $val) 
+		{
+			$a[] = $val->region_name;
+		}
+		$city = implode(',', $a);
+
 		//首页职位招聘热门职位
 		$job=DB::table("job")->get();
 		//print_r($job);die;
@@ -28,21 +36,31 @@ class IndexController extends Controller
 			$job[$k]->company_type=unserialize($v->company_type);
 			$job[$k]->material_benefits=unserialize($v->material_benefits);
 		}
-		if(!empty($_GET['id']) && $_GET['id']!=1)
+		if(!empty($_GET['id']) && $_GET['id']==1)
 		{	
 		// echo "sdfasdfgasd";die;
 			$list = Role_type::type_tree();
-			return view('dengindex',['type'=>$list,"job"=>$job]);
+			return view('dengindex',['type'=>$list,"job"=>$job,'link'=>$link]);
 		}else
 		{
 			$list = Role_type::type_tree();
-			return view('index',['type'=>$list,"job"=>$job]);
+<<<<<<< HEAD
+			$advert=DB::table("guanggao")->get();
+			// var_dump($advert);die;
+			return view('index',['type'=>$list,"job"=>$job,'advert'=>$advert]);
+=======
+			return view('index',['type'=>$list,"job"=>$job,'link'=>$link,'city'=>$city]);
+>>>>>>> e018addb2c043641c223191625bfe5d01c4a447f
 			
 		}
 
 	
 
+<<<<<<< HEAD
 		return view('index',['type'=>$list,"job"=>$job]);
+=======
+		// return view('index',['type'=>$list,"job"=>$job,"jobn"=>$job]);
+>>>>>>> b56bffebc5cf26a68a31d133bde359a0d4ca703c
 
 	}
 	/**
@@ -88,14 +106,31 @@ class IndexController extends Controller
 					// $as=$_COOKIE['id'];
 					// Session::put('username',$username);
 					// $a = Session::get('username');
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+					// var_dump($as);die;
+					echo "<script>alert('登陆成功');location.href='index';</script>";
+						
+=======
+					// var_dump($as);die;
+>>>>>>> e018addb2c043641c223191625bfe5d01c4a447f
+>>>>>>> b56bffebc5cf26a68a31d133bde359a0d4ca703c
 					// var_dump($a);die;
 
 					echo "<script>alert('登陆成功');location.href='index?id=1';</script>";
 						die;
+<<<<<<< HEAD
 
 					echo "<script>alert('登陆成功');location.href='index';</script>";				
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> e018addb2c043641c223191625bfe5d01c4a447f
+>>>>>>> b56bffebc5cf26a68a31d133bde359a0d4ca703c
 				}
 				  
 			}
@@ -128,6 +163,7 @@ class IndexController extends Controller
 	{
 		return view('register');
 	}
+
 }
 
 ?>

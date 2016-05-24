@@ -12,7 +12,12 @@
 */
 
 
+<<<<<<< HEAD
 Route::get('/', "IndexController@index");
+=======
+Route::get('/',"IndexController@index");
+
+>>>>>>> b56bffebc5cf26a68a31d133bde359a0d4ca703c
 
 /*
 |--------------------------------------------------------------------------
@@ -46,14 +51,19 @@ Route::any('/Admin/zhi_fang',"Admin\AdminController@zhi_fang");
 Route::any('/Admin/zhi_juti',"Admin\AdminController@zhi_juti");
 Route::any('/Admin/add_adress',"Admin\AdminController@add_adress");
 Route::any('/Admin/content',"Admin\AdminController@content");
+Route::any('/Admin/youqing',"Admin\AdminController@youqing");
+Route::any('/Admin/link_add',"Admin\AdminController@link_add");
+Route::any('/Admin/link_update',"Admin\AdminController@link_update");
 
 Route::any('/Type/add',"Admin\TypeController@add");
 Route::any('/Type/lists',"Admin\TypeController@lists");
+
 
 // ------------------------------------------------------------------------
 //注册
 Route::any('/Zhuce/zhuce',"ZhuceController@zhuce");
 Route::any('/Zhuce/yanzheng',"ZhuceController@yanzheng");
+
 
 Route::any('/Type/show',"Admin\TypeController@show");
 
@@ -63,6 +73,7 @@ Route::any('/Admin/Company_position',"Admin\CompanyController@Company_position")
 Route::any('/Admin/Add_position',"Admin\CompanyController@Add_position");
 //职位列表
 Route::any('/Admin/Job_lists',"Admin\CompanyController@Job_lists");
+
 
 //------------------------------------------------------------------------
 //用户中心-------个人资料
@@ -74,13 +85,13 @@ Route::any('Yonghu/jianli',"YonghuController@jianli");
 Route::any('Yonghu/wanshan',"YonghuController@wanshan");
 
 
+
 //用户列表
 Route::any('/User/user_list',"UserController@user_list");
 
 //城市站管理
 Route::any('/City/elements',"Admin\CityController@elements");
 Route::any('/City/add_city',"Admin\CityController@add_city");
-
 
 
 

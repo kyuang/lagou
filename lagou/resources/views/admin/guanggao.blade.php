@@ -5,12 +5,12 @@
 	<title>Document</title>
 </head>
 <body>
-	<form action="{{url('Admin/content')}}" method="post">
+	<form action="{{url('Admin/content')}}" method="post" enctype="multipart/form-data">
 	<input type="hidden" name="_token" value="{{csrf_token()}}">
 		<table>
 			<tr>
 				<td>广告名称</td>
-				<td><input type="text" name="gname"></td>
+				<td><input type="text" name="title"></td>
 			</tr>
 			<tr>
 				<td>广告图片</td>
