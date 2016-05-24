@@ -21,6 +21,7 @@ class IndexController extends Controller
 	public function index()
 	{
 		$list = Role_type::type_tree();
+		$link = DB::table('links')->orderBy('sort', 'desc')->get();
 		// var_dump($list);die;
 		//首页职位招聘热门职位
 		$job=DB::table("job")->get();
@@ -33,11 +34,11 @@ class IndexController extends Controller
 		{	
 		// echo "sdfasdfgasd";die;
 			$list = Role_type::type_tree();
-			return view('dengindex',['type'=>$list,"job"=>$job]);
+			return view('dengindex',['type'=>$list,"job"=>$job,'link'=>$link]);
 		}else
 		{
 			$list = Role_type::type_tree();
-			return view('index',['type'=>$list,"job"=>$job]);
+			return view('index',['type'=>$list,"job"=>$job,'link'=>$link]);
 			
 		}
 

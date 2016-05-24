@@ -356,6 +356,12 @@
 										首页轮播图管理
 									</a>
 								</li>
+								<li>
+									<a href="<?php echo e(url('Admin/youqing')); ?>">
+										<i class="icon-double-angle-right"></i>
+										友情链接管理
+									</a>
+								</li>
 							</ul>
 						</li>
 						<li>

@@ -47,6 +47,9 @@ Route::any('/Admin/zhi_fang',"Admin\AdminController@zhi_fang");
 Route::any('/Admin/zhi_juti',"Admin\AdminController@zhi_juti");
 Route::any('/Admin/add_adress',"Admin\AdminController@add_adress");
 Route::any('/Admin/content',"Admin\AdminController@content");
+Route::any('/Admin/youqing',"Admin\AdminController@youqing");
+Route::any('/Admin/link_add',"Admin\AdminController@link_add");
+Route::any('/Admin/link_update',"Admin\AdminController@link_update");
 
 Route::any('/Type/add',"Admin\TypeController@add");
 Route::any('/Type/lists',"Admin\TypeController@lists");

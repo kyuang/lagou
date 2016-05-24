@@ -65,5 +65,45 @@ class AdminController extends Controller
 		}
 	}
 
+
+	/**
+	 * 友情链接
+	 */
+	public function youqing()
+	{
+		$sql = "select * from links order by sort desc";
+		$re = DB::select($sql);
+		// var_dump($re);die;
+		return view('admin.youqing',['data'=>$re]);
+	}
+
+	public function link_add()
+	{
+		
+		$sort = $_POST['sort'];
+		$name = $_POST['link_name'];
+		$url = $_POST['link_href'];
+		$content = $_POST['link_title'];
+
+		foreach($sort as $k=>$v)
+		{
+			$name = $name[$k];
+			$url = $url[$k];
+			$content = $content[$k];
+			$sql = "insert into links  values(null,'$name','$url','$content','$v')";
+			DB::insert($sql);
+		}
+		return redirect('Admin/youqing');
+
+	}
+
+	public function link_update()
+	{
+		$id = $_GET['id'];
+		$name = $_GET['name'];
+		$val = $_GET['val'];
+		$sql = "update links set $name = '$val' where id=$id";
+		$re = DB::update($sql);
+	}
 	
 }
