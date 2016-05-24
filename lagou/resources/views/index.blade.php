@@ -215,40 +215,42 @@ sctx : "http://suggest.lagou.com"
 
 <div id="home_banner" class="home_banner">
 <ul class="banner_bg" style="height: 480px; margin-top: -160px;">
+
+
+@foreach($advert as $v)
 <li class="banner_bg_1 current">
-
-
-
-<a class="" href="http://www.lagou.com/gongsi/19365.html" target="_blank" data-lg-tj-id="es00" data-lg-tj-no="0001" data-lg-tj-cid="1982"><img src="{{URL::asset('files')}}/Cgp3O1csCW2AXOYXAAHE9GZUzok034.JPG" width="612" height="160" alt="货车帮"></a>
+<a class="" href="http://www.lagou.com/gongsi/19365.html" target="_blank" data-lg-tj-id="es00" data-lg-tj-no="0001" data-lg-tj-cid="1982"><img src="{{URL::asset('/').$v->gimg}}" width="612" height="160" alt="货车帮"></a>
 </li>
-<li class="banner_bg_2">
+@endforeach
 
 
-
+<!-- <li class="banner_bg_2">
 <a class="" href="http://www.lagou.com/topic/renrenxingtwo.html" target="_blank" data-lg-tj-id="es00" data-lg-tj-no="0002" data-lg-tj-cid="1975"><img src="{{URL::asset('files')}}/CgqKkVcE0s-AKW7uAACEYADklOk091.JPG" width="612" height="160" alt="人人行(借贷宝)"></a>
 </li>
+
+
+
 <li class="banner_bg_3">
-
-
-
 <a class="" href="http://www.lagou.com/activity/dist/imageCollection/pc/html/index.html?labelWords=hot" target="_blank" data-lg-tj-id="es00" data-lg-tj-no="0003" data-lg-tj-cid="2133"><img src="{{URL::asset('files')}}/Cgp3O1csR66AF4jIAACp5e8pwGU974.JPG" width="612" height="160" alt="设计专场"></a>
-</li>
+</li> -->
 </ul>
 <div class="banner_control">
 <em style="top: 55px;"></em>
 <ul class="thumbs">
+@foreach($advert as $v)
 <li class="thumbs_1">
 <i></i>
-<img src="{{URL::asset('files')}}/Cgp3O1csCXCARQOAAAAZooX853U320.JPG" width="113" height="42">
+<img src="{{URL::asset('/').$v->gimg}}" width="113" height="42">
 </li>
-<li class="thumbs_2 current">
+@endforeach
+<!-- <li class="thumbs_2 current">
 <i></i>
 <img src="{{URL::asset('files')}}/CgqKkVcE0tSAdseNAAAokHl4hJg013.JPG" width="113" height="42">
 </li>
 <li class="thumbs_3">
 <i></i>
 <img src="{{URL::asset('files')}}/CgqKkVcsR7iAGzTCAAAOwlwqivw702.JPG" width="113" height="42">
-</li>
+</li> -->
 </ul>
 </div>
 </div>
