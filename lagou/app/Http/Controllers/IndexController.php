@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 use Validator,DB,Redirect;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Session;
+// use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Cookie;
 use Input;
-
+use Session;
 use App\Http\Models\Role_type;
 
 header("content-type:text/html;charset=utf-8");
@@ -28,7 +28,7 @@ class IndexController extends Controller
 			$job[$k]->company_type=unserialize($v->company_type);
 			$job[$k]->material_benefits=unserialize($v->material_benefits);
 		}
-		if(!empty($_GET['id']) && $_GET['id']!=1)
+		if(!empty($_GET['id']) && $_GET['id']==1)
 		{	
 		// echo "sdfasdfgasd";die;
 			$list = Role_type::type_tree();
@@ -62,11 +62,12 @@ class IndexController extends Controller
 			$password=$_POST['password'];
 			$re = DB::table('users')->where(['email'=>$email,'password'=>$password])->first();
 			// var_dump($re);die;
-			$username = DB::table('users')->where(['email'=>$email,'password'=>$password])->pluck('username');
+			$userInfo = DB::table('users')->where(['email'=>$email,'password'=>$password])->first();
 			// var_dump($username);die;
-			$a=$username[0];
-			$u_id = DB::table('users')->where(['email'=>$email,'password'=>$password])->pluck('u_id');
-			$id=$u_id[0];
+			// $u_id = DB::table('users')->where(['email'=>$email,'password'=>$password])->first();
+			$id=$userInfo->u_id;
+			$a=$userInfo->username;
+
 			// var_dump($id);die;
 			if($re)
 			{
@@ -83,24 +84,12 @@ class IndexController extends Controller
 				{
 					
 					//登录成功
-					setcookie('username',$a);
-					setcookie('id',$id);
+					Session::put('username',$a);
+					Session::put('id',$id);
+					Session::save();
 					// $as=$_COOKIE['id'];
-					// Session::put('username',$username);
-					// $a = Session::get('username');
-<<<<<<< HEAD
 					// var_dump($as);die;
-					echo "<script>alert('登陆成功');location.href='index';</script>";
-						
-=======
-					// var_dump($a);die;
-
-					echo "<script>alert('登陆成功');location.href='index?id=1';</script>";
-						die;
-
-					echo "<script>alert('登陆成功');location.href='index';</script>";				
-
->>>>>>> 6659878e89222afdde6768f102921e5eee048a35
+					return "<script>alert('登陆成功');location.href='index?id=1';</script>";
 				}
 				  
 			}
