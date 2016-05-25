@@ -154,6 +154,8 @@ Route::any('/User/user_list',"UserController@user_list");
 Route::any('/City/elements',"Admin\CityController@elements");
 Route::any('/City/add_city',"Admin\CityController@add_city");
 
+//前台链接对应的详情页
+Route::any('Job/details',"JobController@details");
 
 
 

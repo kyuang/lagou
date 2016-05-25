@@ -8,6 +8,7 @@ use Input;
 use App\Mail;
 use DB;
 use Redirect;
+use Session;
 
 class YonghuController extends Controller
 {
@@ -16,9 +17,10 @@ class YonghuController extends Controller
 	{
 		//查询数据库中登录者的信息
 		// setcookie('id',1);
-		$id=Session::get('id');
+		$id=1;
 		// var_dump($id);die;
 		$data=DB::table('users')->where('u_id',$id)->first();
+		// var_dump($data);die;
 		return view('yonghu.user',['post'=>$data]);
 	}
 	//个人资料-----接收用户的完善资料并进行存储

@@ -90,7 +90,7 @@ window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 					<a href="http://www.lagou.com/mycenter/collections.html" class="bl" data-lg-tj-id="5900" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">收藏夹</a>
 				</li>
 				<li class="user_dpdown">
-					<span class="unick bl"><?php echo $post->name ?></span>
+					<span class="unick bl"><?php echo $post->username ?></span>
 					<em class="noticeDot dn" id="noticeDot_name"></em>
 					<i></i>
 					<ul>

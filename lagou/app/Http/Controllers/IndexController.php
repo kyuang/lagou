@@ -44,23 +44,18 @@ class IndexController extends Controller
 		}else
 		{
 			$list = Role_type::type_tree();
-<<<<<<< HEAD
+
 			$advert=DB::table("guanggao")->get();
 			// var_dump($advert);die;
-			return view('index',['type'=>$list,"job"=>$job,'advert'=>$advert]);
-=======
-			return view('index',['type'=>$list,"job"=>$job,'link'=>$link,'city'=>$city]);
->>>>>>> e018addb2c043641c223191625bfe5d01c4a447f
+
+			return view('index',['type'=>$list,"job"=>$job,'link'=>$link,'city'=>$city,'advert'=>$advert]);
+
 			
 		}
-
-	
-
-<<<<<<< HEAD
 		return view('index',['type'=>$list,"job"=>$job]);
-=======
+
 		// return view('index',['type'=>$list,"job"=>$job,"jobn"=>$job]);
->>>>>>> b56bffebc5cf26a68a31d133bde359a0d4ca703c
+
 
 	}
 	/**
@@ -84,9 +79,8 @@ class IndexController extends Controller
 			// var_dump($username);die;
 			// $u_id = DB::table('users')->where(['email'=>$email,'password'=>$password])->first();
 			$id=$userInfo->u_id;
-			$a=$userInfo->username;
-
 			// var_dump($id);die;
+			$a=$userInfo->username;
 			if($re)
 			{
 				  //登陆失败 记录登陆失败的次数
@@ -105,39 +99,12 @@ class IndexController extends Controller
 					Session::put('username',$a);
 					Session::put('id',$id);
 					Session::save();
-					// $as=$_COOKIE['id'];
-<<<<<<< HEAD
+					
+					
+					setcookie('u_id',$id);
+					// $as=$_COOKIE['u_id'];
 					// var_dump($as);die;
-					return "<script>alert('登陆成功');location.href='index?id=1';</script>";
-=======
-					// Session::put('username',$username);
-					// $a = Session::get('username');
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-					// var_dump($as);die;
-					echo "<script>alert('登陆成功');location.href='index';</script>";
-						
-=======
-					// var_dump($as);die;
->>>>>>> e018addb2c043641c223191625bfe5d01c4a447f
->>>>>>> b56bffebc5cf26a68a31d133bde359a0d4ca703c
-					// var_dump($a);die;
-
-					echo "<script>alert('登陆成功');location.href='index?id=1';</script>";
-						die;
-<<<<<<< HEAD
-
-					echo "<script>alert('登陆成功');location.href='index';</script>";				
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e018addb2c043641c223191625bfe5d01c4a447f
->>>>>>> b56bffebc5cf26a68a31d133bde359a0d4ca703c
->>>>>>> c661b8df52b9e4806bca3a7c0408c568e6dd4e1a
+					return "<script>alert('登陆成功');location.href='index';</script>";
 				}
 				  
 			}

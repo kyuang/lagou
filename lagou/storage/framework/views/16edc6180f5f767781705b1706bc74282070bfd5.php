@@ -193,7 +193,7 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 					<a href="http://www.lagou.com/mycenter/collections.html" class="bl" data-lg-tj-id="5900" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">收藏夹</a>
 				</li>
 								<li class="user_dpdown">
-					<span class="unick bl"><?php echo Session::get('username');?></span>
+					<span class="unick bl"><?php echo Session::get('username');?>李四</span>
 					<em class="noticeDot dn" id="noticeDot_name"></em>
 					<i></i>
 					<ul class="reset">
@@ -301,7 +301,7 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 					</div>	
 					
 					<div class="mr_p_name mr_w604 clearfixs">
-						<span class="mr_edit dn" onclick="dian()"><i></i><em>编辑</em></span><span class="mr_name" value="1"><?php echo Session::get('username');?></span>
+						<span class="mr_edit dn" onclick="dian()"><i></i><em>编辑</em></span><span class="mr_name" value="1"><?php echo Session::get('username');?>李四</span>
 					</div>
 					<form id="nameForm" style="display:none">
 						<div>
