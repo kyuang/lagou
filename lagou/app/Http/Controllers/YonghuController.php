@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Input;
 use App\Mail;
-use DB;
+use DB,Session;
 use Redirect;
 
 class YonghuController extends Controller
@@ -17,8 +17,9 @@ class YonghuController extends Controller
 		//查询数据库中登录者的信息
 		// setcookie('id',1);
 		$id=Session::get('id');
-		// var_dump($id);die;
+		$id=1;
 		$data=DB::table('users')->where('u_id',$id)->first();
+		// var_dump($data);die;
 		return view('yonghu.user',['post'=>$data]);
 	}
 	//个人资料-----接收用户的完善资料并进行存储
