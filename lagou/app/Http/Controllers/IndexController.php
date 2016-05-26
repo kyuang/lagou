@@ -41,25 +41,13 @@ class IndexController extends Controller
 			$list = Role_type::type_tree();
 			$advert=DB::table("guanggao")->get();		
 
-<<<<<<< HEAD
-			$advert=DB::table("guanggao")->get();
 
 		
 			return view('index',['type'=>$list,"job"=>$job,'link'=>$link,'city'=>$city,'advert'=>$advert,'reci'=>$reci]);
 			
-		}
-	
-=======
-		// return view('index',['type'=>$list,"job"=>$job]);
-
-
-			// var_dump($advert);die;
-
-		// return view('index',['type'=>$list,"job"=>$job]);
-		return view('index',['type'=>$list,"job"=>$job,'link'=>$link,'city'=>$city,'advert'=>$advert,'reci'=>$reci]);	
-		 
->>>>>>> 53f4870589fce4226e19632703ab4b8df2349f7f
 	}
+	
+
 	//首页搜索框
 	public function search_input(Request $request){
 		$name=$request->input("name");
@@ -110,33 +98,13 @@ class IndexController extends Controller
 					Session::put('username',$a);
 					Session::put('id',$id);
 					Session::save();
-<<<<<<< HEAD
-					// $as=$_COOKIE['id'];
 
-					// Session::put('username',$username);
-					// $a = Session::get('username');
-
-
-
-			
-
-
-
-					// var_dump($as);die;
-					return "<script>alert('登陆成功');location.href='index?id=1';</script>";
-
-
-					// Session::put('username',$username);
-					// $a = Session::get('username');
-			
-
-=======
 
 					setcookie('u_id',$id);
 					// $as=$_COOKIE['u_id'];
 					// var_dump($as);die;
 					return "<script>alert('登陆成功');location.href='index';</script>";
->>>>>>> 53f4870589fce4226e19632703ab4b8df2349f7f
+
 				}
 				  
 			}
