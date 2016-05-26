@@ -44,24 +44,25 @@ class IndexController extends Controller
 		}else
 		{
 			$list = Role_type::type_tree();
-<<<<<<< HEAD
+
 			$advert=DB::table("guanggao")->get();
-			// var_dump($advert);die;
-			return view('index',['type'=>$list,"job"=>$job,'advert'=>$advert]);
-=======
-			return view('index',['type'=>$list,"job"=>$job,'link'=>$link,'city'=>$city]);
->>>>>>> e018addb2c043641c223191625bfe5d01c4a447f
+		
+			return view('index',['type'=>$list,"job"=>$job,'link'=>$link,'city'=>$city,'advert'=>$advert]);
 			
 		}
 
-	
-
-<<<<<<< HEAD
 		return view('index',['type'=>$list,"job"=>$job]);
-=======
-		// return view('index',['type'=>$list,"job"=>$job,"jobn"=>$job]);
->>>>>>> b56bffebc5cf26a68a31d133bde359a0d4ca703c
 
+	}
+	//首页搜索框
+	public function search_input(Request $request){
+		$name=$request->input("name");
+		$sql="select role_name from role_type where(role_name like '%$name%') ";
+		$data=DB::select($sql);
+		//print_r($data);die;
+		foreach ($data as $value) {
+			echo "<a href='javascript:void(0);' onclick='clicks(this)' >".$value->role_name."</a></br>";
+		}
 	}
 	/**
 	 * 登陆页面
@@ -106,31 +107,23 @@ class IndexController extends Controller
 					// $as=$_COOKIE['id'];
 					// Session::put('username',$username);
 					// $a = Session::get('username');
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
+
 
 					// var_dump($as);die;
 					echo "<script>alert('登陆成功');location.href='index';</script>";
 						
-=======
+
 					// var_dump($as);die;
->>>>>>> e018addb2c043641c223191625bfe5d01c4a447f
->>>>>>> b56bffebc5cf26a68a31d133bde359a0d4ca703c
-					// var_dump($a);die;
+
 
 					echo "<script>alert('登陆成功');location.href='index?id=1';</script>";
 						die;
-<<<<<<< HEAD
+
 
 					echo "<script>alert('登陆成功');location.href='index';</script>";				
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e018addb2c043641c223191625bfe5d01c4a447f
->>>>>>> b56bffebc5cf26a68a31d133bde359a0d4ca703c
+
 				}
 				  
 			}
