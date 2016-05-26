@@ -29,7 +29,7 @@
 <link rel="Shortcut Icon" href="http://pstatic.lagou.com/www/static/common/static/favicon_faed927.ico">
 
 
-
+<script src="{{URL::asset('/')}}jquery/jquery-2.1.4.min.js"></script>
 <!-- global_domain FE_base... -->
 
 <script charset="utf-8" src="{{URL::asset('files')}}/v.js"></script><script async="" src="{{URL::asset('files')}}/analytics.js"></script><script async="" src="{{URL::asset('files')}}/a.js"></script><script type="text/javascript">
@@ -90,7 +90,7 @@ sctx : "http://suggest.lagou.com"
 </div>
 
 <ul class="lg_tbar_r">
-<?php if(empty($_COOKIE['username'])){?>
+<?php if(empty($_COOKIE['u_id']) or $_COOKIE['u_id']!=1){ ?>
 <li>
 <a href="{{url('Index/login')}}" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">登录</a>
 </li>
@@ -98,12 +98,59 @@ sctx : "http://suggest.lagou.com"
 <a href="{{url('Index/register')}}" class="bl" data-lg-tj-id="5g00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">注册</a>
 </li>
 <?php }else{?>
-<li>
-<a href="" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">欢迎<?php echo $_COOKIE['username'];?>登录</a>
-</li>
-<li>
-<a href="{{url('Index/loginout')}}" data-lg-tj-id="5f00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a>
-</li>
+	<ul class="lg_tbar_r">
+				<!-- if has unread message, add class unreaded -->
+				<li class="msg_dropdown">
+					<a class="msg_group" href="javascript:%20void%200;" data-lg-tj-id="5h00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">
+						消息
+						<em class="msg_amount hide" id="headMsgAmount"></em>
+					</a>
+					<div class="lg_msg_popup">
+						<div class="lg_msg_pu_body" id="lgPopupMsgBody"><div class="no_body"><p class="lg_msg_avatar no_msg_i">暂时没有新的消息~</p></div></div>
+						<div class="lg_msg_pu_footer">
+							<a href="http://www.lagou.com/message/settingsdetail.html" target="_blank" class="lg_msg_setting fl"><i class="lg_msg_avatar setting_i"></i>&nbsp;</a>
+							<a href="http://www.lagou.com/message/msgdetail.html" class="lg_msg_more fr">查看更多</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="{{url('Yonghu/jianli')}}" class="bl" data-lg-tj-id="5700" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的简历</a>
+				</li>
+				<li>
+					<a href="http://www.lagou.com/mycenter/delivery.html" class="bl" id="deliveryLink" data-lg-tj-id="5800" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">投递箱</a>
+					<em class="noticeDot dn" id="noticeDot_delivery"></em>
+				</li>
+				<li>
+					<a href="http://www.lagou.com/mycenter/collections.html" class="bl" data-lg-tj-id="5900" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">收藏夹</a>
+				</li>
+				<li class="user_dpdown">
+					<span class="unick bl">李四</span>
+					<em class="noticeDot dn" id="noticeDot_name"></em>
+					<i></i>
+					<ul>
+						<li>
+							<a href="http://www.lagou.com/s/subscribe.html" data-lg-tj-id="5a00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的订阅</a>
+						</li>
+						<li>
+							<a href="http://www.lagou.com/mycenter/invitation.html" id="invitationLink" data-lg-tj-id="5b00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow" data-lg-gatj-msg="header_c,职位邀请,number">职位邀请</a>
+							<em class="noticeDot dn" id="noticeDot_invitation"></em>
+						</li>
+				        <li>
+							<a href="http://account.lagou.com/account/accountBind.html" data-lg-tj-id="5c00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">帐号设置</a>
+						</li>
+						 <li>
+							<a href="{{url('Yonghu/shou')}}" data-lg-tj-id="5c00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">个人资料</a>
+						</li>
+						<li>
+							<a href="http://hr.lagou.com/dashboard/" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">去企业版</a>
+						</li>
+						<li>
+							<a href="" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
 <?php }?>
 </ul>
 	
@@ -112,8 +159,10 @@ sctx : "http://suggest.lagou.com"
 </div>
 
 </div><!--end #lg_tbar-->
+<!-- -->
 
-
+		<!--C端头部黑色导航-->
+			
 <!--C端头部白色导航-->
 <div id="lg_tnav">
 
@@ -227,11 +276,13 @@ sctx : "http://suggest.lagou.com"
 <dl class="hotSearch">
 	<dt>热门搜索：</dt>
 		@foreach($reci as $v)
-		<dd><a href="http://www.lagou.com/topic/citychengdu01.html" class="current">{{$v->reci}}</a></dd>
+		<dd><a href="" class="current">{{$v->reci}}</a></dd>
 		@endforeach
 		<dd><a href="http://www.lagou.com/activity/dist/imageCollection/pc/html/index.html" class="current">拉勾形象征集</a></dd>
-		<dd><a href="http://www.lagou.com/app/download.html?source=search_app" class="current">拉勾APP</a></dd>
+		<dd><a href="http://www.lagou.com/app/download.html?source=search_app" class="current">拉勾APP</a>
+		</dd>
 </dl>
+
 
 
 <div id="home_banner" class="home_banner">
@@ -386,7 +437,7 @@ sctx : "http://suggest.lagou.com"
 <div class="fl pli_top_l">
 <div class="position_name">
 
-<h2 class="fl"><a href="http://www.lagou.com/jobs/1639461.html" target="_blank" class="position_link fl wordCut" data-index="0" data-lg-tj-id="4m00" data-lg-tj-no="0001" data-lg-tj-cid="1639461">{{$v->job_name}}<span>{{$v->region_name}}</span></a></h2>
+<h2 class="fl"><a href="{{url('Job/details')}}?id={{$v->j_id}}">{{$v->job_name}}<span>{{$v->region_name}}</span></a></h2>
 <!-- 此处需要和后台确认 -->
 
 <span class="fl">{{$v->kai_time}}</span>

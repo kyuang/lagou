@@ -13,6 +13,14 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+Route::get('/',"IndexController@index");
+
+
+Route::get('/', "IndexController@index");
+>>>>>>> 53f4870589fce4226e19632703ab4b8df2349f7f
 
 Route::get('/',"IndexController@index");
 
@@ -154,6 +162,8 @@ Route::any('/User/user_list',"UserController@user_list");
 Route::any('/City/elements',"Admin\CityController@elements");
 Route::any('/City/add_city',"Admin\CityController@add_city");
 
+//前台链接对应的详情页
+Route::any('Job/details',"JobController@details");
 
 
 

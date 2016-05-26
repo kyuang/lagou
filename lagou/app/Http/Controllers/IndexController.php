@@ -37,15 +37,11 @@ class IndexController extends Controller
 			$job[$k]->company_type=unserialize($v->company_type);
 			$job[$k]->material_benefits=unserialize($v->material_benefits);
 		}
-		if(!empty($_GET['id']) && $_GET['id']==1)
-		{	
-		// echo "sdfasdfgasd";die;
+		
 			$list = Role_type::type_tree();
-			return view('dengindex',['type'=>$list,"job"=>$job,'link'=>$link,'reci'=>$reci]);
-		}else
-		{
-			$list = Role_type::type_tree();
+			$advert=DB::table("guanggao")->get();		
 
+<<<<<<< HEAD
 			$advert=DB::table("guanggao")->get();
 
 		
@@ -53,6 +49,16 @@ class IndexController extends Controller
 			
 		}
 	
+=======
+		// return view('index',['type'=>$list,"job"=>$job]);
+
+
+			// var_dump($advert);die;
+
+		// return view('index',['type'=>$list,"job"=>$job]);
+		return view('index',['type'=>$list,"job"=>$job,'link'=>$link,'city'=>$city,'advert'=>$advert,'reci'=>$reci]);	
+		 
+>>>>>>> 53f4870589fce4226e19632703ab4b8df2349f7f
 	}
 	//首页搜索框
 	public function search_input(Request $request){
@@ -85,9 +91,8 @@ class IndexController extends Controller
 			// var_dump($username);die;
 			// $u_id = DB::table('users')->where(['email'=>$email,'password'=>$password])->first();
 			$id=$userInfo->u_id;
-			$a=$userInfo->username;
-
 			// var_dump($id);die;
+			$a=$userInfo->username;
 			if($re)
 			{
 				  //登陆失败 记录登陆失败的次数
@@ -101,11 +106,11 @@ class IndexController extends Controller
 				}
 				else
 				{
-					
 					//登录成功
 					Session::put('username',$a);
 					Session::put('id',$id);
 					Session::save();
+<<<<<<< HEAD
 					// $as=$_COOKIE['id'];
 
 					// Session::put('username',$username);
@@ -125,6 +130,13 @@ class IndexController extends Controller
 					// $a = Session::get('username');
 			
 
+=======
+
+					setcookie('u_id',$id);
+					// $as=$_COOKIE['u_id'];
+					// var_dump($as);die;
+					return "<script>alert('登陆成功');location.href='index';</script>";
+>>>>>>> 53f4870589fce4226e19632703ab4b8df2349f7f
 				}
 				  
 			}
@@ -146,7 +158,7 @@ class IndexController extends Controller
 	 */
 	public function loginout()
 	{
-		setcookie('username','',time()-1);
+		Session::destroy();
 		return Redirect::to('Index/index');
 	}
 
