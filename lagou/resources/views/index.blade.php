@@ -224,7 +224,14 @@ sctx : "http://suggest.lagou.com"
 <span>猜你要搜</span>
 <ul></ul>
 </div>
-<dl class="hotSearch"><dt>热门搜索：</dt><dd><a href="http://www.lagou.com/topic/citychengdu01.html" class="current">成都热招职位</a></dd><dd><a href="http://www.lagou.com/topic/cityshenzhen01.html" class="current">深圳热招职位</a></dd><dd><a href="http://www.lagou.com/topic/javazcb.html" class="current">Java热门职位</a></dd><dd><a href="http://www.lagou.com/topic/ioszcb.html" class="current">iOS职位精选</a></dd><dd><a href="http://www.lagou.com/activity/dist/imageCollection/pc/html/index.html" class="current">拉勾形象征集</a></dd><dd><a href="http://www.lagou.com/app/download.html?source=search_app" class="current">拉勾APP</a></dd></dl>
+<dl class="hotSearch">
+	<dt>热门搜索：</dt>
+		@foreach($reci as $v)
+		<dd><a href="http://www.lagou.com/topic/citychengdu01.html" class="current">{{$v->reci}}</a></dd>
+		@endforeach
+		<dd><a href="http://www.lagou.com/activity/dist/imageCollection/pc/html/index.html" class="current">拉勾形象征集</a></dd>
+		<dd><a href="http://www.lagou.com/app/download.html?source=search_app" class="current">拉勾APP</a></dd>
+</dl>
 
 
 <div id="home_banner" class="home_banner">

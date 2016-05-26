@@ -193,7 +193,7 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 					<a href="http://www.lagou.com/mycenter/collections.html" class="bl" data-lg-tj-id="5900" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">收藏夹</a>
 				</li>
 								<li class="user_dpdown">
-					<span class="unick bl">{{$_COOKIE['username']}}</span>
+					<span class="unick bl"><?php echo Session::get('username');?></span>
 					<em class="noticeDot dn" id="noticeDot_name"></em>
 					<i></i>
 					<ul class="reset">
@@ -271,8 +271,25 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 					<img src="{{URL::asset('/')}}jianli_files/default_headpic.png" alt="头像" class="mr_headimg" height="117" width="117">
 					<img src="{{URL::asset('/')}}jianli_files/tou.png" class="opa" alt="">
 					<img src="{{URL::asset('/')}}jianli_files/shadow_tx.png" alt="" class="shadow">
-					<input class="mr_headfile" id="up_tx" name="headPic" onchange="myresumeCommon.utils.imageUpload(this,myresumeCommon.requestTargets.photoUpload,uploadPhoto.upSucc,uploadPhoto.upFail);" title="支持jpg、jpeg、gif、png格式，文件小于10M" type="file">
+					<input class="mr_headfile" type="submit" id="up_tx" name="headPic" onchange="uplode_add(this);" title="支持jpg、jpeg、gif、png格式，文件小于10M" type="file">
+					<input type="hidden" id="u_id" value="<?php echo Session::get('id') ?>">
 				</div>
+				<script>
+				function uplode_add()
+				{
+					//获取文件的名
+					var img_name=;
+					//获取登录者的id
+					var u_id = $("#u_id").val();
+					
+					//将文件上传并且入库
+					var url ="{{url('Yonghu/uplode')}}";
+					var data ={'u_id':u_id,'img_name':img_name};
+					$.get(url,data,function(msg){
+
+					});
+				}
+				</script>
 				<div class="mr_baseinfo">
 					<i class="mr_left_bg"></i>
 					<i class="mr_right_bg"></i>
@@ -284,12 +301,13 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 					</div>	
 					
 					<div class="mr_p_name mr_w604 clearfixs">
-						<span class="mr_edit dn"><i></i><em>编辑</em></span><span class="mr_name" value="1">用户名</span>
+						<span class="mr_edit dn" onclick="dian()"><i></i><em>编辑</em></span><span class="mr_name" value="1"><?php echo Session::get('username');?></span>
 					</div>
-					<form id="nameForm" style="display:none" >
+					<form id="nameForm" style="display:none">
 						<div>
-							<input id="mr_name" name="mr_name" class="ed_name"  type="text">
-							<input class="save" value="保存" type="submit">
+							<input id="mr_name" name="mr_name" class="ed_name"  type="text" value="<?php echo Session::get('username') ?>">
+							<input type="hidden" name="id" id="u_id" value="<?php echo Session::get('u_id') ?>">
+							<button class="asdf">提交</button>
 							<a href="javascript:;" class="cancel">取消</a>
 						</div>
 					</form>
@@ -301,10 +319,21 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 					// 		$this.find('.mr_edit dn').show();
 					// 	}
 					// 	//定义编辑的点击事件
-					// 	$('.mr_edit dn').click(function(){
-					// 		//将修改的表单展示
-					// 		$("#nameForm").show();
-					// 	});
+						function dian()
+						{
+							//将修改展示
+							$("#nameForm").show();
+							$(".asdf").click(function(){
+								//获取值传输到后台
+								var zhi = $("#mr_name").val();
+								var id = $("#u_id").val();
+								var url = "{{url('Yonghu/users_add')}}";
+								var data = {'zhi':zhi,'id':id};
+								$.get(url,data,function(msg){
+									alert(msg)
+								});
+							});
+						}
 					</script>
 					<div class="mr_p_info mr_w604 clearfixs">		
 						<div class="info_t">

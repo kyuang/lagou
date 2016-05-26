@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 use Validator,DB,Redirect;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Session;
+// use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Cookie;
 use Input;
-
+use Session;
 use App\Http\Models\Role_type;
 
 header("content-type:text/html;charset=utf-8");
@@ -22,6 +22,7 @@ class IndexController extends Controller
 	{
 		$list = Role_type::type_tree();
 		$link = DB::table('links')->orderBy('sort', 'desc')->get();
+		$reci = DB::table('reci')->get();
 		$city = DB::table('lagou_region')->join('region','lagou_region.zhan','=','region.region_id')->get();
 		foreach ($city as $key => $val) 
 		{
@@ -40,12 +41,13 @@ class IndexController extends Controller
 		{	
 		// echo "sdfasdfgasd";die;
 			$list = Role_type::type_tree();
-			return view('dengindex',['type'=>$list,"job"=>$job,'link'=>$link]);
+			return view('dengindex',['type'=>$list,"job"=>$job,'link'=>$link,'reci'=>$reci]);
 		}else
 		{
 			$list = Role_type::type_tree();
 
 			$advert=DB::table("guanggao")->get();
+<<<<<<< HEAD
 		
 			return view('index',['type'=>$list,"job"=>$job,'link'=>$link,'city'=>$city,'advert'=>$advert]);
 			
@@ -53,6 +55,16 @@ class IndexController extends Controller
 
 		return view('index',['type'=>$list,"job"=>$job]);
 
+=======
+			// var_dump($advert);die;
+			
+			return view('index',['type'=>$list,"job"=>$job,'link'=>$link,'city'=>$city,'advert'=>$advert,'reci'=>$reci]);
+
+			
+		}
+
+	
+>>>>>>> fd5b9c291ddf83866bf7f947a6fc0fa74317ed76
 	}
 	//首页搜索框
 	public function search_input(Request $request){
@@ -81,11 +93,12 @@ class IndexController extends Controller
 			$password=$_POST['password'];
 			$re = DB::table('users')->where(['email'=>$email,'password'=>$password])->first();
 			// var_dump($re);die;
-			$username = DB::table('users')->where(['email'=>$email,'password'=>$password])->pluck('username');
+			$userInfo = DB::table('users')->where(['email'=>$email,'password'=>$password])->first();
 			// var_dump($username);die;
-			$a=$username[0];
-			$u_id = DB::table('users')->where(['email'=>$email,'password'=>$password])->pluck('u_id');
-			$id=$u_id[0];
+			// $u_id = DB::table('users')->where(['email'=>$email,'password'=>$password])->first();
+			$id=$userInfo->u_id;
+			$a=$userInfo->username;
+
 			// var_dump($id);die;
 			if($re)
 			{
@@ -102,9 +115,11 @@ class IndexController extends Controller
 				{
 					
 					//登录成功
-					setcookie('username',$a);
-					setcookie('id',$id);
+					Session::put('username',$a);
+					Session::put('id',$id);
+					Session::save();
 					// $as=$_COOKIE['id'];
+<<<<<<< HEAD
 					// Session::put('username',$username);
 					// $a = Session::get('username');
 
@@ -120,10 +135,20 @@ class IndexController extends Controller
 					echo "<script>alert('登陆成功');location.href='index?id=1';</script>";
 						die;
 
+=======
 
-					echo "<script>alert('登陆成功');location.href='index';</script>";				
+					// var_dump($as);die;
+					return "<script>alert('登陆成功');location.href='index?id=1';</script>";
+>>>>>>> fd5b9c291ddf83866bf7f947a6fc0fa74317ed76
 
+					// Session::put('username',$username);
+					// $a = Session::get('username');
+			
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> fd5b9c291ddf83866bf7f947a6fc0fa74317ed76
 				}
 				  
 			}

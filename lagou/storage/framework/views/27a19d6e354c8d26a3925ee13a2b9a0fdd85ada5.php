@@ -49,6 +49,7 @@ var GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 <section class="content_box cleafix">
 	<div class="left_area fl">
 		<form action="<?php echo e(url('Index/login')); ?>" method="post" id="from">
+		<input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
 			<div class="form_body" data-view="loginView">
 				<div style="display: block;" class="input_item clearfix" data-propertyname="username" data-controltype="Phone">
 					<input class="input input_white" id="" name="email" placeholder="请输入已验证手机/邮箱" data-required="required" autocomplete="off" type="text">
