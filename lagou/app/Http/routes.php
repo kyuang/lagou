@@ -13,11 +13,16 @@
 
 
 
+<<<<<<< HEAD
+Route::get('/',"IndexController@index");
+
+=======
 Route::get('/', "IndexController@index");
 
 Route::get('/',"IndexController@index");
 
 
+>>>>>>> fd5b9c291ddf83866bf7f947a6fc0fa74317ed76
 
 /*
 |--------------------------------------------------------------------------
@@ -97,6 +102,8 @@ Route::group(['middleware' => ['web']], function () {
 
 //前台首页
 Route::any('/Index/index',"IndexController@index");
+//首页搜索框
+Route::any('/Index/search_input',"IndexController@search_input");
 Route::any('/Index/login',"IndexController@login");
 Route::any('/login/login.json',"IndexController@login.json");
 Route::any('/Index/register',"IndexController@register");
