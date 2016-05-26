@@ -5,6 +5,7 @@
 	<title>用户管理</title>
 </head>
 <body>
+<?php echo $__env->make('admin.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 	<table>
 		<tr>
 			<th>id</th>
@@ -25,5 +26,6 @@
 		</tr>
 		<?php endforeach; ?>
 	</table>
+	<?php echo $__env->make('admin.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 </body>
 </html>

@@ -211,45 +211,54 @@ sctx : "http://suggest.lagou.com"
 <span>猜你要搜</span>
 <ul></ul>
 </div>
-<dl class="hotSearch"><dt>热门搜索：</dt><dd><a href="http://www.lagou.com/topic/citychengdu01.html" class="current">成都热招职位</a></dd><dd><a href="http://www.lagou.com/topic/cityshenzhen01.html" class="current">深圳热招职位</a></dd><dd><a href="http://www.lagou.com/topic/javazcb.html" class="current">Java热门职位</a></dd><dd><a href="http://www.lagou.com/topic/ioszcb.html" class="current">iOS职位精选</a></dd><dd><a href="http://www.lagou.com/activity/dist/imageCollection/pc/html/index.html" class="current">拉勾形象征集</a></dd><dd><a href="http://www.lagou.com/app/download.html?source=search_app" class="current">拉勾APP</a></dd></dl>
+<dl class="hotSearch">
+	<dt>热门搜索：</dt>
+		<?php foreach($reci as $v): ?>
+		<dd><a href="http://www.lagou.com/topic/citychengdu01.html" class="current"><?php echo e($v->reci); ?></a></dd>
+		<?php endforeach; ?>
+		<dd><a href="http://www.lagou.com/activity/dist/imageCollection/pc/html/index.html" class="current">拉勾形象征集</a></dd>
+		<dd><a href="http://www.lagou.com/app/download.html?source=search_app" class="current">拉勾APP</a></dd>
+</dl>
 
 
 <div id="home_banner" class="home_banner">
 <ul class="banner_bg" style="height: 480px; margin-top: -160px;">
+
+
+<?php foreach($advert as $v): ?>
 <li class="banner_bg_1 current">
-
-
-
-<a class="" href="http://www.lagou.com/gongsi/19365.html" target="_blank" data-lg-tj-id="es00" data-lg-tj-no="0001" data-lg-tj-cid="1982"><img src="<?php echo e(URL::asset('files')); ?>/Cgp3O1csCW2AXOYXAAHE9GZUzok034.JPG" width="612" height="160" alt="货车帮"></a>
+<a class="" href="http://www.lagou.com/gongsi/19365.html" target="_blank" data-lg-tj-id="es00" data-lg-tj-no="0001" data-lg-tj-cid="1982"><img src="<?php echo e(URL::asset('/').$v->gimg); ?>" width="612" height="160" alt="货车帮"></a>
 </li>
-<li class="banner_bg_2">
+<?php endforeach; ?>
 
 
-
+<!-- <li class="banner_bg_2">
 <a class="" href="http://www.lagou.com/topic/renrenxingtwo.html" target="_blank" data-lg-tj-id="es00" data-lg-tj-no="0002" data-lg-tj-cid="1975"><img src="<?php echo e(URL::asset('files')); ?>/CgqKkVcE0s-AKW7uAACEYADklOk091.JPG" width="612" height="160" alt="人人行(借贷宝)"></a>
 </li>
+
+
+
 <li class="banner_bg_3">
-
-
-
 <a class="" href="http://www.lagou.com/activity/dist/imageCollection/pc/html/index.html?labelWords=hot" target="_blank" data-lg-tj-id="es00" data-lg-tj-no="0003" data-lg-tj-cid="2133"><img src="<?php echo e(URL::asset('files')); ?>/Cgp3O1csR66AF4jIAACp5e8pwGU974.JPG" width="612" height="160" alt="设计专场"></a>
-</li>
+</li> -->
 </ul>
 <div class="banner_control">
 <em style="top: 55px;"></em>
 <ul class="thumbs">
+<?php foreach($advert as $v): ?>
 <li class="thumbs_1">
 <i></i>
-<img src="<?php echo e(URL::asset('files')); ?>/Cgp3O1csCXCARQOAAAAZooX853U320.JPG" width="113" height="42">
+<img src="<?php echo e(URL::asset('/').$v->gimg); ?>" width="113" height="42">
 </li>
-<li class="thumbs_2 current">
+<?php endforeach; ?>
+<!-- <li class="thumbs_2 current">
 <i></i>
 <img src="<?php echo e(URL::asset('files')); ?>/CgqKkVcE0tSAdseNAAAokHl4hJg013.JPG" width="113" height="42">
 </li>
 <li class="thumbs_3">
 <i></i>
 <img src="<?php echo e(URL::asset('files')); ?>/CgqKkVcsR7iAGzTCAAAOwlwqivw702.JPG" width="113" height="42">
-</li>
+</li> -->
 </ul>
 </div>
 </div>

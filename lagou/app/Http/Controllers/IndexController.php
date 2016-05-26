@@ -22,6 +22,7 @@ class IndexController extends Controller
 	{
 		$list = Role_type::type_tree();
 		$link = DB::table('links')->orderBy('sort', 'desc')->get();
+		$reci = DB::table('reci')->get();
 		$city = DB::table('lagou_region')->join('region','lagou_region.zhan','=','region.region_id')->get();
 		foreach ($city as $key => $val) 
 		{
@@ -36,27 +37,12 @@ class IndexController extends Controller
 			$job[$k]->company_type=unserialize($v->company_type);
 			$job[$k]->material_benefits=unserialize($v->material_benefits);
 		}
-		if(!empty($_GET['id']) && $_GET['id']==1)
-		{	
-		// echo "sdfasdfgasd";die;
+		
 			$list = Role_type::type_tree();
-			return view('dengindex',['type'=>$list,"job"=>$job,'link'=>$link]);
-		}else
-		{
-			$list = Role_type::type_tree();
-
 			$advert=DB::table("guanggao")->get();
 			// var_dump($advert);die;
-
-			return view('index',['type'=>$list,"job"=>$job,'link'=>$link,'city'=>$city,'advert'=>$advert]);
-
-			
-		}
-		return view('index',['type'=>$list,"job"=>$job]);
-
-		// return view('index',['type'=>$list,"job"=>$job,"jobn"=>$job]);
-
-
+		// return view('index',['type'=>$list,"job"=>$job]);
+		return view('index',['type'=>$list,"job"=>$job,'link'=>$link,'city'=>$city,'advert'=>$advert,'reci'=>$reci]);
 	}
 	/**
 	 * 登陆页面
@@ -94,13 +80,10 @@ class IndexController extends Controller
 				}
 				else
 				{
-					
 					//登录成功
 					Session::put('username',$a);
 					Session::put('id',$id);
 					Session::save();
-					
-					
 					setcookie('u_id',$id);
 					// $as=$_COOKIE['u_id'];
 					// var_dump($as);die;
