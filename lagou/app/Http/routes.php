@@ -13,14 +13,7 @@
 
 
 
-<<<<<<< HEAD
-=======
 
-Route::get('/',"IndexController@index");
-
-
-Route::get('/', "IndexController@index");
->>>>>>> 53f4870589fce4226e19632703ab4b8df2349f7f
 
 Route::get('/',"IndexController@index");
 
