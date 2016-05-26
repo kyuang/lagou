@@ -590,7 +590,7 @@ require.config({paths:{
 "common/widgets/common/msgPopup": "http://pstatic.lagou.com/www/static/common/widgets/common/msgPopup_ccfc337"
 }});</script>
 <script type="text/javascript" src="{{URL::asset('files')}}/main.html_aio_4787e07.js"></script>
-<!-- <script type="text/javascript" src="{{URL::asset('files')}}/widgets_4dd49c9.js"> --></script><script src="{{URL::asset('files')}}/h.js" type="text/javascript"></script>
+<script type="text/javascript" src="{{URL::asset('files')}}/widgets_4dd49c9.js"></script><script src="{{URL::asset('files')}}/h.js" type="text/javascript"></script>
 <script type="text/javascript" src="{{URL::asset('files')}}/userinfo_7f282e9.js"></script>
 <script type="text/javascript" src="{{URL::asset('files')}}/layout_a28dd79.js"></script>
 <script type="text/javascript" src="{{URL::asset('files')}}/main.html_aio_2_f93dde9.js"></script>

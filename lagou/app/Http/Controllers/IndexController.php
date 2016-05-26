@@ -47,24 +47,12 @@ class IndexController extends Controller
 			$list = Role_type::type_tree();
 
 			$advert=DB::table("guanggao")->get();
-<<<<<<< HEAD
+
 		
-			return view('index',['type'=>$list,"job"=>$job,'link'=>$link,'city'=>$city,'advert'=>$advert]);
-			
-		}
-
-		return view('index',['type'=>$list,"job"=>$job]);
-
-=======
-			// var_dump($advert);die;
-			
 			return view('index',['type'=>$list,"job"=>$job,'link'=>$link,'city'=>$city,'advert'=>$advert,'reci'=>$reci]);
-
 			
 		}
-
 	
->>>>>>> fd5b9c291ddf83866bf7f947a6fc0fa74317ed76
 	}
 	//首页搜索框
 	public function search_input(Request $request){
@@ -119,36 +107,24 @@ class IndexController extends Controller
 					Session::put('id',$id);
 					Session::save();
 					// $as=$_COOKIE['id'];
-<<<<<<< HEAD
+
 					// Session::put('username',$username);
 					// $a = Session::get('username');
 
 
 
-					// var_dump($as);die;
-					echo "<script>alert('登陆成功');location.href='index';</script>";
-						
-
-					// var_dump($as);die;
+			
 
 
-					echo "<script>alert('登陆成功');location.href='index?id=1';</script>";
-						die;
-
-=======
 
 					// var_dump($as);die;
 					return "<script>alert('登陆成功');location.href='index?id=1';</script>";
->>>>>>> fd5b9c291ddf83866bf7f947a6fc0fa74317ed76
+
 
 					// Session::put('username',$username);
 					// $a = Session::get('username');
 			
 
-<<<<<<< HEAD
-
-=======
->>>>>>> fd5b9c291ddf83866bf7f947a6fc0fa74317ed76
 				}
 				  
 			}
