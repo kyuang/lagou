@@ -55,7 +55,7 @@ var frontRegister = "http://www.lagou.com/frontRegister.do";
 		  		<span id="nowrap"><?php echo Session::get('username'); ?></span> 
 		   		<i></i>
 		   	</dt>                
-		    <dd class="logout dn"><a href="http://www.lagou.com/frontLogout.do" rel="nofollow">退出</a></dd>
+		    <dd class="logout dn"><a href="{{url('Index/loginout')}}" rel="nofollow">退出</a></dd>
 	   </dl> 
 	</div>
 </div>
@@ -137,7 +137,11 @@ var frontRegister = "http://www.lagou.com/frontRegister.do";
 		    		var data ={'u_id':u_id,'school':school,'zhuanye':zhuanye};
 		    		var url = "jianli_adds";
 		    		$.get(url,data,function(msg){
-		        			
+		        			if(msg==1)
+		        			{
+		        				alert('创建成功');
+		        				location.href="{{url('Yonghu/jianli')}}";
+		        			}
 		        		})
 
 		    	});

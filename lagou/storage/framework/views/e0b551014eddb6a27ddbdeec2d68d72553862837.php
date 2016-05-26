@@ -137,7 +137,11 @@ var frontRegister = "http://www.lagou.com/frontRegister.do";
 		    		var data ={'u_id':u_id,'school':school,'zhuanye':zhuanye};
 		    		var url = "jianli_adds";
 		    		$.get(url,data,function(msg){
-		        			
+		        			if(msg==1)
+		        			{
+		        				alert('创建成功');
+		        				location.href="<?php echo e(url('Yonghu/jianli')); ?>";
+		        			}
 		        		})
 
 		    	});

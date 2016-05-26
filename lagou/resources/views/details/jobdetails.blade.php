@@ -110,7 +110,7 @@ window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 					</div>
 				</li>
 				<li>
-					<a href="http://www.lagou.com/resume/myresume.html" class="bl" data-lg-tj-id="5700" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的简历</a>
+					<a href="{{url('Yonghu/jianli')}}" class="bl" data-lg-tj-id="5700" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">我的简历</a>
 				</li>
 				<li>
 					<a href="http://www.lagou.com/mycenter/delivery.html" class="bl" id="deliveryLink" data-lg-tj-id="5800" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">投递箱</a>
@@ -120,7 +120,7 @@ window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 					<a href="http://www.lagou.com/mycenter/collections.html" class="bl" data-lg-tj-id="5900" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">收藏夹</a>
 				</li>
 				<li class="user_dpdown">
-					<span class="unick bl">孟昭利</span>
+					<span class="unick bl">李四</span>
 					<em class="noticeDot dn" id="noticeDot_name"></em>
 					<i></i>
 					<ul>
@@ -141,7 +141,7 @@ window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
 						</li>
 
 						<li>
-							<a href="http://www.lagou.com/frontLogout.do" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a>
+							<a href="{{url('Index/loginout')}}" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a>
 						</li>
 					</ul>
 				</li>

@@ -126,7 +126,8 @@ class IndexController extends Controller
 	 */
 	public function loginout()
 	{
-		Session::destroy();
+		Session::put('id','');
+		setcookie('u_id','',time()-1);
 		return Redirect::to('Index/index');
 	}
 

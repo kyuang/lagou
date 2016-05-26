@@ -8,7 +8,7 @@ use Input;
 use App\Mail;
 use DB,Session;
 use Redirect;
-use Session;
+
 
 class YonghuController extends Controller
 {
@@ -17,13 +17,8 @@ class YonghuController extends Controller
 	{
 		//查询数据库中登录者的信息
 		// setcookie('id',1);
-<<<<<<< HEAD
 		$id=1;
 		// var_dump($id);die;
-=======
-		$id=Session::get('id');
-		$id=1;
->>>>>>> fd5b9c291ddf83866bf7f947a6fc0fa74317ed76
 		$data=DB::table('users')->where('u_id',$id)->first();
 		// var_dump($data);die;
 		return view('yonghu.user',['post'=>$data]);
@@ -93,6 +88,6 @@ class YonghuController extends Controller
 	{
 		$data=$request->input();
 		$d=DB::table('resume')->where('u_id',$data['u_id'])->update(array('school'=>$data['school'],'major'=>$data['zhuanye']));
-			return redirect("Yonghu/jianli");
+		echo 1;
 	}
 }
