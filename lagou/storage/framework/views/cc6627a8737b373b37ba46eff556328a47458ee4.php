@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <!-- saved from url=(0021)http://www.lagou.com/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" charset="utf-8" async="" src="<?php echo e(URL::asset('files')); ?>/contains.js"></script><script type="text/javascript" charset="utf-8" async="" src="<?php echo e(URL::asset('files')); ?>/taskMgr.js"></script><script type="text/javascript" charset="utf-8" async="" src="<?php echo e(URL::asset('files')); ?>/views.js"></script>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" charset="utf-8" async="" src="<?php echo e(URL::asset('files')); ?>/contains.js"></script><script type="text/javascript" charset="utf-8" async="" src="<?php echo e(URL::asset('files')); ?>/taskMgr.js"></script>
+<script type="text/javascript" charset="utf-8" async="" src="<?php echo e(URL::asset('files')); ?>/views.js"></script>
+<script type="text/javascript" src="<?php echo e(URL::asset('files')); ?>/jquery.js"></script>
 <!-- meta -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="renderer" content="webkit">
@@ -13,7 +16,16 @@
 <meta content="拉勾网是最权威的互联网行业招聘网站,提供全国真实的互联网招聘信息,工资不面议当面谈,找工作,招聘网,寻人才就来拉勾网,互联网行业找工作首选拉勾网" name="description">
 
 <title>拉勾网-最专业的互联网招聘平台</title>
-
+<style>
+	#search_sp{
+		background: #999;
+		position: relative;
+		top:40px;
+		z-index: 1000;
+		display: none;
+		font-size: 18px;
+	}
+</style>
 <link rel="Shortcut Icon" href="http://pstatic.lagou.com/www/static/common/static/favicon_faed927.ico">
 
 
@@ -133,7 +145,7 @@ sctx : "http://suggest.lagou.com"
 							<a href="http://hr.lagou.com/dashboard/" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">去企业版</a>
 						</li>
 						<li>
-							<a href="http://www.lagou.com/frontLogout.do" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a>
+							<a href="" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a>
 						</li>
 					</ul>
 				</li>
@@ -246,12 +258,14 @@ sctx : "http://suggest.lagou.com"
 
 <div id="search_box" class="search_box">
 <form id="searchForm" class="searchForm" name="searchForm" action="http://www.lagou.com/jobs/list_" method="get">
-<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" id="search_input" class="search_input ui-autocomplete-input" tabindex="1" maxlength="64" autocomplete="off" value="" placeholder="搜索职位、公司或地点" style="color: rgb(153, 153, 153);">
+<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" id="search_input" oninput="fun()" class="search_input ui-autocomplete-input" tabindex="1" maxlength="64" autocomplete="off" value="" placeholder="搜索职位、公司或地点" style="color: rgb(153, 153, 153);">
+
 <input type="hidden" name="labelWords" id="labelWords" value="">
 <input type="hidden" name="fromSearch" id="fromSearch" value="true">
 <input type="hidden" name="suginput" id="suginput">
 
 <input type="submit" id="search_button" class="search_button" value="搜索" data-lg-tj-id="4V00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
+<div width="100%" height="30" id="search_sp"></div>
 </form>
 <input type="hidden" id="search_py" value="">
 <input type="hidden" id="isIndex" value="true">
@@ -424,7 +438,7 @@ sctx : "http://suggest.lagou.com"
 <div class="fl pli_top_l">
 <div class="position_name">
 
-<h2 class="fl"><a href="<?php echo e(url('Job/details')); ?>"><?php echo e($v->job_name); ?><span><?php echo e($v->region_name); ?></span></a></h2>
+<h2 class="fl"><a href="<?php echo e(url('Job/details')); ?>?id=<?php echo e($v->j_id); ?>"><?php echo e($v->job_name); ?><span><?php echo e($v->region_name); ?></span></a></h2>
 <!-- 此处需要和后台确认 -->
 
 <span class="fl"><?php echo e($v->kai_time); ?></span>
@@ -619,7 +633,7 @@ sctx : "http://suggest.lagou.com"
 
 
 <!-- jquery lib -->
-<!-- analytics js file -->	<!-- plat analytics js file -->	<!-- plat ipinyou tj -->
+<!-- analytics js file -->	<!-- plat analytics js file -->	plat ipinyou tj
 <noscript>&lt;img src="//stats.ipinyou.com/adv.gif?a=ga..n3f5DPSWZXFMcbQa2-GxjX&amp;e=" style="display:none;" /&gt;</noscript>
 
 
@@ -630,11 +644,26 @@ require.config({paths:{
 "common/widgets/common/msgPopup": "http://pstatic.lagou.com/www/static/common/widgets/common/msgPopup_ccfc337"
 }});</script>
 <script type="text/javascript" src="<?php echo e(URL::asset('files')); ?>/main.html_aio_4787e07.js"></script>
-<script type="text/javascript" src="<?php echo e(URL::asset('files')); ?>/widgets_4dd49c9.js"></script><script src="<?php echo e(URL::asset('files')); ?>/h.js" type="text/javascript"></script>
+<!-- <script type="text/javascript" src="<?php echo e(URL::asset('files')); ?>/widgets_4dd49c9.js"> --></script><script src="<?php echo e(URL::asset('files')); ?>/h.js" type="text/javascript"></script>
 <script type="text/javascript" src="<?php echo e(URL::asset('files')); ?>/userinfo_7f282e9.js"></script>
 <script type="text/javascript" src="<?php echo e(URL::asset('files')); ?>/layout_a28dd79.js"></script>
 <script type="text/javascript" src="<?php echo e(URL::asset('files')); ?>/main.html_aio_2_f93dde9.js"></script>
 <script type="text/javascript">
+	function fun(){
+		var name=$("#search_input").val();
+		//alert(name);
+		if(name!=""){
+			$.get("<?php echo e(url('/Index/search_input')); ?>",{name:name},function(msg){
+				$("#search_sp").html(msg);
+				$("#search_sp").show();
+			});
+		}
+	}
+	function clicks(ths){
+		var name=$(ths).html();
+		$("#search_input").val(name);
+		$("#search_sp").hide();
+	}
 window.global = window.global || {};
 global.userCtx = '';
 
@@ -705,6 +734,4 @@ require(['index/page/index/main']);
 </script>
 <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none; left: 538.5px;"></ul><div id="cboxOverlay" style="opacity: 0; cursor: pointer; visibility: visible; display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none; visibility: visible; top: 78px; left: 411px; position: absolute; width: 528px; height: 510px; opacity: 0;"><div id="cboxWrapper" style="height: 510px; width: 528px;"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left; width: 502px;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left; height: 484px;"></div><div id="cboxContent" style="float: left; width: 502px; height: 484px;"><div id="cboxTitle" style="float: left; display: block;">切换城市</div><div id="cboxCurrent" style="float: left; display: none;"></div><button type="button" id="cboxPrevious" style="display: none;"></button><button type="button" id="cboxNext" style="display: none;"></button><button id="cboxSlideshow" style="display: none;"></button><div id="cboxLoadingOverlay" style="float: left; display: none;"></div><div id="cboxLoadingGraphic" style="float: left; display: none;"></div><button type="button" id="cboxClose">close</button></div><div id="cboxMiddleRight" style="float: left; height: 484px;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left; width: 502px;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; max-width: none; display: none;"></div></div>
 <script type="text/javascript" src="<?php echo e(URL::asset('files')); ?>/ipinyou_2be9977.js"></script>
-
-
 </body></html>

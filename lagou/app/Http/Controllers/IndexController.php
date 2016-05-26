@@ -39,29 +39,16 @@ class IndexController extends Controller
 		}
 		
 			$list = Role_type::type_tree();
-			$advert=DB::table("guanggao")->get();
-<<<<<<< HEAD
-		
-			return view('index',['type'=>$list,"job"=>$job,'link'=>$link,'city'=>$city,'advert'=>$advert]);
-			
-		}
+			$advert=DB::table("guanggao")->get();		
 
-		return view('index',['type'=>$list,"job"=>$job]);
-
-=======
-			// var_dump($advert);die;
-<<<<<<< HEAD
 		// return view('index',['type'=>$list,"job"=>$job]);
-		return view('index',['type'=>$list,"job"=>$job,'link'=>$link,'city'=>$city,'advert'=>$advert,'reci'=>$reci]);
-=======
-			
-			return view('index',['type'=>$list,"job"=>$job,'link'=>$link,'city'=>$city,'advert'=>$advert,'reci'=>$reci]);
 
-			
-		}
 
-	
->>>>>>> fd5b9c291ddf83866bf7f947a6fc0fa74317ed76
+			// var_dump($advert);die;
+
+		// return view('index',['type'=>$list,"job"=>$job]);
+		return view('index',['type'=>$list,"job"=>$job,'link'=>$link,'city'=>$city,'advert'=>$advert,'reci'=>$reci]);	
+		 
 	}
 	//首页搜索框
 	public function search_input(Request $request){
@@ -72,7 +59,6 @@ class IndexController extends Controller
 		foreach ($data as $value) {
 			echo "<a href='javascript:void(0);' onclick='clicks(this)' >".$value->role_name."</a></br>";
 		}
->>>>>>> 9e05c7699044a5689f7fd93db487495727ef01ba
 	}
 	/**
 	 * 登陆页面
@@ -114,44 +100,11 @@ class IndexController extends Controller
 					Session::put('username',$a);
 					Session::put('id',$id);
 					Session::save();
-<<<<<<< HEAD
+
 					setcookie('u_id',$id);
 					// $as=$_COOKIE['u_id'];
 					// var_dump($as);die;
 					return "<script>alert('登陆成功');location.href='index';</script>";
-=======
-					// $as=$_COOKIE['id'];
-<<<<<<< HEAD
-					// Session::put('username',$username);
-					// $a = Session::get('username');
-
-
-
-					// var_dump($as);die;
-					echo "<script>alert('登陆成功');location.href='index';</script>";
-						
-
-					// var_dump($as);die;
-
-
-					echo "<script>alert('登陆成功');location.href='index?id=1';</script>";
-						die;
-
-=======
-
-					// var_dump($as);die;
-					return "<script>alert('登陆成功');location.href='index?id=1';</script>";
->>>>>>> fd5b9c291ddf83866bf7f947a6fc0fa74317ed76
-
-					// Session::put('username',$username);
-					// $a = Session::get('username');
-			
-
-<<<<<<< HEAD
-
-=======
->>>>>>> fd5b9c291ddf83866bf7f947a6fc0fa74317ed76
->>>>>>> 9e05c7699044a5689f7fd93db487495727ef01ba
 				}
 				  
 			}
@@ -173,7 +126,7 @@ class IndexController extends Controller
 	 */
 	public function loginout()
 	{
-		setcookie('username','',time()-1);
+		Session::destroy();
 		return Redirect::to('Index/index');
 	}
 

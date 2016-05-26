@@ -145,7 +145,7 @@ sctx : "http://suggest.lagou.com"
 							<a href="http://hr.lagou.com/dashboard/" data-lg-tj-id="5d00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">去企业版</a>
 						</li>
 						<li>
-							<a href="http://www.lagou.com/frontLogout.do" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a>
+							<a href="" data-lg-tj-id="5e00" data-lg-tj-no="idnull" data-lg-tj-cid="idnull" rel="nofollow">退出</a>
 						</li>
 					</ul>
 				</li>
